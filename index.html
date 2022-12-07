@@ -1,11 +1,283 @@
-<html>
-
-<head>
-    <title>Hello World!</title>
-</head>
-
-<body>
-    hello,world
-</body>
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/style.css" />
+    <link
+      href="//db.onlinewebfonts.com/c/cd0381aa3322dff4babd137f03829c8c?family=Tahoma"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Layout</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__info">Информация по резервуарам</div>
+      <ul class="header__navigation list">
+        <li class="list__item">
+          <button class="header__btn list__btn">
+            <a class="header__link list__link" href="#"
+              >Панель администратора</a
+            >
+          </button>
+        </li>
+      </ul>
+    </header>
+    <main class="main">
+      <header class="main__header">
+        <ul class="main__navigation list">
+          <li class="list__item">
+            <a class="main__link list__link" href="#">АИ-92</a>
+          </li>
+          <li class="list__item">
+            <a class="main__link list__link" href="#">КЕРОСИН</a>
+          </li>
+          <li class="list__item">
+            <a class="main__link list__link" href="#">ДТ ЗИМНЕЕ</a>
+          </li>
+          <li class="list__item">
+            <a class="main__link list__link" href="#">ТС-1</a>
+          </li>
+          <li class="list__item">
+            <a class="main__link list__link" href="#">АИ-95</a>
+          </li>
+          <li class="list__item">
+            <a class="main__link list__link" href="#">МАЗУТ</a>
+          </li>
+          <li class="list__item">
+            <a class="main__link list__link" href="#">ГАЗОЙЛЬ</a>
+          </li>
+          <li class="list__item">
+            <a class="main__link list__link" href="#">НЕФТЬ</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main__cistern-container">
+        <div class="cistern">
+          <div class="cistern__body">
+            <div class="cistern__weight cistern__weight_border-bottom_red">
+              <span class="cistern__title">Масса</span>
+              <span class="cistern__value">980</span>
+            </div>
+            <div class="cistern__filling-wrapper">
+              <div class="cistern__filling cistern__filling_height_98">
+                <div class="cistern__threshold cistern__threshold_high"></div>
+                <div class="cistern__threshold cistern__threshold_medium"></div>
+                <div class="cistern__threshold cistern__threshold_low"></div>
+              </div>
+            </div>
+          </div>
+          <div class="cistern__footer">
+            <div class="cistern__percent">98%</div>
+            <p class="cistern__description">Уровень керосина в резервуаре №1</p>
+          </div>
+        </div>
+        <div class="cistern">
+          <div class="cistern__body">
+            <div class="cistern__weight cistern__weight_border-bottom_green">
+              <span class="cistern__title">Масса</span>
+              <span class="cistern__value">680</span>
+            </div>
+            <div class="cistern__filling-wrapper">
+              <div class="cistern__threshold cistern__threshold_high"></div>
+              <div class="cistern__threshold cistern__threshold_medium"></div>
+              <div class="cistern__threshold cistern__threshold_low"></div>
+              <div class="cistern__filling cistern__filling_height_68"></div>
+            </div>
+          </div>
+          <div class="cistern__footer">
+            <div class="cistern__percent">68%</div>
+            <p class="cistern__description">Уровень керосина в резервуаре №2</p>
+          </div>
+        </div>
+        <div class="cistern">
+          <div class="cistern__body">
+            <div class="cistern__weight cistern__weight_border-bottom_red">
+              <span class="cistern__title">Масса</span>
+              <span class="cistern__value">180</span>
+            </div>
+            <div class="cistern__filling-wrapper">
+              <div class="cistern__threshold cistern__threshold_high"></div>
+              <div class="cistern__threshold cistern__threshold_medium"></div>
+              <div class="cistern__threshold cistern__threshold_low"></div>
+              <div class="cistern__filling cistern__filling_height_18"></div>
+            </div>
+          </div>
+          <div class="cistern__footer">
+            <div class="cistern__percent">18%</div>
+            <p class="cistern__description">Уровень керосина в резервуаре №3</p>
+          </div>
+        </div>
+        <div class="cistern">
+          <div class="cistern__body">
+            <div class="cistern__weight cistern__weight_border-bottom_green">
+              <span class="cistern__title">Масса</span>
+              <span class="cistern__value">750</span>
+            </div>
+            <div class="cistern__filling-wrapper">
+              <div class="cistern__threshold cistern__threshold_high"></div>
+              <div class="cistern__threshold cistern__threshold_medium"></div>
+              <div class="cistern__threshold cistern__threshold_low"></div>
+              <div class="cistern__filling cistern__filling_height_75"></div>
+            </div>
+          </div>
+          <div class="cistern__footer">
+            <div class="cistern__percent">75%</div>
+            <p class="cistern__description">Уровень керосина в резервуаре №4</p>
+          </div>
+        </div>
+        <div class="cistern">
+          <div class="cistern__body">
+            <div class="cistern__weight cistern__weight_border-bottom_red">
+              <span class="cistern__title">Масса</span>
+              <span class="cistern__value">180</span>
+            </div>
+            <div class="cistern__filling-wrapper">
+              <div class="cistern__threshold cistern__threshold_high"></div>
+              <div class="cistern__threshold cistern__threshold_medium"></div>
+              <div class="cistern__threshold cistern__threshold_low"></div>
+              <div class="cistern__filling cistern__filling_height_18"></div>
+            </div>
+          </div>
+          <div class="cistern__footer">
+            <div class="cistern__percent">18%</div>
+            <p class="cistern__description">Уровень керосина в резервуаре №3</p>
+          </div>
+        </div>
+        <div class="cistern">
+          <div class="cistern__body">
+            <div class="cistern__weight cistern__weight_border-bottom_green">
+              <span class="cistern__title">Масса</span>
+              <span class="cistern__value">750</span>
+            </div>
+            <div class="cistern__filling-wrapper">
+              <div class="cistern__threshold cistern__threshold_high"></div>
+              <div class="cistern__threshold cistern__threshold_medium"></div>
+              <div class="cistern__threshold cistern__threshold_low"></div>
+              <div class="cistern__filling cistern__filling_height_75"></div>
+            </div>
+          </div>
+          <div class="cistern__footer">
+            <div class="cistern__percent">75%</div>
+            <p class="cistern__description">Уровень керосина в резервуаре №4</p>
+          </div>
+        </div>
+        <div class="cistern">
+          <div class="cistern__body">
+            <div class="cistern__weight cistern__weight_border-bottom_green">
+              <span class="cistern__title">Масса</span>
+              <span class="cistern__value">750</span>
+            </div>
+            <div class="cistern__filling-wrapper">
+              <div class="cistern__threshold cistern__threshold_high"></div>
+              <div class="cistern__threshold cistern__threshold_medium"></div>
+              <div class="cistern__threshold cistern__threshold_low"></div>
+              <div class="cistern__filling cistern__filling_height_75"></div>
+            </div>
+          </div>
+          <div class="cistern__footer">
+            <div class="cistern__percent">75%</div>
+            <p class="cistern__description">Уровень керосина в резервуаре №4</p>
+          </div>
+        </div>
+        <div class="cistern">
+          <div class="cistern__body">
+            <div class="cistern__weight cistern__weight_border-bottom_red">
+              <span class="cistern__title">Масса</span>
+              <span class="cistern__value">980</span>
+            </div>
+            <div class="cistern__filling-wrapper">
+              <div class="cistern__filling cistern__filling_height_98">
+                <div class="cistern__threshold cistern__threshold_high"></div>
+                <div class="cistern__threshold cistern__threshold_medium"></div>
+                <div class="cistern__threshold cistern__threshold_low"></div>
+              </div>
+            </div>
+          </div>
+          <div class="cistern__footer">
+            <div class="cistern__percent">98%</div>
+            <p class="cistern__description">Уровень керосина в резервуаре №1</p>
+          </div>
+        </div>
+        <div class="cistern">
+          <div class="cistern__body">
+            <div class="cistern__weight cistern__weight_border-bottom_green">
+              <span class="cistern__title">Масса</span>
+              <span class="cistern__value">680</span>
+            </div>
+            <div class="cistern__filling-wrapper">
+              <div class="cistern__threshold cistern__threshold_high"></div>
+              <div class="cistern__threshold cistern__threshold_medium"></div>
+              <div class="cistern__threshold cistern__threshold_low"></div>
+              <div class="cistern__filling cistern__filling_height_68"></div>
+            </div>
+          </div>
+          <div class="cistern__footer">
+            <div class="cistern__percent">68%</div>
+            <p class="cistern__description">Уровень керосина в резервуаре №2</p>
+          </div>
+        </div>
+        <div class="cistern">
+          <div class="cistern__body">
+            <div class="cistern__weight cistern__weight_border-bottom_red">
+              <span class="cistern__title">Масса</span>
+              <span class="cistern__value">180</span>
+            </div>
+            <div class="cistern__filling-wrapper">
+              <div class="cistern__threshold cistern__threshold_high"></div>
+              <div class="cistern__threshold cistern__threshold_medium"></div>
+              <div class="cistern__threshold cistern__threshold_low"></div>
+              <div class="cistern__filling cistern__filling_height_18"></div>
+            </div>
+          </div>
+          <div class="cistern__footer">
+            <div class="cistern__percent">18%</div>
+            <p class="cistern__description">Уровень керосина в резервуаре №3</p>
+          </div>
+        </div>
+        <div class="cistern">
+          <div class="cistern__body">
+            <div class="cistern__weight cistern__weight_border-bottom_green">
+              <span class="cistern__title">Масса</span>
+              <span class="cistern__value">750</span>
+            </div>
+            <div class="cistern__filling-wrapper">
+              <div class="cistern__threshold cistern__threshold_high"></div>
+              <div class="cistern__threshold cistern__threshold_medium"></div>
+              <div class="cistern__threshold cistern__threshold_low"></div>
+              <div class="cistern__filling cistern__filling_height_75"></div>
+            </div>
+          </div>
+          <div class="cistern__footer">
+            <div class="cistern__percent">75%</div>
+            <p class="cistern__description">Уровень керосина в резервуаре №4</p>
+          </div>
+        </div>
+      </div>
+      <footer class="main__footer">
+        <ul class="main__notation-container list">
+          <li class="list__item">
+            <p class="main__notation main__notation_bg-color_green">
+              200 < МАССА < 800
+            </p>
+          </li>
+          <li class="list__item">
+            <p class="main__notation main__notation_bg-color_red">
+              МАССА < 200
+              <br />
+              МАССА > 800
+            </p>
+          </li>
+        </ul>
+      </footer>
+    </main>
+  </body>
 </html>
