@@ -1,0 +1,15 @@
+body {
+  background-color: rgb(27, 30, 39);
+  margin: 25px 30px 32px 30px;
+  padding: 0;
+}
+.main {
+  background-color: #161922;
+  min-height: 820px;
+  padding: 10px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
