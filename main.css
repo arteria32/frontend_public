@@ -1,0 +1,169 @@
+:root {
+    --red-color: #EB5757;
+    --green-color: #00A99D;
+}
+
+
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: block;
+}
+
+button{
+    font-size: 12px;
+    background: #303549;
+    color: white;
+    border: #272A38;
+    padding: 5px;
+    border-radius: 6px;
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-color: rgba(39, 42, 56, 0.5);
+}
+
+.admin {
+    background-color: #272A38;
+    height: 5vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.choise {
+    background-color: #272A3880;
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.selector {
+    color: #606580;
+    padding-right: 2%;
+    padding-top: 2%;
+    text-align: center;
+}
+
+.selector:hover{
+    color: white;
+    background: linear-gradient(0deg, rgba(35, 120, 217, 0.25) 0%, rgba(35, 120, 217, 0) 100%);;
+}
+
+.content{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+.card {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mass {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.less {
+    background-color: var(--red-color);
+    height: 6px;
+    width: 10vw;
+}
+
+.all {
+    background-color: #303549;
+    height: 6px;
+    width: 10vw;
+}
+
+.container {
+    background-color: #0089FF;
+    height: 175px;
+    width: 10vw;
+}
+
+.liquid {
+    background-color: #232532;
+    height: 2%;
+    width: 100%;
+}
+
+.info {
+    padding-right: 10%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+.card_info {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: right;
+}
+.percent {
+
+    padding-right: 5px;
+    padding-top: 5px;
+    background: #232532;
+    opacity: 0.89;
+    border-radius: 6px;
+    width: 2.5em;
+    height: 2em;
+    align-items: center;
+    align-self: center;
+}
+.info_text {
+    font-size: 10px;
+    margin-bottom: 15px;
+}
+
+#LK2 {
+    height: 32%;
+}
+
+.green {
+    background-color: var(--green-color);
+    height: 6px;
+    width: 10vw;
+}
+
+#LK3 {
+    height: 82%;
+}
+.green_block {
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: var(--green-color);
+    height: 20px;
+    width: 20px;
+    border-radius: 6px;
+}
+
+.red_block {
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: var(--red-color);
+    height: 20px;
+    width: 20px;
+    border-radius: 6px;
+}
