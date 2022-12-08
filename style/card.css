@@ -1,8 +1,5 @@
 .card {
-  width: 197px;
-}
-.main__card {
-  padding-left: 55px;
+   width: 197px; 
 }
 .card__text {
   display: flex;
