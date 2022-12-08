@@ -1,11 +1,342 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Hello World!</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Резервуары</title>
 </head>
-
-<body>
-    hello,world
+<body class="page-container">
+        <header class="header-container">
+            <nav class="navigation main-navigation">
+                <div class="title-information">
+                    <img class="icons" src="/img/reservoir.svg" width="16" height="13.26" alt="Иконка резервуаров">
+                    <span class="title-information-link" href="#">Информация по резервуарам</span>
+                </div>
+                <button class="main-navigation-button" type="button">
+                    <span class="text-button">Панель администратора</span>
+                </button>
+            </nav>
+            <nav class="navigation fuel-navigation">
+                <ul class="fuel-navigation-list">
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="#">АИ-92</a>
+                    </li>
+                    <li class="navigation-item navigation-item_current">
+                        <a class="navigation-link navigation-link_current" href="#">КЕРОСИН</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="#">ДТ-ЗИМНЕЕ</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="#">ТС-1</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="#">АИ-95</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="#">МАЗУТ</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="#">ГАЗОЙЛЬ</a>
+                    </li>
+                    <li class="navigation-item">
+                        <a class="navigation-link" href="#">НЕФТЬ</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-container">
+            <ul class="reservoir-container">
+                 <li class="reservoir-item">
+                    <div class="reservoir-title">
+                        <span>Масса</span>
+                        <span class="weight-reservoir">980</span>
+                    </div>
+                    <div class="reservoir-content">
+                        <div class="reservoir-mass reservoir-mass_red"></div>
+                        <div class="reservoir-flask">
+                            <div class="flask-basement"></div>
+                            <div class="flask-content">
+                                <div class="flask-mesure">
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                </div>
+                                <div class="flask-fuel-level flask-fuel-level_largest"></div>
+                            </div>
+                            <div class="flask-basement"></div>
+                        </div>
+                    </div>
+                    <div class="reservoir-info">
+                        <div class="percent-square"><span class="percent-reservoir">98%</span></div>
+                        <span>Уровень<br>керосина<br>в резервуаре №1</span>
+                    </div>
+                 </li>
+                 <li class="reservoir-item">
+                    <div class="reservoir-title">
+                        <span>Масса</span>
+                        <span class="weight-reservoir">680</span>
+                    </div>
+                    <div class="reservoir-content">
+                        <div class="reservoir-mass reservoir-mass_green"></div>
+                        <div class="reservoir-flask">
+                            <div class="flask-basement"></div>
+                            <div class="flask-content">
+                                <div class="flask-mesure">
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                </div>
+                                <div class="flask-fuel-level flask-fuel-level_medium"></div>
+                            </div>
+                            <div class="flask-basement"></div>
+                        </div>
+                    </div>
+                    <div class="reservoir-info">
+                        <div class="percent-square"><span class="percent-reservoir">68%</span></div>
+                        <span>Уровень<br>керосина<br>в резервуаре №2</span>
+                    </div>
+                 </li>
+                 <li class="reservoir-item">
+                    <div class="reservoir-title">
+                        <span>Масса</span>
+                        <span class="weight-reservoir">180</span>
+                    </div>
+                    <div class="reservoir-content">
+                        <div class="reservoir-mass reservoir-mass_red"></div>
+                        <div class="reservoir-flask">
+                            <div class="flask-basement"></div>
+                            <div class="flask-content">
+                                <div class="flask-mesure">
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                </div>
+                                <div class="flask-fuel-level flask-fuel-level_small"></div>
+                            </div>
+                            <div class="flask-basement"></div>
+                        </div>
+                    </div>
+                    <div class="reservoir-info">
+                        <div class="percent-square"><span class="percent-reservoir">18%</span></div>
+                        <span>Уровень<br>керосина<br>в резервуаре №3</span>
+                    </div>
+                 </li>
+                 <li class="reservoir-item">
+                    <div class="reservoir-title">
+                        <span>Масса</span>
+                        <span class="weight-reservoir">750</span>
+                    </div>
+                    <div class="reservoir-content">
+                        <div class="reservoir-mass reservoir-mass_green"></div>
+                        <div class="reservoir-flask">
+                            <div class="flask-basement"></div>
+                            <div class="flask-content">
+                                <div class="flask-mesure">
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                </div>
+                                <div class="flask-fuel-level flask-fuel-level_large"></div>
+                            </div>
+                            <div class="flask-basement"></div>
+                        </div>
+                    </div>
+                    <div class="reservoir-info">
+                        <div class="percent-square"><span class="percent-reservoir">75%</span></div>
+                        <span>Уровень<br>керосина<br>в резервуаре №4</span>
+                    </div>
+                 </li>
+                 <li class="reservoir-item">
+                    <div class="reservoir-title">
+                        <span>Масса</span>
+                        <span class="weight-reservoir">180</span>
+                    </div>
+                    <div class="reservoir-content">
+                        <div class="reservoir-mass reservoir-mass_red"></div>
+                        <div class="reservoir-flask">
+                            <div class="flask-basement"></div>
+                            <div class="flask-content">
+                                <div class="flask-mesure">
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                </div>
+                                <div class="flask-fuel-level flask-fuel-level_small"></div>
+                            </div>
+                            <div class="flask-basement"></div>
+                        </div>
+                    </div>
+                    <div class="reservoir-info">
+                        <div class="percent-square"><span class="percent-reservoir">18%</span></div>
+                        <span>Уровень<br>керосина<br>в резервуаре №3</span>
+                    </div>
+                 </li>
+                 <li class="reservoir-item">
+                    <div class="reservoir-title">
+                        <span>Масса</span>
+                        <span class="weight-reservoir">750</span>
+                    </div>
+                    <div class="reservoir-content">
+                        <div class="reservoir-mass reservoir-mass_green"></div>
+                        <div class="reservoir-flask">
+                            <div class="flask-basement"></div>
+                            <div class="flask-content">
+                                <div class="flask-mesure">
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                </div>
+                                <div class="flask-fuel-level flask-fuel-level_large"></div>
+                            </div>
+                            <div class="flask-basement"></div>
+                        </div>
+                    </div>
+                    <div class="reservoir-info">
+                        <div class="percent-square"><span class="percent-reservoir">75%</span></div>
+                        <span>Уровень<br>керосина<br>в резервуаре №4</span>
+                    </div>
+                 </li>
+                 <li class="reservoir-item">
+                    <div class="reservoir-title">
+                        <span>Масса</span>
+                        <span class="weight-reservoir">750</span>
+                    </div>
+                    <div class="reservoir-content">
+                        <div class="reservoir-mass reservoir-mass_green"></div>
+                        <div class="reservoir-flask">
+                            <div class="flask-basement"></div>
+                            <div class="flask-content">
+                                <div class="flask-mesure">
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                </div>
+                                <div class="flask-fuel-level flask-fuel-level_large"></div>
+                            </div>
+                            <div class="flask-basement"></div>
+                        </div>
+                    </div>
+                    <div class="reservoir-info">
+                        <div class="percent-square"><span class="percent-reservoir">75%</span></div>
+                        <span>Уровень<br>керосина<br>в резервуаре №4</span>
+                    </div>
+                 </li>
+                 <li class="reservoir-item">
+                    <div class="reservoir-title">
+                        <span>Масса</span>
+                        <span class="weight-reservoir">980</span>
+                    </div>
+                    <div class="reservoir-content">
+                        <div class="reservoir-mass reservoir-mass_red"></div>
+                        <div class="reservoir-flask">
+                            <div class="flask-basement"></div>
+                            <div class="flask-content">
+                                <div class="flask-mesure">
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                </div>
+                                <div class="flask-fuel-level flask-fuel-level_largest"></div>
+                            </div>
+                            <div class="flask-basement"></div>
+                        </div>
+                    </div>
+                    <div class="reservoir-info">
+                        <div class="percent-square"><span class="percent-reservoir">98%</span></div>
+                        <span>Уровень<br>керосина<br>в резервуаре №1</span>
+                    </div>
+                 </li>
+                 <li class="reservoir-item">
+                    <div class="reservoir-title">
+                        <span>Масса</span>
+                        <span class="weight-reservoir">680</span>
+                    </div>
+                    <div class="reservoir-content">
+                        <div class="reservoir-mass reservoir-mass_green"></div>
+                        <div class="reservoir-flask">
+                            <div class="flask-basement"></div>
+                            <div class="flask-content">
+                                <div class="flask-mesure">
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                </div>
+                                <div class="flask-fuel-level flask-fuel-level_medium"></div>
+                            </div>
+                            <div class="flask-basement"></div>
+                        </div>
+                    </div>
+                    <div class="reservoir-info">
+                        <div class="percent-square"><span class="percent-reservoir">68%</span></div>
+                        <span>Уровень<br>керосина<br>в резервуаре №2</span>
+                    </div>
+                 </li>
+                 <li class="reservoir-item">
+                    <div class="reservoir-title">
+                        <span>Масса</span>
+                        <span class="weight-reservoir">180</span>
+                    </div>
+                    <div class="reservoir-content">
+                        <div class="reservoir-mass reservoir-mass_red"></div>
+                        <div class="reservoir-flask">
+                            <div class="flask-basement"></div>
+                            <div class="flask-content">
+                                <div class="flask-mesure">
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                </div>
+                                <div class="flask-fuel-level flask-fuel-level_small"></div>
+                            </div>
+                            <div class="flask-basement"></div>
+                        </div>
+                    </div>
+                    <div class="reservoir-info">
+                        <div class="percent-square"><span class="percent-reservoir">18%</span></div>
+                        <span>Уровень<br>керосина<br>в резервуаре №3</span>
+                    </div>
+                 </li>
+                 <li class="reservoir-item">
+                    <div class="reservoir-title">
+                        <span>Масса</span>
+                        <span class="weight-reservoir">750</span>
+                    </div>
+                    <div class="reservoir-content">
+                        <div class="reservoir-mass reservoir-mass_green"></div>
+                        <div class="reservoir-flask">
+                            <div class="flask-basement"></div>
+                            <div class="flask-content">
+                                <div class="flask-mesure">
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                    <span class="mesure-line"></span>
+                                </div>
+                                <div class="flask-fuel-level flask-fuel-level_medium"></div>
+                            </div>
+                            <div class="flask-basement"></div>
+                        </div>
+                    </div>
+                    <div class="reservoir-info">
+                        <div class="percent-square"><span class="percent-reservoir">75%</span></div>
+                        <span>Уровень<br>керосина<br>в резервуаре №4</span>
+                    </div>
+                 </li> 
+            </ul>
+        </main>
+        <footer class="footer-page">
+            <ul class="footer-info-list">
+                <li class="footer-info-container">
+                    <div class="footer-info-square footer-info-square_green"></div>
+                    <span>200 < МАССА < 800</span>
+                </li>
+                <li class="footer-info-container">
+                    <div class="footer-info-square footer-info-square_red"></div>
+                    <span>МАССА < 200<br>МАССА > 800</span>
+                </li>
+            </ul>
+        </footer>
 </body>
-
 </html>

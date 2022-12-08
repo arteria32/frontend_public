@@ -1,0 +1,347 @@
+@font-face {
+  font-family: "Tahoma";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/Tahoma.woff)format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/Roboto-400.woff2)format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/fonts/Roboto-700.woff2)format("woff2");
+  font-display: swap;
+}
+
+* {
+  all: unset;
+  display: revert;
+}
+
+:root {
+  --height-reservoir-square: 124px;
+  --reservoir-width: 200px;
+
+  --background-color: #1B1E27;
+  --main-color : #171A23;
+  --medium-dark-color: #272A38;
+  --medium-dark-alfa50-color: #272A3880;
+  --dark-color: #12151E80;
+  --white-color: #ffffff;
+  --white-hover-color: #ffffff80;
+  --light-color: #F9F9F9;
+  --light-grey-color: #D7E2F2;
+  --nav-btn-color: #303549;
+  --nav-btn-hover-color: #30354980;
+  --fuel-link-color: #606580;
+  --fuel-link_current-color: #303549;
+  --fuel-link-hover-color: #303549;
+  --light-blue-color: #0089FF;
+  --aqua-color: #04978D;
+  --red-color: #EB5757;
+  --flask-color: #232532;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  padding: 25px 30px 32px 30px;
+  background-color: var(--background-color);
+}
+
+/* === header & navigation === */
+
+.navigation {
+  display: flex;
+  align-items: center;
+  min-height: 54px;
+  padding: 0 14px;
+}
+
+.main-navigation {
+  background-color: var(--medium-dark-color);
+  justify-content: space-between;
+}
+
+.fuel-navigation {
+  background-color: var(--medium-dark-alfa50-color);
+  justify-content: center;
+}
+
+.title-information {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.title-information-link {
+  font-family: "Tahoma";
+  font-size: 12px;
+  color: var(--light-grey-color);
+  text-align: center;
+  cursor: pointer;
+}
+
+.title-information-link:hover {
+  color: var(--white-hover-color);
+}
+
+.text-button {
+  font-family: "Tahoma";
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.main-navigation-button {
+  cursor: pointer;
+  appearance: none;
+  border: 0;
+  border-radius: 4px;
+  color: var(--white-color);
+  background: var(--nav-btn-color);
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.main-navigation-button:hover {
+  background: var(--nav-btn-hover-color);
+}
+
+.fuel-navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0 40px;
+}
+
+.navigation-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.navigation-item_current {
+  border-bottom: 2px solid var(--light-blue-color);
+}
+
+.navigation-link {
+  color: var(--fuel-link-color);
+  position: relative;
+}
+
+.navigation-link:hover {
+  color: var(--fuel-link-hover-color);
+}
+
+.navigation-link_current {
+  color: var(--white-color)
+}
+
+.navigation-link_current::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  bottom: -19px;
+  left: -10px;
+  height: 10px;
+  background: linear-gradient(0deg, rgba(35, 120, 217, 0.25) 0%, rgba(35, 120, 217, 0) 100%);
+}
+
+/* === main content === */
+
+.main-container {
+  background-color: var(--main-color);
+  flex: 1;
+}
+
+.reservoir-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  justify-items: center;
+  gap: 90px 60px ;
+  list-style: none;
+  padding: 74px 55px 148px 55px;
+}
+
+.reservoir-item {
+  width: var(--reservoir-width);
+}
+
+.reservoir-title {
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 9px;
+}
+
+.reservoir-content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.reservoir-mass {
+  width: var(--reservoir-width);
+  height: 4px;
+}
+
+.reservoir-mass_green {
+  background-color: var(--aqua-color);
+}
+
+.reservoir-mass_red {
+  background-color: var(--red-color);
+}
+
+.reservoir-flask {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flask-basement {
+  width: var(--reservoir-width);
+  height: 10px;
+  background-color: var(--nav-btn-color);
+
+}
+
+.flask-content {
+  width: calc(var(--reservoir-width) - 2 * 6px);
+  height: 124px;
+  background-color: var(--flask-color);
+  position: relative;
+}
+
+.flask-mesure {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  padding-left: 18px;
+  position: absolute;
+}
+
+.mesure-line{
+  background-color: var(--light-color);
+  height: 0.5px;
+  width: 38px;
+}
+
+.flask-fuel-level {
+  background: var(--light-blue-color);
+}
+
+.flask-fuel-level_small {
+  height: calc(var(--height-reservoir-square) * 0.18);
+  margin-top: calc(var(--height-reservoir-square) * 0.82);
+  background: var(--light-blue-color);
+}
+
+.flask-fuel-level_medium {
+  height: calc(var(--height-reservoir-square) * 0.68);
+  margin-top: calc(var(--height-reservoir-square) * 0.32);
+  background: var(--light-blue-color);
+}
+
+.flask-fuel-level_large {
+  height: calc(var(--height-reservoir-square) * 0.75);
+  margin-top: calc(var(--height-reservoir-square) * 0.25);
+  background: var(--light-blue-color);
+}
+
+.flask-fuel-level_largest {
+  height: calc(var(--height-reservoir-square) * 0.98);
+  margin-top: calc(var(--height-reservoir-square) * 0.02);
+  background: var(--light-blue-color);
+}
+
+.reservoir-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+}
+
+.percent-reservoir {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.percent-square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+  background: var(--medium-dark-color);
+}
+
+.weight-reservoir {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+
+/* === footer === */
+
+.footer-page {
+  background-color: var(--medium-dark-alfa50-color);
+}
+
+.footer-info-list {
+  padding: 10px 25px 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+}
+
+.footer-info-container {
+  display: flex;
+  align-items:center;
+  gap: 23px;
+}
+
+.footer-info-square {
+  height: 23px;
+  width: 23px;
+  border-radius: 3px;
+}
+
+.footer-info-square_green {
+  background: var(--aqua-color);
+}
+
+.footer-info-square_red {
+  background: var(--red-color);
+}
