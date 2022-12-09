@@ -92,9 +92,10 @@ background: rgba(0, 0, 0, 0.866);
     top: 25%;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
 }
-.squ1{
-    position: absolute;
+.squ1{ 
+    position: relative;
     width: 350px;
     height: 350px;
 }
@@ -190,8 +191,7 @@ background: rgba(0, 0, 0, 0.866);
 
 
 .squ2{
-    position: absolute;
-    left: 350px;
+    position: relative;
     width: 350px;
     height: 350px;
 }
@@ -276,6 +276,295 @@ background: rgba(0, 0, 0, 0.866);
     color: white;
 }
 .word2_2{
+    position: relative;
+    max-width: 110px;
+    max-height: 20px;
+    top: 230px;
+    left: 150px;
+    color: white;
+}
+
+
+
+.squ3{
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+.sq3{
+    position: relative;
+    left:50px;
+    top: 150px;
+    width: 185.12px;
+    height: 23.21px;
+ 
+    background-color: #0089FF;    
+}
+.l1_3{
+    position: absolute;
+    left: 8%;
+    top: 25%;
+    width: 50px;
+    height: 1px;
+    background: white;
+}
+.l2_3{
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    width: 50px;
+    height: 1px;
+    background: white;
+}
+.l3_3{
+    position: absolute;
+    left: 8%;
+    top: 75%;
+    width: 50px;
+    height: 1px;
+    background: white;
+}
+.line1_3{
+    position: absolute;
+    top: 194px;
+    right: 107px;
+    width: 197.12px;
+    height: 10.1px;
+    background: #303549;
+}
+.line2_3{
+    position: absolute;
+    top: 55.5px;
+    right: 108.5px;
+    width: 197.12px;
+    height: 10.1px;
+    border-top: 4.1px solid #EB5757;
+    background: #303549;
+}
+.word1_3{
+    position: absolute;
+    top: 35px;
+    left: 50px;
+    color: white;
+}
+.number1_3{
+    position: absolute;
+    top: 35px;
+    left: 200px;
+    color: white;
+}
+.msq3{
+    position: absolute;
+    top: 230px;
+    left: 50px;
+    width: 56px;
+    height: 56px;
+    background: #303549;
+}
+.number2_3{
+    position: relative;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    top: 21px;
+    left: 17px;
+    color: white;
+}
+.word2_3{
+    position: relative;
+    max-width: 110px;
+    max-height: 20px;
+    top: 230px;
+    left: 150px;
+    color: white;
+}
+
+
+
+
+.squ4{
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+.sq4{
+    position: relative;
+    left:50px;
+    top: 85px;
+    width: 185.12px;
+    height: 79.67px;
+    border-top: 8.6px solid #232532;
+    background-color: #0089FF;    
+}
+.l1_4{
+    position: absolute;
+    left: 8%;
+    top: 25%;
+    width: 50px;
+    height: 1px;
+    background: white;
+}
+.l2_4{
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    width: 50px;
+    height: 1px;
+    background: white;
+}
+.l3_4{
+    position: absolute;
+    left: 8%;
+    top: 75%;
+    width: 50px;
+    height: 1px;
+    background: white;
+}
+.line1_4{
+    position: absolute;
+    top: 194px;
+    right: 107px;
+    width: 197.12px;
+    height: 10.1px;
+    background: #303549;
+}
+.line2_4{
+    position: absolute;
+    top: 55.5px;
+    right: 108.5px;
+    width: 197.12px;
+    height: 10.1px;
+    border-top: 4.1px solid #00A99D;
+    background: #303549;
+}
+.word1_4{
+    position: absolute;
+    top: 35px;
+    left: 50px;
+    color: white;
+}
+.number1_4{
+    position: absolute;
+    top: 35px;
+    left: 200px;
+    color: white;
+}
+.msq4{
+    position: absolute;
+    top: 230px;
+    left: 50px;
+    width: 56px;
+    height: 56px;
+    background: #303549;
+}
+.number2_4{
+    position: relative;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    top: 21px;
+    left: 17px;
+    color: white;
+}
+.word2_4{
+    position: relative;
+    max-width: 110px;
+    max-height: 20px;
+    top: 230px;
+    left: 150px;
+    color: white;
+}
+
+
+
+.squ5{
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+.sq5{
+    position: relative;
+    left:50px;
+    top: 150px;
+    width: 185.12px;
+    height: 23.21px;
+ 
+    background-color: #0089FF;    
+}
+.l1_5{
+    position: absolute;
+    left: 8%;
+    top: 25%;
+    width: 50px;
+    height: 1px;
+    background: white;
+}
+.l2_5{
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    width: 50px;
+    height: 1px;
+    background: white;
+}
+.l3_5{
+    position: absolute;
+    left: 8%;
+    top: 75%;
+    width: 50px;
+    height: 1px;
+    background: white;
+}
+.line1_5{
+    position: absolute;
+    top: 194px;
+    right: 107px;
+    width: 197.12px;
+    height: 10.1px;
+    background: #303549;
+}
+.line2_5{
+    position: absolute;
+    top: 55.5px;
+    right: 108.5px;
+    width: 197.12px;
+    height: 10.1px;
+    border-top: 4.1px solid #EB5757;
+    background: #303549;
+}
+.word1_5{
+    position: absolute;
+    top: 35px;
+    left: 50px;
+    color: white;
+}
+.number1_5{
+    position: absolute;
+    top: 35px;
+    left: 200px;
+    color: white;
+}
+.msq5{
+    position: absolute;
+    top: 230px;
+    left: 50px;
+    width: 56px;
+    height: 56px;
+    background: #303549;
+}
+.number2_5{
+    position: relative;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    top: 21px;
+    left: 17px;
+    color: white;
+}
+.word2_5{
     position: relative;
     max-width: 110px;
     max-height: 20px;
