@@ -1,11 +1,341 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Hello World!</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Courses</title>
 </head>
-
 <body>
-    hello,world
+    <div class="container">
+        <div class="admin">
+            <div class="admin-info">
+                <span class="admin-info-text">Информация по резервуарам</span>
+            </div>
+            <div class="admin-panel">
+                <span class="admin-panel-text">Панель администратора</span>
+            </div>
+        </div>
+        <div class = "menu">
+            <nav class = "menu-nav">
+                <div class="menu-item">
+                    <a href="#" class="menu-item-link">аи-92</a>
+                </div>
+                <div class="menu-item_active">
+                    <a href="#" class="menu-item-link_active">керосин</a>
+                    <div class="menu-item-line_active"></div>
+                </div>
+                <div class="menu-item">
+                    <a href="#" class="menu-item-link">дт зимнее</a>
+                </div>
+                <div class="menu-item">
+                    <a href="#" class="menu-item-link">тс-1</a>
+                </div>
+                <div class="menu-item">
+                    <a href="#" class="menu-item-link">аи-95</a>
+                </div>
+                <div class="menu-item">
+                    <a href="#" class="menu-item-link">мазут</a>
+                </div>
+                <div class="menu-item">
+                    <a href="#" class="menu-item-link">газойль</a>
+                </div>
+                <div class="menu-item">
+                    <a href="#" class="menu-item-link">нефть</a>
+                </div>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="block">
+                <div class="weight">
+                    <div class="weight-text">Масса</div>
+                    <div class="weight-number">980</div>
+                </div>
+                <div class="line-red"></div>
+                <div class="underline"></div>
+                <div class="capacity">
+                    <div class="capacity-volume">
+                        <div class="capacity-volume-count"></div>
+                        <div class="capacity-volume-line">
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="underline"></div>
+                <div class="result">
+                    <div class="result-procent">
+                        <div class="result-procent-text">98%</div>
+                    </div>
+                    <div class="result-text">Уровень <br>керосина <br>в резервуаре №1</div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="weight">
+                    <div class="weight-text">Масса</div>
+                    <div class="weight-number">680</div>
+                </div>
+                <div class="line-green"></div>
+                <div class="underline"></div>
+                <div class="capacity">
+                    <div class="capacity-volume">
+                        <div class="capacity-volume-count" style = "height:87px"></div>
+                        <div class="capacity-volume-line">
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="underline"></div>
+                <div class="result">
+                    <div class="result-procent">
+                        <div class="result-procent-text">68%</div>
+                    </div>
+                    <div class="result-text">Уровень <br>керосина <br>в резервуаре №2</div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="weight">
+                    <div class="weight-text">Масса</div>
+                    <div class="weight-number">180</div>
+                </div>
+                <div class="line-red"></div>
+                <div class="underline"></div>
+                <div class="capacity">
+                    <div class="capacity-volume">
+                        <div class="capacity-volume-count" style = "height:23px"></div>
+                        <div class="capacity-volume-line">
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="underline"></div>
+                <div class="result">
+                    <div class="result-procent">
+                        <div class="result-procent-text">18%</div>
+                    </div>
+                    <div class="result-text">Уровень <br>керосина <br>в резервуаре №3</div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="weight">
+                    <div class="weight-text">Масса</div>
+                    <div class="weight-number">750</div>
+                </div>
+                <div class="line-green"></div>
+                <div class="underline"></div>
+                <div class="capacity">
+                    <div class="capacity-volume">
+                        <div class="capacity-volume-count" style = "height:93px"></div>
+                        <div class="capacity-volume-line">
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="underline"></div>
+                <div class="result">
+                    <div class="result-procent">
+                        <div class="result-procent-text">75%</div>
+                    </div>
+                    <div class="result-text">Уровень <br>керосина <br>в резервуаре №4</div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="weight">
+                    <div class="weight-text">Масса</div>
+                    <div class="weight-number">180</div>
+                </div>
+                <div class="line-red"></div>
+                <div class="underline"></div>
+                <div class="capacity">
+                    <div class="capacity-volume">
+                        <div class="capacity-volume-count" style = "height:23px"></div>
+                        <div class="capacity-volume-line">
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="underline"></div>
+                <div class="result">
+                    <div class="result-procent">
+                        <div class="result-procent-text">18%</div>
+                    </div>
+                    <div class="result-text">Уровень <br>керосина <br>в резервуаре №3</div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="weight">
+                    <div class="weight-text">Масса</div>
+                    <div class="weight-number">750</div>
+                </div>
+                <div class="line-green"></div>
+                <div class="underline"></div>
+                <div class="capacity">
+                    <div class="capacity-volume">
+                        <div class="capacity-volume-count" style = "height:93px"></div>
+                        <div class="capacity-volume-line">
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="underline"></div>
+                <div class="result">
+                    <div class="result-procent">
+                        <div class="result-procent-text">85%</div>
+                    </div>
+                    <div class="result-text">Уровень <br>керосина <br>в резервуаре №4</div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="weight">
+                    <div class="weight-text">Масса</div>
+                    <div class="weight-number">750</div>
+                </div>
+                <div class="line-green"></div>
+                <div class="underline"></div>
+                <div class="capacity">
+                    <div class="capacity-volume">
+                        <div class="capacity-volume-count" style = "height:93px"></div>
+                        <div class="capacity-volume-line">
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="underline"></div>
+                <div class="result">
+                    <div class="result-procent">
+                        <div class="result-procent-text">75%</div>
+                    </div>
+                    <div class="result-text">Уровень <br>керосина <br>в резервуаре №4</div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="weight">
+                    <div class="weight-text">Масса</div>
+                    <div class="weight-number">980</div>
+                </div>
+                <div class="line-red"></div>
+                <div class="underline"></div>
+                <div class="capacity">
+                    <div class="capacity-volume">
+                        <div class="capacity-volume-count"></div>
+                        <div class="capacity-volume-line">
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="underline"></div>
+                <div class="result">
+                    <div class="result-procent">
+                        <div class="result-procent-text">98%</div>
+                    </div>
+                    <div class="result-text">Уровень <br>керосина <br>в резервуаре №1</div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="weight">
+                    <div class="weight-text">Масса</div>
+                    <div class="weight-number">680</div>
+                </div>
+                <div class="line-green"></div>
+                <div class="underline"></div>
+                <div class="capacity">
+                    <div class="capacity-volume">
+                        <div class="capacity-volume-count" style = "height:90px"></div>
+                        <div class="capacity-volume-line">
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="underline"></div>
+                <div class="result">
+                    <div class="result-procent">
+                        <div class="result-procent-text">68%</div>
+                    </div>
+                    <div class="result-text">Уровень <br>керосина <br>в резервуаре №2</div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="weight">
+                    <div class="weight-text">Масса</div>
+                    <div class="weight-number">180</div>
+                </div>
+                <div class="line-red"></div>
+                <div class="underline"></div>
+                <div class="capacity">
+                    <div class="capacity-volume">
+                        <div class="capacity-volume-count" style = "height:23px"></div>
+                        <div class="capacity-volume-line">
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="underline"></div>
+                <div class="result">
+                    <div class="result-procent">
+                        <div class="result-procent-text">18%</div>
+                    </div>
+                    <div class="result-text">Уровень <br>керосина <br>в резервуаре №3</div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="weight">
+                    <div class="weight-text">Масса</div>
+                    <div class="weight-number">750</div>
+                </div>
+                <div class="line-green"></div>
+                <div class="underline"></div>
+                <div class="capacity">
+                    <div class="capacity-volume">
+                        <div class="capacity-volume-count"></div>
+                        <div class="capacity-volume-line">
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                            <div class="capacity-volume-subline"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="underline"></div>
+                <div class="result">
+                    <div class="result-procent">
+                        <div class="result-procent-text">75%</div>
+                    </div>
+                    <div class="result-text">Уровень <br>керосина <br>в резервуаре №4</div>
+                </div>
+            </div>
+        </div>
+        <div class="under">
+            <div class="under-rect-green"></div>
+            <div class="under-text-first"> 200 &lt; МАССА &gt; 800</div>
+            <div class="under-rect-red"></div>
+            <div class="under-text-second">
+                <div class="under-text-second-title">МАССА &lt; 200</div>
+                <div class="under-text-second-subtitle">МАССА &gt; 800</div>
+            </div>
+        </div>
+        
+    </div>
 </body>
-
 </html>
