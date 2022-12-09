@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.page {
+	font-family: Tahoma, sans-serif;
+	background-color: $page-bg;
+	color: $main-text;
+	margin: 0 auto;
+	min-width: 345px;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	
+	&__wrap {
+		overflow: hidden;
+	}
+	&__main {
+		margin: 0 30px;
+	}
+}
+
