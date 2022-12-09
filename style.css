@@ -1,0 +1,220 @@
+body{
+    background-color: #1B1E27;
+    box-sizing: border-box;
+    font-family:'Roboto', sana-serif;
+    colof: #ffffff
+}
+.topnav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    max-width: 960px;
+    height: 50px;
+    margin: 0 auto;
+    line-height: 50px;
+    font-family: 'Tahoma';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #ffffff;
+}
+.topnav__link{
+    font-family: 'Tahoma';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    margin: 0 20px;
+    transition: .3s ease-in-out;
+}
+a:link {
+  color: #606580; 
+}
+a:visited {
+  color: #ffffff;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1860px;
+    height: 30px;
+    line-height: 50px;
+    background-color: #232532; 
+}
+
+.left{
+    height: 14px;
+    left: 3.8%;
+    right: 86.88%;
+    line-height: 14px;
+    color: #D7E2F2;
+    position: left;
+    width: 200px;
+    padding-right: 20px;
+    font-size: 14px;
+    line-height: 16px;
+}
+button{
+    background-color: #303549;
+    border-radius: 5px;
+    color: #ffffff;
+    border: none;
+}
+
+.main-container{
+    display: flex;
+    owerflow: scroll;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 5em;
+}
+
+p{
+    margin: 0;
+    color: #ffffff;
+}
+.reserviors{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reservior{
+    display: flex;
+    flex-direction: column;
+    width: 197px;
+}
+.reservior_text{
+    display: flex;
+    justify-content: space-between;
+    marign-bottom: 10px;
+}
+.reservior_text p{
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 21px;
+    justify-content: center;
+}
+.reservior_body{
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 185px;
+    height: 140px;
+    margin-bottom: 30px;
+    padding: 14px 0 10px 0;
+    align-self: center;
+    background-color: #232532;
+}
+.reservior_body_red::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #303549;
+    border-top: 4px solid #EB5757;
+}
+.reservior_body_green::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #303549;
+    border-top: 4px solid #04978D;
+}
+.reservior_body::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #303549;
+}
+.reservior_body_lines{
+    position: absolute;
+    top: 46px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 38px;
+    height: 63px;
+    z-index: 1;
+}
+.reservior_body_line{
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+}
+.reservior_body_inner1{
+    width: 100%;
+    height: 98%;
+    background-color: #0089FF;
+}
+.reservior_body_inner2{
+    width: 100%;
+    height: 68%;
+    background-color: #0089FF;
+}
+.reservior_body_inner3{
+    width: 100%;
+    height: 18%;
+    background-color: #0089FF;
+}
+.reservior_body_inner4{
+    width: 100%;
+    height: 75%;
+    background-color: #0089FF;
+}
+.reservior_level{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.reservior_level_percent{
+    padding: 18px 9px 15px 9px;
+    background-color: #232532;
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 700;
+    border-radius: 6px;
+}
+.reservior_level_text{
+    width: 135px;
+    padding-right: 20px;
+    font-size: 14px;
+    line-height: 16px;
+}
+.bottom{
+    display: flex;
+    flex-direction: row;
+    lign-items: end;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 1860px;
+}
+.bottom_text{
+    width: 135px;
+    padding-right: 20px;
+    font-size: 14px;
+    line-height: 16px;  
+}
+.square1{
+    width: 15px;
+    height: 15px;
+    background: #EB5757;
+}
+.square2{
+    width: 15px;
+    height: 15px;
+    background: #04978D;
+}
