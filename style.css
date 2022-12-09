@@ -1,0 +1,285 @@
+body{
+background: rgba(0, 0, 0, 0.866); 
+}
+
+
+.rectangle{
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 2.31%;
+    min-height: 30px;
+    bottom: 92.69%;
+    display: flex;
+    background: #272A38;    
+}
+.inf{
+    max-width: 100%;
+    min-width: 10%;
+    min-height: 70%;
+    margin-left: 10px;
+    margin-top: 10px;
+    align-self: flex-start;
+    align-self: center;
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    
+    color: #D7E2F2;   
+}
+ .rectangle1{
+    max-width: 100%;
+    min-width: 10%;
+    min-height: 70%;
+    margin-left: auto;
+    margin-right: 20px;
+    align-self: flex-end;
+    align-self: center;
+    background: #303549;
+    border-radius: 4px;
+} 
+ .panel{
+    padding: 0 10px;
+    margin-top: 5px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+
+    
+    color: #D7E2F2;  
+} 
+
+
+.assortment{
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 7.33%;
+    min-height: 30px;
+    bottom: 90.69%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    background:rgba(39, 42, 56, 0.5);
+    border-radius: 0px;
+}
+.product{
+    align-self: center;
+    margin: 10px;
+    font-family: 'Tahoma';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    
+    color: #606580;  
+}
+.product_2{
+    padding: 0px 8px;
+    color: #D7E2F2;
+    border-bottom: 3px solid blue;
+}
+
+
+
+
+.square{
+    position: absolute;
+    left: 8%;
+    top: 25%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.squ1{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+}
+.sq1{
+    position: relative;
+    left:50px;
+    top: 50px;
+    width: 185.12px;
+    height: 115.85px;
+    border-top: 8.6px solid #232532;
+    background-color: #0089FF;    
+}
+.l1{
+    position: absolute;
+    left: 8%;
+    top: 25%;
+    width: 50px;
+    height: 1px;
+    background: white;
+}
+.l2{
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    width: 50px;
+    height: 1px;
+    background: white;
+}
+.l3{
+    position: absolute;
+    left: 8%;
+    top: 75%;
+    width: 50px;
+    height: 1px;
+    background: white;
+}
+.line1{
+    position: absolute;
+    top: 194px;
+    right: 107px;
+    width: 197.12px;
+    height: 10.1px;
+    background: #303549;
+}
+.line2{
+    position: absolute;
+    top: 55.5px;
+    right: 108.5px;
+    width: 197.12px;
+    height: 10.1px;
+    border-top: 4.1px solid #EB5757;
+    background: #303549;
+}
+.word1{
+    position: absolute;
+    top: 35px;
+    left: 50px;
+    color: white;
+}
+.number1{
+    position: absolute;
+    top: 35px;
+    left: 200px;
+    color: white;
+}
+.msq{
+    position: absolute;
+    top: 230px;
+    left: 50px;
+    width: 56px;
+    height: 56px;
+    background: #303549;
+}
+.number2{
+    position: relative;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    top: 21px;
+    left: 17px;
+    color: white;
+}
+.word2{
+    position: relative;
+    max-width: 110px;
+    max-height: 20px;
+    top: 230px;
+    left: 150px;
+    color: white;
+}
+
+
+
+.squ2{
+    position: absolute;
+    left: 350px;
+    width: 350px;
+    height: 350px;
+}
+.sq2{
+    position: relative;
+    left:50px;
+    top: 85px;
+    width: 185.12px;
+    height: 79.67px;
+    border-top: 8.6px solid #232532;
+    background-color: #0089FF;    
+}
+.l1_2{
+    position: absolute;
+    left: 8%;
+    top: 25%;
+    width: 50px;
+    height: 1px;
+    background: white;
+}
+.l2_2{
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    width: 50px;
+    height: 1px;
+    background: white;
+}
+.l3_2{
+    position: absolute;
+    left: 8%;
+    top: 75%;
+    width: 50px;
+    height: 1px;
+    background: white;
+}
+.line1_2{
+    position: absolute;
+    top: 194px;
+    right: 107px;
+    width: 197.12px;
+    height: 10.1px;
+    background: #303549;
+}
+.line2_2{
+    position: absolute;
+    top: 55.5px;
+    right: 108.5px;
+    width: 197.12px;
+    height: 10.1px;
+    border-top: 4.1px solid #00A99D;
+    background: #303549;
+}
+.word1_2{
+    position: absolute;
+    top: 35px;
+    left: 50px;
+    color: white;
+}
+.number1_2{
+    position: absolute;
+    top: 35px;
+    left: 200px;
+    color: white;
+}
+.msq2{
+    position: absolute;
+    top: 230px;
+    left: 50px;
+    width: 56px;
+    height: 56px;
+    background: #303549;
+}
+.number2_2{
+    position: relative;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    top: 21px;
+    left: 17px;
+    color: white;
+}
+.word2_2{
+    position: relative;
+    max-width: 110px;
+    max-height: 20px;
+    top: 230px;
+    left: 150px;
+    color: white;
+}
