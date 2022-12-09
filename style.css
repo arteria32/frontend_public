@@ -2,7 +2,6 @@ body{
     background-color: #1B1E27;
     box-sizing: border-box;
     font-family:'Roboto', sana-serif;
-    colof: #ffffff
 }
 .topnav {
     display: flex;
@@ -72,7 +71,6 @@ button{
 
 .main-container{
     display: flex;
-    owerflow: scroll;
     height: auto;
     flex-wrap: wrap;
     gap: 5em;
@@ -95,7 +93,6 @@ p{
 .reservior_text{
     display: flex;
     justify-content: space-between;
-    marign-bottom: 10px;
 }
 .reservior_text p{
     color: #ffffff;
@@ -197,7 +194,6 @@ p{
 .bottom{
     display: flex;
     flex-direction: row;
-    lign-items: end;
     justify-content: flex-end;
     gap: 10px;
     width: 1860px;
