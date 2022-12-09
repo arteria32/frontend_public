@@ -1,11 +1,308 @@
+<!DOCTYPE html>
 <html>
-
-<head>
-    <title>Hello World!</title>
-</head>
-
-<body>
-    hello,world
-</body>
-
+	<head>
+		<link rel="stylesheet" href="style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+		<div class="app">
+			<div class="container">
+				<header class="header ui-row">
+					<div class="page-info">
+						<div class="page-info__icon"></div>
+						<label class="page-info__name">
+							Информация о резервуарах
+						</label>
+					</div>
+					<button class="admin-panel-btn">
+						Панель администратора
+					</button>
+				</header>
+				<main class="main">
+					<nav class="fuel-types ui-row">
+						<ul class="fuel-types__list">
+							<li class="fuel-types__item">АИ-92</li>
+							<li
+								class="fuel-types__item fuel-types__item--active"
+							>
+								Керосин
+							</li>
+							<li class="fuel-types__item">Дт зимнее</li>
+							<li class="fuel-types__item">ТС-1</li>
+							<li class="fuel-types__item">Мазут</li>
+							<li class="fuel-types__item">Газойль</li>
+							<li class="fuel-types__item">Нефть</li>
+						</ul>
+					</nav>
+					<div class="tanks">
+						<div class="tank-info">
+							<div class="tank-info__weight">
+								<div class="tank-info__weight-label">Масса</div>
+								<div class="tank-info__weight-value">980</div>
+							</div>
+							<div class="tank">
+								<div
+									class="tank__wall tank__wall--orange-roof"
+								></div>
+								<div class="tank__content">
+									<div class="tank__fuel"></div>
+								</div>
+								<div class="tank__wall"></div>
+							</div>
+							<div class="tank-info__fuel-lvl">
+								<div class="tank-info__fuel-lvl-rate">98%</div>
+								<div class="tank-info__fuel-lvl-label">
+									Уровень керосина в резервуаре №1
+								</div>
+							</div>
+						</div>
+						<div class="tank-info">
+							<div class="tank-info__weight">
+								<div class="tank-info__weight-label">Масса</div>
+								<div class="tank-info__weight-value">680</div>
+							</div>
+							<div class="tank">
+								<div
+									class="tank__wall tank__wall--green-roof"
+								></div>
+								<div class="tank__content">
+									<div
+										class="tank__fuel tank__fuel--70perc"
+									></div>
+								</div>
+								<div class="tank__wall"></div>
+							</div>
+							<div class="tank-info__fuel-lvl">
+								<div class="tank-info__fuel-lvl-rate">68%</div>
+								<div class="tank-info__fuel-lvl-label">
+									Уровень керосина в резервуаре №2
+								</div>
+							</div>
+						</div>
+						<div class="tank-info">
+							<div class="tank-info__weight">
+								<div class="tank-info__weight-label">Масса</div>
+								<div class="tank-info__weight-value">180</div>
+							</div>
+							<div class="tank">
+								<div
+									class="tank__wall tank__wall--orange-roof"
+								></div>
+								<div class="tank__content">
+									<div
+										class="tank__fuel tank__fuel--20perc"
+									></div>
+								</div>
+								<div class="tank__wall"></div>
+							</div>
+							<div class="tank-info__fuel-lvl">
+								<div class="tank-info__fuel-lvl-rate">18%</div>
+								<div class="tank-info__fuel-lvl-label">
+									Уровень керосина в резервуаре №3
+								</div>
+							</div>
+						</div>
+						<div class="tank-info">
+							<div class="tank-info__weight">
+								<div class="tank-info__weight-label">Масса</div>
+								<div class="tank-info__weight-value">750</div>
+							</div>
+							<div class="tank">
+								<div
+									class="tank__wall tank__wall--green-roof"
+								></div>
+								<div class="tank__content">
+									<div
+										class="tank__fuel tank__fuel--80perc"
+									></div>
+								</div>
+								<div class="tank__wall"></div>
+							</div>
+							<div class="tank-info__fuel-lvl">
+								<div class="tank-info__fuel-lvl-rate">75%</div>
+								<div class="tank-info__fuel-lvl-label">
+									Уровень керосина в резервуаре №4
+								</div>
+							</div>
+						</div>
+						<div class="tank-info">
+							<div class="tank-info__weight">
+								<div class="tank-info__weight-label">Масса</div>
+								<div class="tank-info__weight-value">180</div>
+							</div>
+							<div class="tank">
+								<div
+									class="tank__wall tank__wall--orange-roof"
+								></div>
+								<div class="tank__content">
+									<div
+										class="tank__fuel tank__fuel--20perc"
+									></div>
+								</div>
+								<div class="tank__wall"></div>
+							</div>
+							<div class="tank-info__fuel-lvl">
+								<div class="tank-info__fuel-lvl-rate">18%</div>
+								<div class="tank-info__fuel-lvl-label">
+									Уровень керосина в резервуаре №3
+								</div>
+							</div>
+						</div>
+						<div class="tank-info">
+							<div class="tank-info__weight">
+								<div class="tank-info__weight-label">Масса</div>
+								<div class="tank-info__weight-value">750</div>
+							</div>
+							<div class="tank">
+								<div
+									class="tank__wall tank__wall--green-roof"
+								></div>
+								<div class="tank__content">
+									<div
+										class="tank__fuel tank__fuel--80perc"
+									></div>
+								</div>
+								<div class="tank__wall"></div>
+							</div>
+							<div class="tank-info__fuel-lvl">
+								<div class="tank-info__fuel-lvl-rate">75%</div>
+								<div class="tank-info__fuel-lvl-label">
+									Уровень керосина в резервуаре №4
+								</div>
+							</div>
+						</div>
+						<div class="tank-info">
+							<div class="tank-info__weight">
+								<div class="tank-info__weight-label">Масса</div>
+								<div class="tank-info__weight-value">750</div>
+							</div>
+							<div class="tank">
+								<div
+									class="tank__wall tank__wall--green-roof"
+								></div>
+								<div class="tank__content">
+									<div
+										class="tank__fuel tank__fuel--80perc"
+									></div>
+								</div>
+								<div class="tank__wall"></div>
+							</div>
+							<div class="tank-info__fuel-lvl">
+								<div class="tank-info__fuel-lvl-rate">75%</div>
+								<div class="tank-info__fuel-lvl-label">
+									Уровень керосина в резервуаре №4
+								</div>
+							</div>
+						</div>
+						<div class="tank-info">
+							<div class="tank-info__weight">
+								<div class="tank-info__weight-label">Масса</div>
+								<div class="tank-info__weight-value">980</div>
+							</div>
+							<div class="tank">
+								<div
+									class="tank__wall tank__wall--orange-roof"
+								></div>
+								<div class="tank__content">
+									<div
+										class="tank__fuel tank__fuel--20perc"
+									></div>
+								</div>
+								<div class="tank__wall"></div>
+							</div>
+							<div class="tank-info__fuel-lvl">
+								<div class="tank-info__fuel-lvl-rate">98%</div>
+								<div class="tank-info__fuel-lvl-label">
+									Уровень керосина в резервуаре №1
+								</div>
+							</div>
+						</div>
+						<div class="tank-info">
+							<div class="tank-info__weight">
+								<div class="tank-info__weight-label">Масса</div>
+								<div class="tank-info__weight-value">680</div>
+							</div>
+							<div class="tank">
+								<div
+									class="tank__wall tank__wall--green-roof"
+								></div>
+								<div class="tank__content">
+									<div
+										class="tank__fuel tank__fuel--70perc"
+									></div>
+								</div>
+								<div class="tank__wall"></div>
+							</div>
+							<div class="tank-info__fuel-lvl">
+								<div class="tank-info__fuel-lvl-rate">68%</div>
+								<div class="tank-info__fuel-lvl-label">
+									Уровень керосина в резервуаре №2
+								</div>
+							</div>
+						</div>
+						<div class="tank-info">
+							<div class="tank-info__weight">
+								<div class="tank-info__weight-label">Масса</div>
+								<div class="tank-info__weight-value">180</div>
+							</div>
+							<div class="tank">
+								<div
+									class="tank__wall tank__wall--orange-roof"
+								></div>
+								<div class="tank__content">
+									<div
+										class="tank__fuel tank__fuel--20perc"
+									></div>
+								</div>
+								<div class="tank__wall"></div>
+							</div>
+							<div class="tank-info__fuel-lvl">
+								<div class="tank-info__fuel-lvl-rate">18%</div>
+								<div class="tank-info__fuel-lvl-label">
+									Уровень керосина в резервуаре №3
+								</div>
+							</div>
+						</div>
+						<div class="tank-info">
+							<div class="tank-info__weight">
+								<div class="tank-info__weight-label">Масса</div>
+								<div class="tank-info__weight-value">750</div>
+							</div>
+							<div class="tank">
+								<div
+									class="tank__wall tank__wall--green-roof"
+								></div>
+								<div class="tank__content">
+									<div
+										class="tank__fuel tank__fuel--80perc"
+									></div>
+								</div>
+								<div class="tank__wall"></div>
+							</div>
+							<div class="tank-info__fuel-lvl">
+								<div class="tank-info__fuel-lvl-rate">75%</div>
+								<div class="tank-info__fuel-lvl-label">
+									Уровень керосина в резервуаре №4
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="legend ui-row">
+						<div class="legend__item">
+							<div class="legend__icon normal-weight"></div>
+							<div class="legend__desc">200 < Масса < 800</div>
+						</div>
+						<div class="legend__item">
+							<div class="legend__icon crit-weight"></div>
+							<div class="legend__desc">
+								Масса < 200
+								<br />
+								Масса > 800
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+	</body>
 </html>
