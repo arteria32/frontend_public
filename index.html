@@ -1,11 +1,471 @@
-<html>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Информация по резервуарам</title>
+  </head>
+  <body>
+    <main class="tank-information">
+      <div class="tank-information__panel">
+        <div class="tank-information__panel__info">
+          <img
+            src="images/icon.svg"
+            alt="icon"
+            class="tank-information__panel__icon"
+          />
+          <div class="tank-information__panel__text">
+            Информация по резервуарам
+          </div>
+        </div>
+        <button class="tank-information__panel__button">
+          Панель администратора
+        </button>
+      </div>
+      <div class="tank-information__fuel-choice__list">
+        <input type="radio" name="fuel" id="ai-92">
+        <label for="ai-92">
+          <div class="tank-information__fuel-choice__list__item">АИ-92
+          </div>
+        </label>
+        <input type="radio" name="fuel" id="kerosin" checked>
+        <label for="kerosin"><div class="tank-information__fuel-choice__list__item">КЕРОСИН</div></label>
+        <input type="radio" name="fuel" id="dt-winter">
+        <label for="dt-winter"><div class="tank-information__fuel-choice__list__item">ДТ ЗИМНЕЕ</div></label>
+        <input type="radio" name="fuel" id="ts-1">
+        <label for="ts-1"><div class="tank-information__fuel-choice__list__item">ТС-1</div></label>
+        <input type="radio" name="fuel" id="ai-95">
+        <label for="ai-95"><div class="tank-information__fuel-choice__list__item">АИ-95</div></label>
+        <input type="radio" name="fuel" id="mazut">
+        <label for="mazut"><div class="tank-information__fuel-choice__list__item">МАЗУТ</div></label>
+        <input type="radio" name="fuel" id="gasoil">
+        <label for="gasoil"><div class="tank-information__fuel-choice__list__item">ГАЗОЙЛЬ</div></label>
+        <input type="radio" name="fuel" id="oil">
+        <label for="oil"><div class="tank-information__fuel-choice__list__item">НЕФТЬ</div></label>
 
-<head>
-    <title>Hello World!</title>
-</head>
-
-<body>
-    hello,world
-</body>
-
+      </div>
+      <div class="tank-information__tanks">
+        <div class="tanks-flex">
+          <div class="tank-information__tanks__tank">
+            <div class="tank-information__tanks__tank__mass">
+              <div class="tank-information__tanks__tank__mass__text">Масса</div>
+              <div class="tank-information__tanks__tank__mass__number">980</div>
+            </div>
+            <div class="tank-information__tanks__tank__line critical"></div>
+            <div class="tank-information__tanks__tank__container">
+              <div class="tank-information__tanks__tank__container__border"></div>
+              <div class="tank-information__tanks__tank__container__space">
+                <div
+                  class="tank-information__tanks__tank__container__space__liquid"
+                  style="height: 98%"
+                ></div>
+                <div style="position: relative; width: 0; height: 0">
+                  <div
+                  class="tank-information__tanks__tank__container__line line25"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line50"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line75"
+                  ></div>
+                </div>
+              </div>
+              <div class="tank-information__tanks__tank__container__border"></div>
+            </div>
+            <div class="tank-information__tanks__tank__level">
+              <div class="tank-information__tanks__tank__level__percent">98%</div>
+              <div class="tank-information__tanks__tank__level__text">
+                Уровень <br />
+                керосина <br />
+                в резервуаре №1
+              </div>
+            </div>
+          </div>
+          <div class="tank-information__tanks__tank">
+            <div class="tank-information__tanks__tank__mass">
+              <div class="tank-information__tanks__tank__mass__text">Масса</div>
+              <div class="tank-information__tanks__tank__mass__number">680</div>
+            </div>
+            <div class="tank-information__tanks__tank__line accepted"></div>
+            <div class="tank-information__tanks__tank__container">
+              <div class="tank-information__tanks__tank__container__border"></div>
+              <div class="tank-information__tanks__tank__container__space">
+                <div
+                  class="tank-information__tanks__tank__container__space__liquid"
+                  style="height: 68%"
+                ></div>
+                <div style="position: relative; width: 0; height: 0">
+                  <div
+                  class="tank-information__tanks__tank__container__line line25"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line50"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line75"
+                  ></div>
+                </div>
+              </div>
+              <div class="tank-information__tanks__tank__container__border"></div>
+            </div>
+            <div class="tank-information__tanks__tank__level">
+              <div class="tank-information__tanks__tank__level__percent">68%</div>
+              <div class="tank-information__tanks__tank__level__text">
+                Уровень <br />
+                керосина <br />
+                в резервуаре №2
+              </div>
+            </div>
+          </div>
+          <div class="tank-information__tanks__tank">
+            <div class="tank-information__tanks__tank__mass">
+              <div class="tank-information__tanks__tank__mass__text">Масса</div>
+              <div class="tank-information__tanks__tank__mass__number">180</div>
+            </div>
+            <div class="tank-information__tanks__tank__line critical"></div>
+            <div class="tank-information__tanks__tank__container">
+              <div class="tank-information__tanks__tank__container__border"></div>
+              <div class="tank-information__tanks__tank__container__space">
+                <div
+                  class="tank-information__tanks__tank__container__space__liquid"
+                  style="height: 18%"
+                ></div>
+                <div style="position: relative; width: 0; height: 0">
+                  <div
+                  class="tank-information__tanks__tank__container__line line25"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line50"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line75"
+                  ></div>
+                </div>
+              </div>
+              <div class="tank-information__tanks__tank__container__border"></div>
+            </div>
+            <div class="tank-information__tanks__tank__level">
+              <div class="tank-information__tanks__tank__level__percent">18%</div>
+              <div class="tank-information__tanks__tank__level__text">
+                Уровень <br />
+                керосина <br />
+                в резервуаре №3
+              </div>
+            </div>
+          </div>
+          <div class="tank-information__tanks__tank">
+            <div class="tank-information__tanks__tank__mass">
+              <div class="tank-information__tanks__tank__mass__text">Масса</div>
+              <div class="tank-information__tanks__tank__mass__number">750</div>
+            </div>
+            <div class="tank-information__tanks__tank__line accepted"></div>
+            <div class="tank-information__tanks__tank__container">
+              <div class="tank-information__tanks__tank__container__border"></div>
+              <div class="tank-information__tanks__tank__container__space">
+                <div
+                  class="tank-information__tanks__tank__container__space__liquid"
+                  style="height: 75%"
+                ></div>
+                <div style="position: relative; width: 0; height: 0">
+                  <div
+                  class="tank-information__tanks__tank__container__line line25"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line50"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line75"
+                  ></div>
+                </div>
+              </div>
+              <div class="tank-information__tanks__tank__container__border"></div>
+            </div>
+            <div class="tank-information__tanks__tank__level">
+              <div class="tank-information__tanks__tank__level__percent">75%</div>
+              <div class="tank-information__tanks__tank__level__text">
+                Уровень <br />
+                керосина <br />
+                в резервуаре №4
+              </div>
+            </div>
+          </div>
+          <div class="tank-information__tanks__tank">
+            <div class="tank-information__tanks__tank__mass">
+              <div class="tank-information__tanks__tank__mass__text">Масса</div>
+              <div class="tank-information__tanks__tank__mass__number">180</div>
+            </div>
+            <div class="tank-information__tanks__tank__line critical"></div>
+            <div class="tank-information__tanks__tank__container">
+              <div class="tank-information__tanks__tank__container__border"></div>
+              <div class="tank-information__tanks__tank__container__space">
+                <div
+                  class="tank-information__tanks__tank__container__space__liquid"
+                  style="height: 18%"
+                ></div>
+                <div style="position: relative; width: 0; height: 0">
+                  <div
+                  class="tank-information__tanks__tank__container__line line25"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line50"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line75"
+                  ></div>
+                </div>
+              </div>
+              <div class="tank-information__tanks__tank__container__border"></div>
+            </div>
+            <div class="tank-information__tanks__tank__level">
+              <div class="tank-information__tanks__tank__level__percent">18%</div>
+              <div class="tank-information__tanks__tank__level__text">
+                Уровень <br />
+                керосина <br />
+                в резервуаре №3
+              </div>
+            </div>
+          </div>
+          <div class="tank-information__tanks__tank">
+            <div class="tank-information__tanks__tank__mass">
+              <div class="tank-information__tanks__tank__mass__text">Масса</div>
+              <div class="tank-information__tanks__tank__mass__number">750</div>
+            </div>
+            <div class="tank-information__tanks__tank__line accepted"></div>
+            <div class="tank-information__tanks__tank__container">
+              <div class="tank-information__tanks__tank__container__border"></div>
+              <div class="tank-information__tanks__tank__container__space">
+                <div
+                  class="tank-information__tanks__tank__container__space__liquid"
+                  style="height: 75%"
+                ></div>
+                <div style="position: relative; width: 0; height: 0">
+                  <div
+                  class="tank-information__tanks__tank__container__line line25"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line50"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line75"
+                  ></div>
+                </div>
+              </div>
+              <div class="tank-information__tanks__tank__container__border"></div>
+            </div>
+            <div class="tank-information__tanks__tank__level">
+              <div class="tank-information__tanks__tank__level__percent">75%</div>
+              <div class="tank-information__tanks__tank__level__text">
+                Уровень <br />
+                керосина <br />
+                в резервуаре №4
+              </div>
+            </div>
+          </div>
+          <div class="tank-information__tanks__tank">
+            <div class="tank-information__tanks__tank__mass">
+              <div class="tank-information__tanks__tank__mass__text">Масса</div>
+              <div class="tank-information__tanks__tank__mass__number">750</div>
+            </div>
+            <div class="tank-information__tanks__tank__line accepted"></div>
+            <div class="tank-information__tanks__tank__container">
+              <div class="tank-information__tanks__tank__container__border"></div>
+              <div class="tank-information__tanks__tank__container__space">
+                <div
+                  class="tank-information__tanks__tank__container__space__liquid"
+                  style="height: 75%"
+                ></div>
+                <div style="position: relative; width: 0; height: 0">
+                  <div
+                  class="tank-information__tanks__tank__container__line line25"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line50"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line75"
+                  ></div>
+                </div>
+              </div>
+              <div class="tank-information__tanks__tank__container__border"></div>
+            </div>
+            <div class="tank-information__tanks__tank__level">
+              <div class="tank-information__tanks__tank__level__percent">75%</div>
+              <div class="tank-information__tanks__tank__level__text">
+                Уровень <br />
+                керосина <br />
+                в резервуаре №4
+              </div>
+            </div>
+          </div>
+          <div class="tank-information__tanks__tank">
+            <div class="tank-information__tanks__tank__mass">
+              <div class="tank-information__tanks__tank__mass__text">Масса</div>
+              <div class="tank-information__tanks__tank__mass__number">980</div>
+            </div>
+            <div class="tank-information__tanks__tank__line critical"></div>
+            <div class="tank-information__tanks__tank__container">
+              <div class="tank-information__tanks__tank__container__border"></div>
+              <div class="tank-information__tanks__tank__container__space">
+                <div
+                  class="tank-information__tanks__tank__container__space__liquid"
+                  style="height: 98%"
+                ></div>
+                <div style="position: relative; width: 0; height: 0">
+                  <div
+                  class="tank-information__tanks__tank__container__line line25"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line50"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line75"
+                  ></div>
+                </div>
+              </div>
+              <div class="tank-information__tanks__tank__container__border"></div>
+            </div>
+            <div class="tank-information__tanks__tank__level">
+              <div class="tank-information__tanks__tank__level__percent">98%</div>
+              <div class="tank-information__tanks__tank__level__text">
+                Уровень <br />
+                керосина <br />
+                в резервуаре №1
+              </div>
+            </div>
+          </div>
+          <div class="tank-information__tanks__tank">
+            <div class="tank-information__tanks__tank__mass">
+              <div class="tank-information__tanks__tank__mass__text">Масса</div>
+              <div class="tank-information__tanks__tank__mass__number">680</div>
+            </div>
+            <div class="tank-information__tanks__tank__line accepted"></div>
+            <div class="tank-information__tanks__tank__container">
+              <div class="tank-information__tanks__tank__container__border"></div>
+              <div class="tank-information__tanks__tank__container__space">
+                <div
+                  class="tank-information__tanks__tank__container__space__liquid"
+                  style="height: 68%"
+                ></div>
+                <div style="position: relative; width: 0; height: 0">
+                  <div
+                  class="tank-information__tanks__tank__container__line line25"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line50"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line75"
+                  ></div>
+                </div>
+              </div>
+              <div class="tank-information__tanks__tank__container__border"></div>
+            </div>
+            <div class="tank-information__tanks__tank__level">
+              <div class="tank-information__tanks__tank__level__percent">68%</div>
+              <div class="tank-information__tanks__tank__level__text">
+                Уровень <br />
+                керосина <br />
+                в резервуаре №2
+              </div>
+            </div>
+          </div>
+          <div class="tank-information__tanks__tank">
+            <div class="tank-information__tanks__tank__mass">
+              <div class="tank-information__tanks__tank__mass__text">Масса</div>
+              <div class="tank-information__tanks__tank__mass__number">180</div>
+            </div>
+            <div class="tank-information__tanks__tank__line critical"></div>
+            <div class="tank-information__tanks__tank__container">
+              <div class="tank-information__tanks__tank__container__border"></div>
+              <div class="tank-information__tanks__tank__container__space">
+                <div
+                  class="tank-information__tanks__tank__container__space__liquid"
+                  style="height: 18%"
+                ></div>
+                <div style="position: relative; width: 0; height: 0">
+                  <div
+                  class="tank-information__tanks__tank__container__line line25"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line50"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line75"
+                  ></div>
+                </div>
+              </div>
+              <div class="tank-information__tanks__tank__container__border"></div>
+            </div>
+            <div class="tank-information__tanks__tank__level">
+              <div class="tank-information__tanks__tank__level__percent">18%</div>
+              <div class="tank-information__tanks__tank__level__text">
+                Уровень <br />
+                керосина <br />
+                в резервуаре №3
+              </div>
+            </div>
+          </div>
+          <div class="tank-information__tanks__tank">
+            <div class="tank-information__tanks__tank__mass">
+              <div class="tank-information__tanks__tank__mass__text">Масса</div>
+              <div class="tank-information__tanks__tank__mass__number">750</div>
+            </div>
+            <div class="tank-information__tanks__tank__line accepted"></div>
+            <div class="tank-information__tanks__tank__container">
+              <div class="tank-information__tanks__tank__container__border"></div>
+              <div class="tank-information__tanks__tank__container__space">
+                <div
+                  class="tank-information__tanks__tank__container__space__liquid"
+                  style="height: 75%"
+                ></div>
+                <div style="position: relative; width: 0; height: 0">
+                  <div
+                  class="tank-information__tanks__tank__container__line line25"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line50"
+                  ></div>
+                  <div
+                    class="tank-information__tanks__tank__container__line line75"
+                  ></div>
+                </div>
+              </div>
+              <div class="tank-information__tanks__tank__container__border"></div>
+            </div>
+            <div class="tank-information__tanks__tank__level">
+              <div class="tank-information__tanks__tank__level__percent">75%</div>
+              <div class="tank-information__tanks__tank__level__text">
+                Уровень <br />
+                керосина <br />
+                в резервуаре №4
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tank-information__legend">
+          <div class="tank-information__legend__item">
+            <div class="tank-information__legend__item__square accepted"></div>
+            <div class="tank-information__legend__item__text">
+              200 &lt; МАССА &lt; 800
+            </div>
+          </div>
+          <div class="tank-information__legend__item">
+            <div class="tank-information__legend__item__square critical"></div>
+            <div class="tank-information__legend__item__text">
+              МАССА &lt; 200 <br />
+              МАССА &gt; 800
+            </div>
+          </div>
+        </div>
+    </main>
+  </body>
 </html>

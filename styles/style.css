@@ -1,0 +1,238 @@
+:root {
+  --main-bg-color: #1b1e27;
+
+  --first-bg-color: #272a38;
+  --second-bg-color: #272a3880;
+  --third-bg-color: #303549;
+  --fourth-bg-color: #171923;
+
+  --container-empty-color: #232532;
+  --container-liquid-color: #0089ff;
+
+  --main-text-color: #ffffff;
+  --not-hovered-text-color: #606580;
+  --main-font: "Roboto", sans-serif;
+  --head-font: "Tahoma", sans-serif;
+
+  --critical-color: #eb5757;
+  --accepted-color: #00a99d;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  font-family: var(--main-font);
+  font-style: normal;
+  font-size: 12px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.tank-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 98%;
+  padding: 25px 30px;
+}
+
+.tank-information__panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--head-font);
+  line-height: 14px;
+  height: 54px;
+  background-color: var(--first-bg-color);
+}
+
+.tank-information__panel__info {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 14px;
+  color: #d7e2f2;
+  gap: 13px;
+}
+
+.tank-information__panel__button {
+  background-color: var(--third-bg-color);
+  border: none;
+  font-family: var(--head-font);
+  font-size: 13px;
+  line-height: 16px;
+  border-radius: 4px;
+  color: var(--main-text-color);
+  margin-right: 11px;
+  height: 40px;
+  width: 190px;
+  cursor: pointer;
+  transition: all ease-in-out 0.1s;
+}
+.tank-information__panel__button:hover {
+  transform: scale(1.1);
+}
+
+.tank-information__fuel-choice__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  height: 54px;
+  background-color: var(--second-bg-color);
+  color: var(--not-hovered-text-color);
+}
+
+.tank-information__fuel-choice__list__item {
+  cursor: pointer;
+  height: 100%;
+  padding: 19px;
+  transition: all ease-in-out 0.1s;
+}
+
+.tank-information__fuel-choice__list__item:hover {
+  color: var(--main-text-color);
+}
+
+input[type="radio"]:checked + label > div {
+  border-bottom: 2px solid #0089ff;
+  box-shadow: inset 0 -4px 2px -2px #0088ffc0;
+  color: var(--main-text-color);
+}
+
+.tank-information__tanks {
+  background-color: var(--fourth-bg-color);
+}
+
+.tanks-flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 80px 50px;
+  margin: 95px 40px;
+}
+
+.tank-information__tanks__tank {
+  width: 180px;
+}
+
+.tank-information__tanks__tank__mass {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 9px 0px;
+}
+
+.tank-information__tanks__tank__mass__text {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.tank-information__tanks__tank__mass__number {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.tank-information__tanks__tank__line {
+  height: 4px;
+}
+
+.critical {
+  background-color: var(--critical-color);
+}
+
+.accepted {
+  background-color: var(--accepted-color);
+}
+
+.tank-information__tanks__tank__container__border {
+  height: 10px;
+  background-color: var(--third-bg-color);
+}
+
+.tank-information__tanks__tank__container__space {
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  margin: 0 5px;
+  background-color: var(--container-empty-color);
+}
+
+.tank-information__tanks__tank__container__space__liquid {
+  margin-top: auto;
+  background-color: var(--container-liquid-color);
+}
+
+.tank-information__tanks__tank__container__line {
+  position: absolute;
+  width: 38px;
+  height: 1px;
+  background-color: var(--main-text-color);
+  left: 15px;
+}
+
+.line25 {
+  bottom: 30px;
+}
+.line50 {
+  bottom: 60px;
+}
+.line75 {
+  bottom: 90px;
+}
+
+.tank-information__tanks__tank__level {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 30px 5px 0;
+}
+
+.tank-information__tanks__tank__level__percent {
+  background-color: var(--container-empty-color);
+  border-radius: 6px;
+  padding: 18px 9px;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 700;
+}
+
+.tank-information__tanks__tank__level__text {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.tank-information__legend {
+  height: 54px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--second-bg-color);
+  column-gap: 25px;
+}
+
+.tank-information__legend__item {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+  margin-right: 25px;
+}
+
+.tank-information__legend__item__square {
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+}
+
+.tank-information__legend__item__text {
+  font-size: 14px;
+  line-height: 16px;
+}
