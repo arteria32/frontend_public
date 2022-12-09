@@ -1,11 +1,366 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-    <title>Hello QQQQS!</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset_css.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
 </head>
-
 <body>
-    hello,world
-</body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__title">
+                    <a class="header__text" href="#">Информация по резервуарам</a>
+                    <button class="header__button">
+                        Панель администратора
+                    </button>
+                </div>
+                <ul class="header__menu">
+                    <input type="checkbox" id="checkbox__toggle">
+                    <label for="checkbox__toggle" class="hamburger"><span class="hamburger-line"></span></label>
+                    <div class="menu">
+                        <li class="header__item">
+                            <a class="item__link" href="#">АИ-92</a>
+                        </li>
+                        <li class="header__item">
+                            <a class="item__link" href="#">Керосин</a>
+                        </li>
+                        <li class="header__item">
+                            <a class="item__link" href="#">Дт зимнее</a>
+                        </li>
+                        <li class="header__item">
+                            <a class="item__link" href="#">ТС-1</a>
+                        </li>
+                        <li class="header__item">
+                            <a class="item__link" href="#">АИ-95</a>
+                        </li>
+                        <li class="header__item">
+                            <a class="item__link" href="#">Мазут</a>
+                        </li>
+                        <li class="header__item">
+                            <a class="item__link" href="#">ГАЗОЙЛЬ</a>
+                        </li>
+                        <li class="header__item">
+                            <a class="item__link" href="#">Нефть </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="content">
+        <div class="container">
+            <div class="content__inner">
+                <div class="content__bars bars">
+                    <div class="bars__box box" style"::root{--heightLevels: 40%}">
+                        <div class="box__header">
+                            <p class="box__title">Масса</p>
+                            <p class="box__quantity">980</p>
+                        </div>
+                        <div class="box__metrics">
+                            <div class="box__status status-red"></div>
+                            <div class="box__cap"></div>
+                            <div class="box__value">
+                                <div class="box__units">
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>    
+                                </div>
+                                <div class="box__level" style="height: 90%;"></div>
+                            </div>
+                            <div class="box__cap"></div>
+                        </div>
+                        <div class="box__footer">
+                            <p class="box__procent">98%</p>
+                            <p class="box__text">
+                                Уровень керосина в резервуаре №1
+                            </p>
+                        </div>
+                    </div>
 
+                    <div class="bars__box box">
+                        <div class="box__header">
+                            <p class="box__title">Масса</p>
+                            <p class="box__quantity">680</p>
+                        </div>
+                        <div class="box__metrics">
+                            <div class="box__status status-green"></div>
+                            <div class="box__cap"></div>
+                            <div class="box__value">
+                                <div class="box__units">
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>    
+                                </div>
+                                <div class="box__level" style="height: 68%;"></div>
+                            </div>
+                            <div class="box__cap"></div>
+                        </div>
+                        <div class="box__footer">
+                            <p class="box__procent">68%</p>
+                            <p class="box__text">
+                                Уровень керосина в резервуаре №2
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bars__box box">
+                        <div class="box__header">
+                            <p class="box__title">Масса</p>
+                            <p class="box__quantity">180</p>
+                        </div>
+                        <div class="box__metrics">
+                            <div class="box__status status-red"></div>
+                            <div class="box__cap"></div>
+                            <div class="box__value">
+                                <div class="box__units">
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>    
+                                </div>
+                                <div class="box__level" style="height: 18%;"></div>
+                            </div>
+                            <div class="box__cap"></div>
+                        </div>
+                        <div class="box__footer">
+                            <p class="box__procent">18%</p>
+                            <p class="box__text">
+                                Уровень керосина в резервуаре №3
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bars__box box">
+                        <div class="box__header">
+                            <p class="box__title">Масса</p>
+                            <p class="box__quantity">750</p>
+                        </div>
+                        <div class="box__metrics">
+                            <div class="box__status status-green"></div>
+                            <div class="box__cap"></div>
+                            <div class="box__value">
+                                <div class="box__units">
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>    
+                                </div>
+                                <div class="box__level" style="height: 75%;"></div>
+                            </div>
+                            <div class="box__cap"></div>
+                        </div>
+                        <div class="box__footer">
+                            <p class="box__procent">75%</p>
+                            <p class="box__text">
+                                Уровень керосина в резервуаре №4
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bars__box box">
+                        <div class="box__header">
+                            <p class="box__title">Масса</p>
+                            <p class="box__quantity">180</p>
+                        </div>
+                        <div class="box__metrics">
+                            <div class="box__status status-red"></div>
+                            <div class="box__cap"></div>
+                            <div class="box__value">
+                                <div class="box__units">
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>    
+                                </div>
+                                <div class="box__level" style="height: 18%;"></div>
+                            </div>
+                            <div class="box__cap"></div>
+                        </div>
+                        <div class="box__footer">
+                            <p class="box__procent">18%</p>
+                            <p class="box__text">
+                                Уровень керосина в резервуаре №3
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bars__box box">
+                        <div class="box__header">
+                            <p class="box__title">Масса</p>
+                            <p class="box__quantity">750</p>
+                        </div>
+                        <div class="box__metrics">
+                            <div class="box__status status-green"></div>
+                            <div class="box__cap"></div>
+                            <div class="box__value">
+                                <div class="box__units">
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>    
+                                </div>
+                                <div class="box__level" style="height: 75%;"></div>
+                            </div>
+                            <div class="box__cap"></div>
+                        </div>
+                        <div class="box__footer">
+                            <p class="box__procent">75%</p>
+                            <p class="box__text">
+                                Уровень керосина в резервуаре №4
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bars__box box">
+                        <div class="box__header">
+                            <p class="box__title">Масса</p>
+                            <p class="box__quantity">750</p>
+                        </div>
+                        <div class="box__metrics">
+                            <div class="box__status status-green"></div>
+                            <div class="box__cap"></div>
+                            <div class="box__value">
+                                <div class="box__units">
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>    
+                                </div>
+                                <div class="box__level" style="height: 75%;"></div>
+                            </div>
+                            <div class="box__cap"></div>
+                        </div>
+                        <div class="box__footer">
+                            <p class="box__procent">75%</p>
+                            <p class="box__text">
+                                Уровень керосина в резервуаре №4
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bars__box box">
+                        <div class="box__header">
+                            <p class="box__title">Масса</p>
+                            <p class="box__quantity">980</p>
+                        </div>
+                        <div class="box__metrics">
+                            <div class="box__status status-red"></div>
+                            <div class="box__cap"></div>
+                            <div class="box__value">
+                                <div class="box__units">
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>    
+                                </div>
+                                <div class="box__level" style="height: 90%;"></div>
+                            </div>
+                            <div class="box__cap"></div>
+                        </div>
+                        <div class="box__footer">
+                            <p class="box__procent">98%</p>
+                            <p class="box__text">
+                                Уровень керосина в резервуаре №1
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bars__box box">
+                        <div class="box__header">
+                            <p class="box__title">Масса</p>
+                            <p class="box__quantity">680</p>
+                        </div>
+                        <div class="box__metrics">
+                            <div class="box__status status-green"></div>
+                            <div class="box__cap"></div>
+                            <div class="box__value">
+                                <div class="box__units">
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>    
+                                </div>
+                                <div class="box__level" style="height: 68%;"></div>
+                            </div>
+                            <div class="box__cap"></div>
+                        </div>
+                        <div class="box__footer">
+                            <p class="box__procent">68%</p>
+                            <p class="box__text">
+                                Уровень керосина в резервуаре №2
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bars__box box">
+                        <div class="box__header">
+                            <p class="box__title">Масса</p>
+                            <p class="box__quantity">180</p>
+                        </div>
+                        <div class="box__metrics">
+                            <div class="box__status status-red"></div>
+                            <div class="box__cap"></div>
+                            <div class="box__value">
+                                <div class="box__units">
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>    
+                                </div>
+                                <div class="box__level" style="height: 18%;"></div>
+                            </div>
+                            <div class="box__cap"></div>
+                        </div>
+                        <div class="box__footer">
+                            <p class="box__procent">18%</p>
+                            <p class="box__text">
+                                Уровень керосина в резервуаре №3
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bars__box box">
+                        <div class="box__header">
+                            <p class="box__title">Масса</p>
+                            <p class="box__quantity">750</p>
+                        </div>
+                        <div class="box__metrics">
+                            <div class="box__status status-green"></div>
+                            <div class="box__cap"></div>
+                            <div class="box__value">
+                                <div class="box__units">
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>
+                                    <div class="box_unit"></div>    
+                                </div>
+                                <div class="box__level" style="height: 75%;"></div>
+                            </div>
+                            <div class="box__cap"></div>
+                        </div>
+                        <div class="box__footer">
+                            <p class="box__procent">75%</p>
+                            <p class="box__text">
+                                Уровень керосина в резервуаре №4
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__mass">
+                    <div class="footer__green">
+                        200 < МАССА < 800
+                    </div>
+                    <div class="footer__red">
+                        <p>МАССА < 200</p>
+                        <p>МАССА > 800</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
 </html>
