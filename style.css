@@ -1,0 +1,389 @@
+:root {
+    --background-color: #1B1E27;
+    --control-panel: #272A38;
+    --Information-on-tanks:#D7E2F2;
+    --Admin-Panel:#303549;
+    --body:#161922;
+    --regtangle-head-down: #1E212D;
+    --text-header:#606580;
+    --text-header-line:#0089FF;
+
+    --tank-hatch-down-bottom:#303549;
+    --tank-body:#20232F;
+    --liquid:#0089FF;
+
+    --legend1:#04978D;
+    --legend2:#EB5757;
+
+    --text-color:#FFFFFF;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/*-- Control-panel --*/
+
+.control-panel {
+    background: var(--control-panel);
+    height: 54px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 25px;
+    position: relative;
+
+}
+
+.img-vector {
+    position: absolute;
+    left: 14px;
+    top: 18px;
+    
+}
+
+.name-page {
+    margin: 0;
+    position: absolute;
+    top: 19px;
+    left: 43px;
+    color: var(--Information-on-tanks);
+    font-family: 'Tahoma';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+
+}
+
+.button-admin-panel {
+    position: absolute;
+    right: 11px;
+    top: 7px;
+    width: 190px;
+    height: 40px;
+    border: 0;
+    border-radius: 4px;
+    background: var(--Admin-Panel);
+    color: var(--text-color);
+    font-family: 'Tahoma';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center; 
+
+}
+
+.body {
+    position: absolute;
+    top: 79px;
+    left: 30px;
+    right: 30px;
+    background: var(--body);
+
+}
+
+/*-- Heafer --*/
+
+.header {
+    height: 54px;
+    background: var(--regtangle-head-down);
+    padding-top: 18px;
+    position: relative;
+}
+
+.nav {
+    font-family: 'Tahoma';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.nav-link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 20px;
+    color: var(--text-header);
+    text-decoration: none;
+    transition: color 0.2s linear;
+    position: relative;
+
+}
+
+.nav-link::after {
+    content: "";
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-header-line);
+    display: none;
+    position: absolute;
+    top: 200%;
+    left: 0px;
+    z-index: 1;
+    box-shadow: 0px -1px 4px 0.6px var(--text-header-line);
+}
+
+.nav-link:hover {
+    color: var(--text-color);
+
+}
+
+.nav-link:hover:after {
+    display: block;
+}
+
+/*-- Tanks --*/
+
+
+.tanks {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tank-1 {
+    margin-right: 58px;
+    margin-bottom: 94px;
+    padding: 0;
+    width: 206px;
+    height: 273px;
+    position: relative;
+    top: 73px;
+    left: 55px;
+    font-family: 'Roboto';
+    font-style: normal;
+    color: var(--text-color);
+
+}
+
+.massa {
+    position: absolute;
+    top: 9px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+
+}
+
+.value-1 {
+    position:absolute;
+    right: 0;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+}
+
+.tank-hatch-up-1 {
+    position: absolute;
+    top: 39px;
+    width: 100%;
+    height: 4px;
+    background: var(--legend2);
+
+}
+
+.tank-hatch-down {
+    position: absolute;
+    top: 43px;
+    width: 100%;
+    height: 10px;
+    background-color: var(--tank-hatch-down-bottom);
+}
+
+.tank-body {
+    position: absolute;
+    top: 53px;
+    left: 6px;
+    right: 6px;
+    height: 124px;
+    background: var(--tank-body);
+    z-index: 2;
+}
+
+.tank-bottom {
+    position: absolute;
+    top: 177px;
+    width: 100%;
+    height: 10px;
+    background-color: var(--tank-hatch-down-bottom); 
+}
+
+.level-1 {
+    position: absolute;
+    top: 31px;
+    left: 24px;
+    width: 38px;
+    height: 1px;
+    background: var(--text-color);
+    z-index: 3;
+}
+
+.level-2 {
+    position: absolute;
+    top: 62px;
+    left: 24px;
+    width: 38px;
+    height: 1px;
+    background: var(--text-color);
+    z-index: 4;
+}
+
+.level-3 {
+    position: absolute;
+    top: 93px;
+    left: 24px;
+    width: 38px;
+    height: 1px;
+    background: var(--text-color);
+    z-index: 5;
+}
+
+.liquid-1 {
+    position: absolute;
+    top: 8px;
+    background: var(--liquid);
+    width: 100%;
+    height: 116px;
+    z-index: 2;
+}
+
+.indicator {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    width: 56px;
+    height: 56px;
+    border-radius: 6px;
+    background: #232532;
+    opacity: 0.89;
+}
+
+.indicator-percent-name {
+    position: absolute;
+    top: 18px;
+    left: 9px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    
+
+}
+
+.indicator-name {
+    position: absolute;
+    bottom: 3px;
+    left: 66px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.tank-hatch-up-2 {
+    position: absolute;
+    top: 39px;
+    width: 100%;
+    height: 4px;
+    background: var(--legend1);
+}
+
+.liquid-2 {
+    position: absolute;
+    top: 44px;
+    background: var(--liquid);
+    width: 100%;
+    height: 80px;
+    z-index: 2;
+}
+
+.liquid-3 {
+    position: absolute;
+    top: 101px;
+    background: var(--liquid);
+    width: 100%;
+    height: 23px;
+    z-index: 2;
+}
+
+.liquid-4 {
+    position: absolute;
+    top: 31px;
+    background: var(--liquid);
+    width: 100%;
+    height: 93px;
+    z-index: 2;
+}
+
+
+/*-- Footer --*/
+
+.footer {
+    position: relative;
+    top: 55px;
+    height: 54px;
+    background: var(--regtangle-head-down);
+}
+
+.green-square {
+    position: absolute;
+    right: 364px;
+    top: 15px;
+    width: 23px;
+    height: 23px;
+    background-color: var(--legend1);
+    border-radius: 3px;
+}
+
+.red-square {
+    position: absolute;
+    right: 140px;
+    top: 15px;
+    width: 23px;
+    height: 23px;
+    background-color: var(--legend2);
+    border-radius: 3px; 
+}
+
+.legend1 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 19px;
+    right: 213px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--text-color); 
+
+}
+
+.legend2 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--text-color); 
+
+}
