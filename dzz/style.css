@@ -1,0 +1,234 @@
+.supermain{
+width: 1600px;
+height: 100%;
+padding-right: 10px;
+padding-left: 0px;
+padding-top: 10px;
+padding-bottom: 10px;
+background-color: #161515;
+
+}
+button{
+  width: 190px;
+  height: 40px;
+  background: #303549;
+  color: #FFFFFF;
+  border: 1px solid #303549;
+  text-align: center;
+  
+
+}
+
+.m{
+  text-align: left;
+  font-size:18px;
+  color: #FFFFFF;
+}
+.v{
+text-align: right;
+font-size:26px;
+color: #FFFFFF;
+margin-top: -48px;
+
+}
+
+.line{
+
+  margin-top: -30px;
+  align-self: center;
+
+}
+.line2{
+
+  margin-top: -33px;
+  align-self: center;
+
+}
+
+.line3{
+
+  margin-top: -20px;
+
+
+}
+.line0{
+  margin-top: -110px;
+  margin-left: 10px;
+
+}
+.block1{
+  
+  margin: -15px 0px -20px;
+
+  align-self: center;
+
+}
+.block2{
+  margin: 33px 0px -20px;
+
+  align-self: center;
+
+}
+.block3{
+  margin: 86px 0px -20px;
+
+  align-self: center;
+
+}
+.block4{
+  margin: 20px 0px -20px;
+
+  align-self: center;
+
+}
+.b1{
+  position: absolute;
+  width: 190px;
+  height: 40px;
+  left: 1389px;
+  top: 27px;
+  background: #303549;
+  text-align: center;
+}
+.r1{
+  text-align: right;
+
+  margin: 0px 200px 10px 150px;
+}
+.text1{
+color: #606580; /* Цвет обычной ссылки */
+position: relative;
+cursor: pointer;
+text-decoration: none; /* Убираем подчеркивание */
+text-align: center;
+}
+.text1:after{
+	content: "";
+  width: 100%;
+    display: block;
+    position: absolute;
+    right: auto;
+    bottom: -3px;
+    width: 0;
+    height: 2px; /* Высота линии */
+    background-color: rgb(31, 40, 144); /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+
+}
+.text1:hover:after{
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: auto;
+  bottom: -3px;
+  height: 2px; /* Высота линии */
+  background-color: rgb(31, 40, 144); /* Цвет подчеркивания при появлении линии*/
+  transition: width 0.5s;  /* Время эффекта */
+}
+.t{
+  margin: -33px 130px -300px 200px;
+  text-align: right;
+                   
+}
+.blocks2{
+  margin: 270px 45px ;
+  text-align: right;
+
+}
+.menu{
+
+  display: flex;
+  flex-direction: row;
+ 
+  justify-content: center;
+  width: 1560px;
+  height: 54px;
+  left: 20px;
+  margin: 20px 20px -20px;
+
+  background: #1d202b;
+  border-radius: 0px;
+}
+.menu > div{
+  
+  color: #606580;
+  align-self: center;
+  width: 100px;
+  height: 25px;
+  font-family: 'Tahoma';
+  font-style: normal;
+  font-size: 14px;
+
+}
+.main-container{
+    display: flex;
+    color: #FFFFFF;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 1560px;
+    background-color: #161515;
+    margin: 20px 20px 20px 20px;
+
+   
+
+  }
+
+
+  .main-container > div{
+
+
+    width: 179.12px;
+    height: 170.85px;
+    background-color: #232532;
+    margin: 80px 20px 100px 20px;
+  
+  
+  }
+  .finder{
+    position: static;
+    font-family:Tahoma;
+    width: 1560px;
+    height: 54px;
+    top: 25px;
+    margin: 10px 20px -20px;
+    font-size: 12px; 
+    color:  #D7E2F2;
+    background-color: #272A38;
+  }
+  .procent{
+    display: flex;
+    flex-direction: row;
+   width: 180px;
+    background-color: #161515;
+   
+  }
+.numeric{
+  margin: 5px;
+  text-align: center;
+  background-color: #232532;
+  font-size: 20px;
+  line-height: 23px;
+  border-radius: 5px;
+  color: #FFFFFF;
+
+}
+.texts{
+  margin: 5px;
+
+
+  text-align: left;
+  background-color: #161515;
+  color: #FFFFFF;
+  font-size: 14px;
+
+}
+.footer{
+  width: 1560px;
+  height: 54px;
+  margin: 20px;
+
+  font-size: 12px; 
+  color:  #D7E2F2;
+  background-color: #1d202b;
+}
