@@ -20,3 +20,75 @@ let currentUserOnline = "Алексей";
 // let b = prompt("Второе число?", 2);
 // alert(+a + +b);
 
+//Задание 2.10 (Название JavaScript) 
+// let oficialName = "ECMAScript";
+// let userAnswer = prompt("Какое «официальное» название JavaScript?","");
+// if (userAnswer == oficialName) {
+//     alert("Верно!");
+// }
+// else {
+//     alert("Не знаете? ECMAScript!")
+// }
+
+//Задание 2.10 (Покажите знак числа) 
+// let userAnswer = prompt("Введите любое число","");
+// if (userAnswer > 0) {
+//     alert("1");
+// }
+// else if (userAnswer < 0) {
+//     alert("-1");
+// } else {
+//     alert("0")
+// }
+
+//Задание 2.10 (Перепишите 'if' в '?') 
+// result = (a + b < 4) ? 'Мало' : 'Много';
+
+//Задание 2.10 (Перепишите 'if..else' в '?') 
+// let message = (login == 'Сотрудник') ? 'Привет' :
+//   (login == 'Директор') ? 'Здравствуйте' :
+//   (login == '') ? 'Нет логина' :
+//   '';
+
+//Задание 2.11 (Проверка значения из диапазона) 
+// let age = prompt ("Сколько Вам лет?","");
+// if (age>=14 && age<=90) {
+//     alert("Условие выполнено");
+// }
+// else {
+//     alert("Условие не выполнено");
+// }
+
+//Задание 2.11 (Проверка значения вне диапазона) 
+// let age = prompt ("Сколько Вам лет?","");
+// if (!(age>=14 && age<=90)) {
+//     alert("Условие выполнено");
+// }
+// else {
+//     alert("Условие не выполнено");
+// }
+
+//Задание 2.11 (Проверка логина)
+// let login = "Админ";
+// let password = "Я главный!";
+// let userPassword;
+// let userLogin = prompt("Кто там?","");
+// if (userLogin == login) {
+//     userPassword = prompt("Пароль?","")
+//     if (userPassword == password) {
+//         alert("Здравствуйте!");
+//     } else if (userPassword === "" || userPassword === null) {
+//         alert("Отменено");
+//     } else {
+//         alert("Неверный пароль");
+//     }
+// } else if (userLogin == "" || userLogin == null) {
+//     alert("Отменено");
+// } else {
+//     alert("Я вас не знаю");
+// }
+
+//Задание 2.13 ()
+
+
+
