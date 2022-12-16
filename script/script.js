@@ -88,7 +88,22 @@ let currentUserOnline = "Алексей";
 //     alert("Я вас не знаю");
 // }
 
-//Задание 2.13 ()
+//Задание 2.13 (Выведите чётные числа)
+// for (let i = 1; i <= 10; i++) {
+//     if (i % 2 != 0) continue;
+//     console.log(i);
+// }
+
+//Задание 2.13 (Замените for на while)
+// for (let i = 0; i < 3; i++) {
+//     console.log( `number ${i}!` );
+//   }
+let i = 0;
+while (i<3) {
+    console.log(`number ${++i}!`)
+}
+
+
 
 
 
