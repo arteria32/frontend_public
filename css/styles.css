@@ -1,0 +1,45 @@
+:root {
+	--page-bg: #1B1E27;
+	--main-text: #FFFFFF;
+	--button-bg: #303549;
+	--button-bg-active: #525b84;
+}
+* {
+	color: var(--main-text);
+}
+html {
+	
+	background-color: var(--page-bg);
+}
+
+button {
+		border-radius: 4px;
+		font-size: 13px;
+		width: 190px;
+		height: 50px;
+		background-color: var(--button-bg);
+}
+
+button:hover {
+	background-color: var(--button-bg-active);;
+}
+
+
+.page {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.buttonsContainer{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	gap: 10px 20px;
+}
+
+hr {
+	width: 30%;
+	margin-bottom: 30px;
+}
