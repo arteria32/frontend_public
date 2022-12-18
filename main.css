@@ -1,0 +1,10 @@
+body {
+    background-color:  darkgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+button {
+    background-color: grey;
+}
