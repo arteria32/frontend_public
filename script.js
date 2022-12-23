@@ -123,14 +123,14 @@
 // Ожидаемые результат
 // 9
 
-// function zalupa(arr) {
+// function minSum(arr) {
 //   arr = arr.sort((a, b) => a - b);
 //   arr.splice(arr.length - 1, 1, arr[arr.length - 1] - arr[arr.length - 2]);
 //   console.log(arr);
 //   console.log(arr.reduce((acc, num) => acc + num, 0));
 //   if (arr[arr.length - 1] != arr[arr.length - 2]) {
-//     zalupa(arr);
+//     minSum(arr);
 //   }
 //   return arr.reduce((acc, num) => acc + num, 0);
 // }
-// console.log(zalupa([6, 9, 21, 7, 9645, 42354235, 312]));
+// console.log(minSum([6, 9, 21, 7, 9645, 42354235, 312]));
