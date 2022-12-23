@@ -40,17 +40,13 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
-    height: 80vh;
-    width: 60vw;
+    margin: 70px;
+    padding: 50px;
+
     flex-wrap: wrap;
     background: var(--second-bg-color);
 }
 
-.container > div {
-    background-color: var(--light-bg-color);
-    color: #1B1E27;
-}
 
 button {
     background: var(--button-color);
