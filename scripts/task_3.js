@@ -4,4 +4,4 @@ let counter = 0;
 for (let num of arr) {
   if (num % 2 !== 0) counter++;
 }
-console.log(oddNumbersCounter);
+console.log(counter);
