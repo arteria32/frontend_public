@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: hsl(240, 79%, 66%);
+    --light-shadow: hsl(240, 70%, 73%);
+    --dark-shadow: hsl(240, 57%, 53%);
+    --input-color: hsl(240, 100%, 87%);
+    --font-color: white;
+}
+
+body {
+    background: var(--main-color);
+    display: flex;
+    justify-content: center;
+    color: var(--font-color);
+    font-size: 80px;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.neo-box {
+    border-radius: 50px;
+    background-color: var(--main-color);
+    box-shadow: 10px 10px 21px var(--dark-shadow),
+    -10px -10px 21px var(--light-shadow);
+}
+
+#remainingTime {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+

@@ -20,8 +20,8 @@ class Clock {
         .replace('h', hours)
         .replace('m', mins)
         .replace('s', secs);
-  
-      console.log(output);
+
+      document.getElementById('remainingTime').innerHTML = `<div>${output}</div>`;
     }
   
     stop() {
