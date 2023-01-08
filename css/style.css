@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Roboto";
-  src: url('/fonts/Roboto-Regular.ttf') format('truetype');
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Bold.ttf") format('truetype');
+  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -16,18 +16,17 @@
 
 @font-face {
   font-family: "Tahoma";
-  src: url("/fonts/Tahoma-400.woff") format('woff');
+  src: url("../fonts/Tahoma-400.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-
-
 :root {
   --card-lines-color: #303549;
-  --weight-color-from-200-to-800: #00A99D;
-  --weight-color-less-200-more-800: #EB5757;
+  --weight-color-from-val-to-val: #00a99d;
+  --weight-color-less-val-more-val: #eb5757;
+  --button-color: #303549;
 }
 
 * {
@@ -35,10 +34,15 @@
   padding: 0;
 }
 
-body{
+body {
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+body {
   margin: 0;
-  color: #FFFFFF;
-  background-color: #1B1E27;
+  color: #ffffff;
+  background-color: #1b1e27;
   font-family: "Roboto", Tahoma, sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -46,13 +50,12 @@ body{
   padding: 25px 30px 32px;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100%;
   background-color: #171922;
 }
-
 
 .page-header {
   font-family: Tahoma, sans-serif;
@@ -70,21 +73,19 @@ body{
   flex: 0 0 auto;
 }
 
-
-
 /* Добавить цвет из этого класса в переменную */
-.layer{
+.layer {
   background-color: rgba(39, 42, 56, 0.5);
 }
 
-.first_layer_header{
+.first_layer_header {
   padding: 10px 11px;
   background-image: url("../img/Vector.svg");
-  background-color: #1F212D;
+  background-color: #1f212d;
   background-repeat: no-repeat;
   background-size: 16px 14px;
   background-position: 14px center;
-  background-color: #272A38;
+  background-color: #272a38;
   border-radius: 2px 2px 0 0;
   display: flex;
   flex-direction: row;
@@ -92,15 +93,13 @@ body{
   align-items: center;
 }
 
-
-
-.information{
+.information {
   font-size: 12px;
   margin-left: 40px;
 }
 
-.admin_panel{
-  background-color: #303549;
+.admin_panel {
+  background-color: var(--button-color);
   border-radius: 4px;
   color: inherit;
   font-size: 13px;
@@ -109,7 +108,7 @@ body{
   text-align: center;
 }
 
-.oil_type_list{
+.oil_type_list {
   font-family: Tahoma, sans-serif;
   font-weight: 400;
   margin: 0;
@@ -121,16 +120,14 @@ body{
   justify-content: center;
   gap: 55px;
   flex-wrap: wrap;
-
 }
 
 .oil_type_item {
   list-style-type: none;
   text-align: center;
-
 }
 
-.oil_type-link{
+.oil_type-link {
   color: #606580;
   text-decoration: none;
   text-transform: uppercase;
@@ -149,14 +146,15 @@ body{
   bottom: -18px;
   width: 153%;
   content: "";
-  background: linear-gradient(0deg, rgba(35, 120, 217, 0.25) 0%, rgba(35, 120, 217, 0) 100%);
-  border-bottom: 2px solid #0089FF;
-
-
+  background: linear-gradient(
+    0deg,
+    rgba(35, 120, 217, 0.25) 0%,
+    rgba(35, 120, 217, 0) 100%
+  );
+  border-bottom: 2px solid #0089ff;
 }
 
-
-.card-wrapper{
+.card-wrapper {
   width: 197px;
   display: flex;
   flex-direction: column;
@@ -195,12 +193,11 @@ body{
 }
 
 .card_border-bottom_green::after {
-  border-top: 4px solid var(--weight-color-from-200-to-800);
+  border-top: 4px solid var(--weight-color-from-val-to-val);
 }
 
-
 .card_border-bottom_red::after {
-  border-top: 4px solid var(--weight-color-less-200-more-800);
+  border-top: 4px solid var(--weight-color-less-val-more-val);
 }
 
 .card-main {
@@ -213,15 +210,15 @@ body{
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
-  position:relative;
+  position: relative;
   z-index: 0;
 }
 
-.card-filling{
+.card-filling {
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-color: #0089FF;
+  background-color: #0089ff;
   z-index: 1;
 }
 
@@ -243,7 +240,7 @@ body{
 
 .half-percent-line {
   width: 38px;
-  border-bottom: 1px solid #F9F9F9;
+  border-bottom: 1px solid #f9f9f9;
   margin-left: 18px;
   z-index: 2;
 }
@@ -271,7 +268,7 @@ body{
   margin: 0;
   font-size: 20px;
   line-height: 23px;
-  background-image: linear-gradient(90deg, #272A38 94673%, #FFFFFF 114385%);
+  background-image: linear-gradient(90deg, #272a38 94673%, #ffffff 114385%);
   opacity: 0.89;
   padding: 18px 9px 15px;
   border-radius: 6px;
@@ -280,28 +277,34 @@ body{
 .card-footer-text {
   margin: 0;
   text-align: left;
-
 }
 
 .card_list {
   width: 100%;
-  display:grid;
+  display: grid;
   list-style-type: none;
   grid-template-columns: repeat(auto-fill, minmax(198px, auto));
-  gap: 80px
+  gap: 80px;
 }
 
 .page-footer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 10px 25px;
   align-items: center;
 }
 
+.footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
 
-.red-card-information{
+.red-card-information {
   margin-left: 101px;
   position: relative;
 }
@@ -314,7 +317,7 @@ body{
   display: block;
   content: "";
   position: absolute;
-  background-color: var(--weight-color-less-200-more-800);
+  background-color: var(--weight-color-less-val-more-val);
   width: 23px;
   height: 23px;
   left: -51px;
@@ -322,15 +325,15 @@ body{
   border-radius: 3px;
 }
 
-.green-card-information{
+.green-card-information {
   position: relative;
 }
 
-.green-card-information::before{
+.green-card-information::before {
   display: block;
   content: "";
   position: absolute;
-  background-color: var(--weight-color-from-200-to-800);
+  background-color: var(--weight-color-from-val-to-val);
   width: 23px;
   left: -46px;
   top: -3.5px;
@@ -338,13 +341,13 @@ body{
   border-radius: 3px;
 }
 
-@media screen and (max-width: 565px){
+@media screen and (max-width: 565px) {
   .card_list {
     justify-items: center;
   }
 }
 
-@media screen and (max-width: 421px){
+@media screen and (max-width: 524px) {
   .red-card-information {
     margin: 0;
     margin-top: 20px;
@@ -358,10 +361,40 @@ body{
     flex-direction: column;
     align-items: center;
   }
+
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-@media screen and (max-width: 332px){
-  .first_layer_header{
+.btn {
+  border: none;
+  outline: none;
+  background-color: var(--button-color);
+  border-radius: 4px;
+  color: inherit;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 9px 20px 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.6s;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 #252938;
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 0 #252938;
+}
+
+@media screen and (max-width: 332px) {
+  .first_layer_header {
     flex-direction: column;
     align-items: center;
   }
@@ -371,7 +404,7 @@ body{
   }
 }
 
-@media screen and (max-width: 305px){
+@media screen and (max-width: 305px) {
   .first_layer_header {
     background-image: none;
   }

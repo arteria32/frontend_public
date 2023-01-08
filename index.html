@@ -284,14 +284,35 @@
       </main>
 
       <footer class="page-footer layer">
-        <div class="green-card-information">
-          <p>200 &lt; МАССА &lt; 800</p>
+        <div class="buttons_block">
+          <button class="btn download-reservoir">Загрузить данные</button>
+          <button class="btn change-borders">
+            Поменять границы резервуара
+          </button>
         </div>
-        <div class="red-card-information">
-          <p>МАССА &lt; 200</p>
-          <p>МАССА &gt; 800</p>
+        <div class="footer-wrapper">
+          <div class="green-card-information">
+            <p>
+              <span class="left-border">200</span> &lt; МАССА &lt;
+              <span class="right-border">800</span>
+            </p>
+          </div>
+          <div class="red-card-information">
+            <p>МАССА &lt; <span class="left-border">200</span></p>
+            <p>МАССА &gt; <span class="right-border">800</span></p>
+          </div>
         </div>
       </footer>
     </div>
+    <script src="javascrips/index.js"></script>
   </body>
 </html>
+
+<!--
+  TODO: Надо сделать кнопку для считывания номеров в футере для цвета резервуара,
+  TODO: если номер больше 1000 или меньше 0 ошибка и оставляем значение старое,
+  TODO: если левая граница больше правой тоже возвращаем старые значения
+  TODO: заменить <p> на input
+  TODO: функцию загрузки файла с json
+
+-->
