@@ -1,11 +1,108 @@
-<html>
-
-<head>
-    <title>Hello World!</title>
-</head>
-
-<body>
-    hello,world
-</body>
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/style.css" />
+    <link
+      href="//db.onlinewebfonts.com/c/cd0381aa3322dff4babd137f03829c8c?family=Tahoma"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Layout</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__info">Информация по резервуарам</div>
+      <ul class="header__navigation list">
+        <li class="list__item">
+          <input
+            type="file"
+            class="header__upload-btn"
+            accept="application/json"
+          />
+          <button class="header__btn list__btn">Загрузить данные</button>
+        </li>
+      </ul>
+    </header>
+    <main class="main">
+      <header class="main__header">
+        <ul class="main__navigation list">
+          <li class="list__item">
+            <a class="main__link list__link" href="#">АИ-92</a>
+          </li>
+          <li class="list__item">
+            <a class="main__link list__link" href="#">КЕРОСИН</a>
+          </li>
+          <li class="list__item">
+            <a class="main__link list__link" href="#">ДТ ЗИМНЕЕ</a>
+          </li>
+          <li class="list__item">
+            <a class="main__link list__link" href="#">ТС-1</a>
+          </li>
+          <li class="list__item">
+            <a class="main__link list__link" href="#">АИ-95</a>
+          </li>
+          <li class="list__item">
+            <a class="main__link list__link" href="#">МАЗУТ</a>
+          </li>
+          <li class="list__item">
+            <a class="main__link list__link" href="#">ГАЗОЙЛЬ</a>
+          </li>
+          <li class="list__item">
+            <a class="main__link list__link" href="#">НЕФТЬ</a>
+          </li>
+        </ul>
+      </header>
+      <div class="main__cistern-container"></div>
+      <footer class="main__footer">
+        <ul class="main__notation-container list">
+          <li class="list__item">
+            <p class="main__notation main__notation_bg-color_green">
+              <input
+                type="text"
+                maxlength="4"
+                value="200"
+                class="input main__input"
+              />
+              < МАССА <
+              <input
+                type="text"
+                maxlength="4"
+                value="800"
+                class="input main__input"
+              />
+            </p>
+          </li>
+          <li class="list__item">
+            <p class="main__notation main__notation_bg-color_red">
+              МАССА <
+              <input
+                type="text"
+                maxlength="4"
+                value="200"
+                class="input main__input"
+              />
+              <br />
+              МАССА >
+              <input
+                type="text"
+                maxlength="4"
+                value="800"
+                class="input main__input"
+              />
+            </p>
+          </li>
+        </ul>
+      </footer>
+    </main>
+    <script type="module" src="./src/scripts/index.js"></script>
+  </body>
 </html>
