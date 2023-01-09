@@ -62,9 +62,15 @@ input[type="radio"] {
   gap: 13px;
 }
 
+input#file-input {
+  display: none;
+}
+
 .tank-information__panel__button {
   background-color: var(--third-bg-color);
   border: none;
+  text-align: center;
+  padding-top: 0.8em;
   font-family: var(--head-font);
   font-size: 13px;
   line-height: 16px;
