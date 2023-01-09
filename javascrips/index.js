@@ -108,7 +108,7 @@ let createButton = document.querySelector(".download-reservoir");
 createButton.addEventListener("click", async function (event) {
     deleteReservoirs();
     createFromData();
-}); //TODO
+});
 
 let changeColorButton = document.querySelector(".change-borders");
 
