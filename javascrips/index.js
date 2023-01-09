@@ -46,7 +46,7 @@ function createCardItem(
 
     // body MAIN карточки
     let cardFilling = document.createElement("div");
-    cardFilling.classList.add("card-filling"); //!
+    cardFilling.classList.add("card-filling");
     cardFilling.style.height = valueWeight / 10 + "%";
     let halfPercentLine = document.createElement("p");
     halfPercentLine.className = "half-percent-line";
@@ -68,26 +68,86 @@ function createCardItem(
     occupancyPercantageText.textContent = `${valueWeight / 10}%`;
     let cardFooterText = document.createElement("p");
     cardFooterText.className = "card-footer-text";
-    cardFooterText.textContent = `Уровень керосина в резервуаре №${reservoirNumber}`;
+    cardFooterText.textContent = `Уровень керосина в резервуаре №${reservoirNumber}`; //!
     cardFooter.append(occupancyPercantageText, cardFooterText);
     document.querySelector(".card_list").append(cardItem);
 }
 
 function classCardColor(valueWeight = 0) {
-    let leftBorder = +document.querySelector(".left-border").textContent;
-    let rightBorder = +document.querySelector(".right-border").textContent;
-    if (valueWeight >= leftBorder && valueWeight <= rightBorder)
+    if (valueWeight >= leftDefaultVolumeValue && valueWeight <= rightDefaultVolumeValue)
         return "card_border-bottom_green";
     return "card_border-bottom_red";
 }
 
-// deleteReservoirs();
-createCardItem(550, 10, classCardColor(550));
+function loadFile(url) {
+    return new Promise((resolve, reject) => {
+        let file = new XMLHttpRequest();
+        file.open("GET", url);
+        file.responseType = "json";
+        file.onload = () => {
+            resolve(file.response);
+        };
+        file.send();
+    });
+}
+
+async function createFromData() {
+    const reservoirsData = await loadFile("information_about_reservoir.json");
+    for (let reservoir of reservoirsData) {
+        let reservNumber = reservoir.name.slice(-1);
+        let reservVolume = reservoir.volume;
+        createCardItem(reservVolume, reservNumber, classCardColor(reservVolume));
+    }
+}
+
+let leftDefaultVolumeValue = +document.querySelector(".input-left-border").getAttribute("value");
+let rightDefaultVolumeValue = +document.querySelector(".input-right-border").getAttribute("value");
 
 let createButton = document.querySelector(".download-reservoir");
 
-createButton.addEventListener("click", function (event) {
+createButton.addEventListener("click", async function (event) {
     deleteReservoirs();
-    createCardItem(550, 10, classCardColor(550));
-    createCardItem(550, 10, classCardColor(550));
+    createFromData();
+}); //TODO
+
+let changeColorButton = document.querySelector(".change-borders");
+
+changeColorButton.addEventListener("click", function (event) {
+    let leftBorder = +document.querySelector(".input-left-border").value;
+    let rightBorder = +document.querySelector(".input-right-border").value;
+    if (
+        leftBorder >= rightBorder ||
+        rightBorder > 1000 ||
+        leftBorder < 0 ||
+        isNaN(leftBorder) ||
+        isNaN(rightBorder)
+    ) {
+        alert(
+            "НЕПРАВИЛЬНЫЕ ДАННЫЕ, ЛЕВАЯ ГРАНИЦА ДОЛЖНА БЫТЬ МЕНЬШЕ ПРАВОЙ, ПРАВАЯ НЕ ДОЛЖНА ПРЕВЫШАТЬ 1000, ЛЕВАЯ НЕ ДОЛЖНА БЫТЬ МЕНЬШЕ НУЛЯ"
+        );
+        document.querySelector(".input-left-border").value = leftDefaultVolumeValue;
+        document.querySelector(".input-right-border").value = rightDefaultVolumeValue;
+        return;
+    }
+
+    leftDefaultVolumeValue = leftBorder;
+    rightDefaultVolumeValue = rightBorder;
+    document.querySelector(".input-left-border").setAttribute("value", leftBorder);
+    document.querySelector(".input-left-border").value = leftBorder;
+    document.querySelector(".input-right-border").value = rightBorder;
+    let leftSpans = document.querySelectorAll(".left-border");
+    let rightSpans = document.querySelectorAll(".right-border");
+    for (let leftSpan of leftSpans) {
+        leftSpan.textContent = leftBorder;
+    }
+    for (let rightSpan of rightSpans) {
+        rightSpan.textContent = rightBorder;
+    }
+
+    let cardHeaders = document.querySelectorAll(".card-header");
+    for (let cardHead of cardHeaders) {
+        let reservoirVolume = +cardHead.querySelector(".weight-value").textContent;
+        cardHead.classList.remove(cardHead.classList[1]);
+        cardHead.classList.add(classCardColor(reservoirVolume));
+    }
 });

@@ -146,11 +146,7 @@ body {
   bottom: -18px;
   width: 153%;
   content: "";
-  background: linear-gradient(
-    0deg,
-    rgba(35, 120, 217, 0.25) 0%,
-    rgba(35, 120, 217, 0) 100%
-  );
+  background: linear-gradient(0deg, rgba(35, 120, 217, 0.25) 0%, rgba(35, 120, 217, 0) 100%);
   border-bottom: 2px solid #0089ff;
 }
 
@@ -341,33 +337,6 @@ body {
   border-radius: 3px;
 }
 
-@media screen and (max-width: 565px) {
-  .card_list {
-    justify-items: center;
-  }
-}
-
-@media screen and (max-width: 524px) {
-  .red-card-information {
-    margin: 0;
-    margin-top: 20px;
-  }
-
-  .red-card-information::before {
-    left: -65px;
-  }
-
-  .page-footer {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 .btn {
   border: none;
   outline: none;
@@ -391,6 +360,110 @@ body {
 .btn:active {
   transform: translateY(-1px);
   box-shadow: 0 2px 0 #252938;
+}
+
+.buttons_block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+}
+
+.input_block {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 100px;
+  position: relative;
+}
+
+input {
+  border: 0;
+  border-radius: 4px;
+  display: inline-block;
+  height: 25px;
+  box-sizing: border-box;
+  width: 40px;
+  margin-left: 30px;
+  text-align: center;
+}
+
+.input_block::before {
+  display: inline;
+  content: "Левая граница:";
+  position: absolute;
+  left: -75px;
+  top: 5px;
+}
+.input_block::after {
+  display: inline;
+  content: "Правая граница:";
+  position: absolute;
+  right: 45px;
+  top: 5px;
+}
+
+@media screen and (max-width: 1362px) {
+  .page-footer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .buttons_block {
+    gap: 80px;
+  }
+}
+
+@media screen and (max-width: 952px) {
+  .buttons_block {
+    gap: 50px;
+  }
+
+  .input_block::after {
+    top: 38px;
+    white-space: nowrap;
+  }
+
+  .input_block {
+    gap: 10px;
+    flex-direction: column;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 565px) {
+  .card_list {
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .red-card-information {
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  .red-card-information::before {
+    left: -65px;
+  }
+
+  .page-footer {
+    align-items: center;
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons_block {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 @media screen and (max-width: 332px) {
