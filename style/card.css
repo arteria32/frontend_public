@@ -1,6 +1,7 @@
 .card {
-   width: 197px; 
+  width: 197px;
 }
+
 .card__text {
   display: flex;
   color: white;

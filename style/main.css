@@ -1,50 +1,61 @@
-body {
-  background-color: rgb(27, 30, 39);
-  margin: 25px 30px 32px 30px;
-  padding: 0;
-}
 .main {
   background-color: #161922;
   min-height: 820px;
   padding: 10px 0;
   box-sizing: border-box;
-   display: flex;
+  display: flex;
   justify-content: center;
 }
-.main__card-container{
+.main__card-container {
   display: grid;
-  align-items: center;
   grid-template-columns: repeat(7, 1fr);
   grid-column-gap: 55px;
 }
-@media (max-width:1772px) {
-  .main__card-container{
+@media (max-width: 1772px) {
+  .main__card-container {
     grid-template-columns: repeat(6, 1fr);
   }
 }
-@media (max-width:1520px) {
-  .main__card-container{
+@media (max-width: 1520px) {
+  .main__card-container {
     grid-template-columns: repeat(5, 1fr);
   }
 }
-@media (max-width:1265px) {
-  .main__card-container{
+@media (max-width: 1265px) {
+  .main__card-container {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-@media (max-width:1015px) {
-  .main__card-container{
+@media (max-width: 1015px) {
+  .main__card-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (max-width:763px) {
-  .main__card-container{
+@media (max-width: 763px) {
+  .main__card-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width:513px) {
-  .main__card-container{
+@media (max-width: 513px) {
+  .main__card-container {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-
+/* обнуляющие стили для input[type="number"] */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

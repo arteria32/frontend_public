@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style/footer.css" />
     <link rel="stylesheet" href="style/card.css" />
     <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/index.css" />
   </head>
 
   <body>
@@ -19,10 +20,13 @@
         <div class="info__text">Информация по резервуарам</div>
       </div>
       <div class="header__administration-panel administration-panel">
-        <div class="administration-panel__text">Панель администратора</div>
+        <label class="administration-panel__text">
+          <input type="file" id="file" onchange="{file()}" />
+          <p>Загрузить данные</p>
+          <p></p
+        ></label>
       </div>
     </div>
-
     <div class="navbar">
       <div class="navbar__text">
         <div class="navbar__text-backlight"><a>АИ-92</a></div>
@@ -36,302 +40,13 @@
       </div>
     </div>
 
-    <div class="main">
-      <div class="main__card-container">
-        <div class="card">
-          <div class="card__text card__text-top">
-            <div class="card__text_mass">Масса</div>
-            <div class="card__text_num">980</div>
-          </div>
-          <div class="container">
-            <div class="container__border container__top-border_red"></div>
-            <div class="container__rezervuar rezervuar">
-              <div
-                class="rezervuar__dimensional-block rezervuar__dimensional-block_98"
-              ></div>
-              <div class="rezervuar__scale-line_position">
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-              </div>
-            </div>
-            <div class="container__border"></div>
-          </div>
-          <div class="card__text">
-            <div class="card__percent-square percent-square">98%</div>
-            <div class="card__bottom-text">
-              Уровень <br />керосина в резервуаре №1
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__text card__text-top">
-            <div class="card__text_mass">Масса</div>
-            <div class="card__text_num">680</div>
-          </div>
-          <div class="container">
-            <div class="container__border container__top-border_green"></div>
-            <div class="container__rezervuar rezervuar">
-              <div
-                class="rezervuar__dimensional-block rezervuar__dimensional-block_68"
-              ></div>
-              <div class="rezervuar__scale-line_position">
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-              </div>
-            </div>
-            <div class="container__border"></div>
-          </div>
-          <div class="card__text">
-            <div class="card__percent-square percent-square">68%</div>
-            <div class="card__bottom-text">
-              Уровень <br />керосина в резервуаре №2
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__text card__text-top">
-            <div class="card__text_mass">Масса</div>
-            <div class="card__text_num">180</div>
-          </div>
-          <div class="container">
-            <div class="container__border container__top-border_red"></div>
-            <div class="container__rezervuar rezervuar">
-              <div
-                class="rezervuar__dimensional-block rezervuar__dimensional-block_18"
-              ></div>
-              <div class="rezervuar__scale-line_position">
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-              </div>
-            </div>
-            <div class="container__border"></div>
-          </div>
-          <div class="card__text">
-            <div class="card__percent-square percent-square">18%</div>
-            <div class="card__bottom-text">
-              Уровень <br />керосина в резервуаре №3
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__text card__text-top">
-            <div class="card__text_mass">Масса</div>
-            <div class="card__text_num">750</div>
-          </div>
-          <div class="container">
-            <div class="container__border container__top-border_green"></div>
-            <div class="container__rezervuar rezervuar">
-              <div
-                class="rezervuar__dimensional-block rezervuar__dimensional-block_75"
-              ></div>
-              <div class="rezervuar__scale-line_position">
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-              </div>
-            </div>
-            <div class="container__border"></div>
-          </div>
-          <div class="card__text">
-            <div class="card__percent-square percent-square">75%</div>
-            <div class="card__bottom-text">
-              Уровень <br />керосина в резервуаре №4
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__text card__text-top">
-            <div class="card__text_mass">Масса</div>
-            <div class="card__text_num">180</div>
-          </div>
-          <div class="container">
-            <div class="container__border container__top-border_red"></div>
-            <div class="container__rezervuar rezervuar">
-              <div
-                class="rezervuar__dimensional-block rezervuar__dimensional-block_18"
-              ></div>
-              <div class="rezervuar__scale-line_position">
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-              </div>
-            </div>
-            <div class="container__border"></div>
-          </div>
-          <div class="card__text">
-            <div class="card__percent-square percent-square">18%</div>
-            <div class="card__bottom-text">
-              Уровень <br />керосина в резервуаре №3
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__text card__text-top">
-            <div class="card__text_mass">Масса</div>
-            <div class="card__text_num">750</div>
-          </div>
-          <div class="container">
-            <div class="container__border container__top-border_green"></div>
-            <div class="container__rezervuar rezervuar">
-              <div
-                class="rezervuar__dimensional-block rezervuar__dimensional-block_75"
-              ></div>
-              <div class="rezervuar__scale-line_position">
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-              </div>
-            </div>
-            <div class="container__border"></div>
-          </div>
-          <div class="card__text">
-            <div class="card__percent-square percent-square">75%</div>
-            <div class="card__bottom-text">
-              Уровень <br />керосина в резервуаре №4
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__text card__text-top">
-            <div class="card__text_mass">Масса</div>
-            <div class="card__text_num">750</div>
-          </div>
-          <div class="container">
-            <div class="container__border container__top-border_green"></div>
-            <div class="container__rezervuar rezervuar">
-              <div
-                class="rezervuar__dimensional-block rezervuar__dimensional-block_75"
-              ></div>
-              <div class="rezervuar__scale-line_position">
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-              </div>
-            </div>
-            <div class="container__border"></div>
-          </div>
-          <div class="card__text">
-            <div class="card__percent-square percent-square">75%</div>
-            <div class="card__bottom-text">
-              Уровень <br />керосина в резервуаре №4
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__text card__text-top">
-            <div class="card__text_mass">Масса</div>
-            <div class="card__text_num">980</div>
-          </div>
-          <div class="container">
-            <div class="container__border container__top-border_red"></div>
-            <div class="container__rezervuar rezervuar">
-              <div
-                class="rezervuar__dimensional-block rezervuar__dimensional-block_98"
-              ></div>
-              <div class="rezervuar__scale-line_position">
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-              </div>
-            </div>
-            <div class="container__border"></div>
-          </div>
-          <div class="card__text">
-            <div class="card__percent-square percent-square">98%</div>
-            <div class="card__bottom-text">
-              Уровень <br />керосина в резервуаре №1
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__text card__text-top">
-            <div class="card__text_mass">Масса</div>
-            <div class="card__text_num">680</div>
-          </div>
-          <div class="container">
-            <div class="container__border container__top-border_green"></div>
-            <div class="container__rezervuar rezervuar">
-              <div
-                class="rezervuar__dimensional-block rezervuar__dimensional-block_68"
-              ></div>
-              <div class="rezervuar__scale-line_position">
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-              </div>
-            </div>
-            <div class="container__border"></div>
-          </div>
-          <div class="card__text">
-            <div class="card__percent-square percent-square">68%</div>
-            <div class="card__bottom-text">
-              Уровень <br />керосина в резервуаре №2
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__text card__text-top">
-            <div class="card__text_mass">Масса</div>
-            <div class="card__text_num">180</div>
-          </div>
-          <div class="container">
-            <div class="container__border container__top-border_red"></div>
-            <div class="container__rezervuar rezervuar">
-              <div
-                class="rezervuar__dimensional-block rezervuar__dimensional-block_18"
-              ></div>
-              <div class="rezervuar__scale-line_position">
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-              </div>
-            </div>
-            <div class="container__border"></div>
-          </div>
-          <div class="card__text">
-            <div class="card__percent-square percent-square">18%</div>
-            <div class="card__bottom-text">
-              Уровень <br />керосина в резервуаре №3
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__text card__text-top">
-            <div class="card__text_mass">Масса</div>
-            <div class="card__text_num">750</div>
-          </div>
-          <div class="container">
-            <div class="container__border container__top-border_green"></div>
-            <div class="container__rezervuar rezervuar">
-              <div
-                class="rezervuar__dimensional-block rezervuar__dimensional-block_75"
-              ></div>
-              <div class="rezervuar__scale-line_position">
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-                <div class="rezervuar__scale-line"></div>
-              </div>
-            </div>
-            <div class="container__border"></div>
-          </div>
-          <div class="card__text">
-            <div class="card__percent-square percent-square">75%</div>
-            <div class="card__bottom-text">
-              Уровень <br />керосина в резервуаре №4
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="main" id="mainContainer"></div>
 
     <div class="footer">
-      <div class="footer__text">
-        <div class="squad footer__squad footer__squad_red"></div>
-        <div class="footer__text_center">200 < МАССА < 800</div>
+      <div class="footer__text" id="edit" ondblclick="{edit()}">
         <div class="squad footer__squad footer__squad_green"></div>
+        <div class="footer__text_center">200 < МАССА < 800</div>
+        <div class="squad footer__squad footer__squad_red"></div>
         <div class="footer__text_center">
           <div>МАССА < 200</div>
           <div>МАССА > 800</div>
@@ -339,4 +54,5 @@
       </div>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>

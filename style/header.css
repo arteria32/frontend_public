@@ -19,15 +19,21 @@
 .info__text {
   font-size: 12px;
 }
+.administration-panel p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+}
+.administration-panel input {
+  display: none;
+}
 .administration-panel {
+  display: flex;
   height: 40px;
   width: 190px;
   background-color: #303549;
-  display: flex;
-  justify-content: center;
-  align-content: center;
   border-radius: 4px;
-  cursor: pointer;
 }
 .administration-panel__text {
   font-size: 13px;
