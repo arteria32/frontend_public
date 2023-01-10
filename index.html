@@ -1,11 +1,134 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-    <title>Hello World!</title>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Информационная панель Газпрома c информацией по резервуарам">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Информационная панель: Главная</title>
+
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="shortcut icon" href="./content/header-icon.svg">
+
+	
 </head>
 
-<body>
-    hello,world
-</body>
+<body id="page" class="page">
+	<header class="header">
+		<!-- top header -->
+		<div class="header__top">
+			<div class="header__wrap">
+				<div class="header__container">
+					<img class="header__logo" src="./content/header-icon.svg" alt="Иконка резервуаров">
+					<h1 class="header__title">Информация по резервуарам</h1>
+				</div>
+				<div class="header__container">
+					<button type="button" class="header__button">Загрузить данные</button>
+					<div class="header__menu-button" aria-label="Меню">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- bottom header -->
+		<nav id="nav" class="header__bottom nav">
+			<div class="nav__wrap">
+				<ul class="nav__list">
+					<li class="nav__item">
+						<a href="#" class="nav__link">АИ-92</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link nav__link_active">КЕРОСИН</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">ДТ ЗИМНЕЕ</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">ТС-1</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">АИ-95</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">МАЗУТ</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">ГАЗОЙЛЬ</a>
+					</li>
+					<li class="nav__item">
+						<a href="#" class="nav__link">НЕФТЬ</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		</div>
+	</header>
+	<!-- main content -->
+	<main class="page__main main">
+		<div class="main__container">
+			<div class="main__wrap">
+				<section class="storage-list">
+					<div class="storage-list__container">
+						<div class="storage-list__template">Загрузите данные</div>
 
+						<!-- single storage -->
+						<div id="hidden" class="storage-list__item storage">
+							<div class="storage__header">
+								<span class="storage__header-title">Масса</span>
+								<span class="storage__header-number">980</span>
+							</div>
+							<div class="storage__body chart">
+								<div class="chart__indicator"></div>
+								<div class="chart__divider"></div>
+								<div class="chart__volume">
+									<div class="chart__intercepts-list">
+										<div class="chart__intercepts-list-item"></div>
+										<div class="chart__intercepts-list-item"></div>
+										<div class="chart__intercepts-list-item"></div>
+									</div>
+								</div>
+								<div class="chart__divider"></div>
+							</div>
+							<div class="storage__footer">
+								<div class="storage__footer-number">98%</div>
+								<div class="storage__footer-caption">
+								</div>
+							</div>
+						</div>
+
+
+				</section>
+			</div>
+		</div>
+	</main>
+	<!-- footer -->
+	<footer class="footer">
+		<div class="footer__wrap">
+			<div class="footer__container">
+				<div class="footer__conditions">
+					<div class="footer__conditions-icon_true"></div>
+					<span class="footer__conditions-text">
+						<span class="footer__conditions_min">200</span> < МАССА < 
+							<span class="footer__conditions_max">800</span> </span>
+				</div>
+				<div class="footer__conditions">
+					<div class="footer__conditions-icon_false"></div>
+					<div class="footer__conditions-text-wrapper">
+						<span class="footer__conditions-text">МАССА < 
+							<span class="footer__conditions_min">200</span> </span>
+						<span class="footer__conditions-text">МАССА > 
+							<span class="footer__conditions_max">800</span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="./js/model.js" type="module"></script>
+	<script src="./js/view.js" type="module"></script>
+	<script src="./js/controller.js" type="module"></script>
+	<script src="./js/main.js" type="module" defer></script>
+
+	<script src="./js/learnJS.js" type="module"></script>
+</body>
 </html>

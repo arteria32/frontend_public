@@ -1,0 +1,13 @@
+.main {
+	flex-grow: 1;
+	background-color: $main-bg;
+	
+	&__container {
+		margin: 0 30px auto 30px;
+	}
+
+	&__wrap {
+		max-width: 1920px;
+		margin: 0 auto;
+	}
+}
