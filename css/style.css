@@ -470,6 +470,7 @@ input {
   .first_layer_header {
     flex-direction: column;
     align-items: center;
+    gap: 10px;
   }
 
   .information {
