@@ -1,0 +1,58 @@
+.footer {
+  width: 100%;
+  height: 54px;
+  background-color: #272a38;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.editMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+}
+.editMenu input {
+  display: block;
+  color: white;
+  height: 20px;
+  width: 130px;
+  background-color: #272a38;
+  border-radius: 3px;
+  outline: 0;
+  outline-offset: 0;
+}
+.editMenu p {
+  display: block;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+}
+.footer__text {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin-right: 25px;
+}
+.footer__text_center {
+  align-self: center;
+}
+.squad {
+  height: 23px;
+  width: 23px;
+  border-radius: 3px;
+}
+.footer__squad {
+  align-self: center;
+}
+.footer__squad_green {
+  background-color: #04978d;
+}
+.footer__squad_red {
+  background-color: #eb5757;
+}

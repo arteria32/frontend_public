@@ -1,0 +1,44 @@
+.header {
+  width: 100%;
+  height: 54px;
+  background-color: #272a38;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: Tahoma, sans-serif;
+}
+.info {
+  display: flex;
+}
+.info__img {
+  width: 15px;
+  height: 15px;
+  margin: 0 14px;
+}
+.info__text {
+  font-size: 12px;
+}
+.administration-panel p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+}
+.administration-panel input {
+  display: none;
+}
+.administration-panel {
+  display: flex;
+  height: 40px;
+  width: 190px;
+  background-color: #303549;
+  border-radius: 4px;
+}
+.administration-panel__text {
+  font-size: 13px;
+  margin: auto;
+}
+.header__administration-panel {
+  margin-right: 11px;
+}

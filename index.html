@@ -1,11 +1,58 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+    <link rel="stylesheet" href="style/header.css" />
+    <link rel="stylesheet" href="style/navbar.css" />
+    <link rel="stylesheet" href="style/footer.css" />
+    <link rel="stylesheet" href="style/card.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/index.css" />
+  </head>
 
-<head>
-    <title>Hello World!</title>
-</head>
+  <body>
+    <div class="header">
+      <div class="info">
+        <img src="image/img.png " class="info__img" />
+        <div class="info__text">Информация по резервуарам</div>
+      </div>
+      <div class="header__administration-panel administration-panel">
+        <label class="administration-panel__text">
+          <input type="file" id="file" onchange="{file()}" />
+          <p>Загрузить данные</p>
+          <p></p
+        ></label>
+      </div>
+    </div>
+    <div class="navbar">
+      <div class="navbar__text">
+        <div class="navbar__text-backlight"><a>АИ-92</a></div>
+        <div class="navbar__text-backlight"><a>КЕРОСИН</a></div>
+        <div class="navbar__text-backlight"><a>ДТ ЗИМНИЕ</a></div>
+        <div class="navbar__text-backlight"><a>ТС-1</a></div>
+        <div class="navbar__text-backlight"><a>АИ-95</a></div>
+        <div class="navbar__text-backlight"><a>МАЗУТ</a></div>
+        <div class="navbar__text-backlight"><a>ГАЗОЙЛЬ</a></div>
+        <div class="navbar__text-backlight"><a>НЕФТЬ</a></div>
+      </div>
+    </div>
 
-<body>
-    hello,world
-</body>
+    <div class="main" id="mainContainer"></div>
 
+    <div class="footer">
+      <div class="footer__text" id="edit" ondblclick="{edit()}">
+        <div class="squad footer__squad footer__squad_green"></div>
+        <div class="footer__text_center">200 < МАССА < 800</div>
+        <div class="squad footer__squad footer__squad_red"></div>
+        <div class="footer__text_center">
+          <div>МАССА < 200</div>
+          <div>МАССА > 800</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
 </html>
