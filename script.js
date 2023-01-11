@@ -1,109 +1,106 @@
-// // Класссы базовый синтаксис 9.1
+let uploadFile = document.getElementById('upload-file');
+let uploadButton = document.getElementById('upload-btn');
+let container = document.querySelector('.content');
 
-// class Clock {
-//   constructor({ template }) {
-//     this.template = template;
-//   }
+let changeButton = document.getElementById('change-btn');
 
-//   render() {
-//     let date = new Date();
-//     let hours = date.getHours();
-//     if (hours < 10) hours = '0' + hours;
+let minAcceptableValue = 200;
+let maxAcceptableValue = 1000;
 
-//     let mins = date.getMinutes();
-//     if (mins < 10) mins = '0' + mins;
+uploadButton.addEventListener('click', function () {
+  uploadFile.click();
+});
 
-//     let secs = date.getSeconds();
-//     if (secs < 10) secs = '0' + secs;
+function validation(volume) {
+  if (volume < maxAcceptableValue && volume > minAcceptableValue) {
+    return 'green';
+  } else {
+    return 'red';
+  }
+}
 
-//     let output = this.template
-//       .replace('h', hours)
-//       .replace('m', mins)
-//       .replace('s', secs);
+function addReservoir(obj) {
+  let id = parseInt(obj.name.match(/\d+/));
 
-//     console.log(output);
-//   }
+  let div = document.createElement('div');
 
-//   stop() {
-//     clearInterval(this.timer);
-//   }
+  div.innerHTML = `<div class="tank">
+  <div class="title">
+    <div class="mass">Масса</div>
+    <div class="value">${obj.volume}</div>
+  </div>
+  <div class="line ${validation(obj.volume)}"></div>
+  <div class="border"></div>
+  <div class="diagram">
+    <div class="degree1"></div>
+    <div class="degree2"></div>
+    <div class="degree3"></div>
+    <div class="level" style="height:${(obj.volume / 10) * 1.235}px;"></div>
+  </div>
+  <div class="border"></div>
+  <div class="legend">
+    <div class="precent">${obj.volume / 10 + '%'}</div>
+    <div class="text">Уровень керосина <br />в резервуаре №${id}</div>
+  </div>
+</div>`;
+  container.appendChild(div);
+}
 
-//   start() {
-//     this.render();
-//     this.timer = setInterval(() => this.render, 1000);
-//   }
-// }
+uploadFile.addEventListener('change', async (e) => {
+  const file = await e.target.files[0].text();
 
-// let clock = new Clock({ template: 'h:m:s' });
-// clock.start();
+  const data = JSON.parse(file);
 
-// 9.2 Наследование классов
-// Задача 1 Ошибка создания экземпляра класса
-// class Animal {
-//   constructor(name) {
-//     this.name = name;
-//   }
-// }
+  for (let obj in data) {
+    addReservoir(data[obj]);
+  }
+});
 
-// class Rabbit extends Animal {
-//   constructor(name) {
-//     super(name);
-//     this.created = Date.now();
-//   }
-// }
+changeButton.addEventListener('click', function () {
+  minAcceptableValue = prompt('Введите минимальное значение >0');
+  maxAcceptableValue = prompt('Введите максимальное значение <1000');
 
-// let rabbit = new Rabbit('Белый кролик');
-// alert(rabbit.name);
+  if (minAcceptableValue < 1 || maxAcceptableValue > 999) {
+    alert(
+      'Минимальное значение должно быть больше 0, максимальное меньше 1000'
+    );
+    minAcceptableValue = prompt('Введите минимальное значение >0');
+    maxAcceptableValue = prompt('Введите максимальное значение <1000');
+  }
 
-// Задача 2 Улучшенные часы
-// class ExtendedClock extends Clock {
-//   constructor(options) {
-//     super(options);
-//     let { precision = 1000 } = options;
-//     this.precision = precision;
-//   }
-//   start() {
-//     this.render();
-//     this.timer = setInterval(() => this.render(), this.precision);
-//   }
-// }
+  let rules = document.querySelectorAll('.rule');
+  let rulesList = document.querySelector('.rules');
 
-// 9.3  Статические свойства и методы
-// Задача 1. Класс расширяет объект?
-// class Rabbit extends Object {
-//   constructor(name) {
-//     super();
-//     this.name = name;
-//   }
-// }
-// let rabbit = new Rabbit('Кроль');
-// alert(rabbit.hasOwnProperty('name'));
+  for (let rule of rules) {
+    rulesList.removeChild(rule);
+  }
 
-// ДОП ЗАДАНИЕ
+  rulesList.innerHTML = `
+  <div class="rule">
+    <div class="rec_green"></div>
+    ${minAcceptableValue} < МАССА < ${maxAcceptableValue}
+  </div>
+  <div class="rule">
+    <div class="rec_red"></div>
+    <div>
+      МАССА < ${minAcceptableValue}<br />
+      МАССА > ${maxAcceptableValue}
+    </div>
+  </div>`;
 
-// class Rectangle {
-//   constructor(width, height) {
-//     this.width = width;
-//     this.height = height;
-//   }
+  let lines = document.querySelectorAll('.line');
+  let values = document.querySelectorAll('.value');
 
-//   calcArea() {
-//     return this.height * this.width;
-//   }
-// }
-
-// class coloredRectangleWithText extends Rectangle {
-//   constructor(width, height, color, text) {
-//     super(width, height);
-//     this.color = color;
-//     this.text = text;
-//   }
-
-//   showColor() {
-//     return `Прямоугольник цвета ${this.color} `;
-//   }
-
-//   showText() {
-//     return `Прямоугольник говорит ${this.text} `;
-//   }
-// }
+  for (let i = 0; i < lines.length; i++) {
+    if (
+      +values[i].textContent > minAcceptableValue &&
+      +values[i].textContent < maxAcceptableValue
+    ) {
+      lines[i].classList.remove(lines[i].classList.item(1));
+      lines[i].classList.add('green');
+    } else {
+      lines[i].classList.remove(lines[i].classList.item(1));
+      lines[i].classList.add('red');
+    }
+  }
+});

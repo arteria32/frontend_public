@@ -1,6 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>DZ8.VASILEV.NIKITA</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  </head>
   <body>
-    <script src="/script.js" />
+    <div class="container">
+      <header>
+        <div class="tank_info">
+          <img src="/icons/icon.svg" />
+          <div>Информация по резервуарам</div>
+        </div>
+        <div>
+          <input type="file" id="upload-file" accept=".json" hidden="hidden" />
+          <button class="button" id="upload-btn">Загрузить данные</button>
+        </div>
+      </header>
+      <ul class="tablist">
+        <li>АИ-92</li>
+        <li>КЕРОСИН</li>
+        <li>ДТ ЗИМНЕЕ</li>
+        <li>ТС-1</li>
+        <li>АИ-95</li>
+        <li>МАЗУТ</li>
+        <li>ГАЗОЙЛЬ</li>
+        <li>НЕФТЬ</li>
+      </ul>
+      <div class="content"></div>
+      <footer>
+        <button class="button" id="change-btn">
+          Изменить допустимые значения
+        </button>
+        <div class="rules">
+          <div class="rule">
+            <div class="rec_green"></div>
+            200 < МАССА < 800
+          </div>
+          <div class="rule">
+            <div class="rec_red"></div>
+            <div>
+              МАССА < 200<br />
+              МАССА > 800
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="script.js" />
   </body>
 </html>
