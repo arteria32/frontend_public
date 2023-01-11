@@ -60,7 +60,12 @@ changeButton.addEventListener('click', function () {
   minAcceptableValue = prompt('Введите минимальное значение >0');
   maxAcceptableValue = prompt('Введите максимальное значение <1000');
 
-  if (minAcceptableValue < 1 || maxAcceptableValue > 999) {
+  if (
+    minAcceptableValue < 0 ||
+    maxAcceptableValue > 1000 ||
+    typeof minAcceptableValue !== 'number' ||
+    typeof maxAcceptableValue !== 'number'
+  ) {
     alert(
       'Минимальное значение должно быть больше 0, максимальное меньше 1000'
     );
