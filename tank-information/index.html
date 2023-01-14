@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/theme.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>Задание 8. Андрюшина Я.А.</title>
+</head>
+
+<body class="dark-theme">
+    <div class="container">
+        <div class="header">
+            <div class="header__title">
+                <img draggable="false" src="./assets/icons/header-tank.svg">
+                <span> Информация по резервуарам</span>
+            </div>
+            <div class="header__buttons">
+                <div id="change-range-mass" class="header__button">
+                    Изменить диапазон
+                </div>
+                <div id="change-theme" class="header__button">
+                    Изменить тему
+                </div>
+                <label for="file-upload" class="header__button">
+                    <span>Загрузить данные</span>
+                    <input type="file" id="file-upload" accept="application/json">
+                </label>
+            </div>
+        </div>
+        <div class="subheader">
+            <ul class="subheader__navbar">
+                <li class="active-selector" value="0">АИ-92</li>
+                <li value="1">КЕРОСИН</li>
+                <li value="2">ДТ ЗИМНЕЕ</li>
+                <li value="3">ТС-1</li>
+                <li value="4">АИ-95</li>
+                <li value="5">МАЗУТ</li>
+                <li value="6">ГАЗОЙЛЬ</li>
+                <li value="7">НЕФТЬ</li>
+            </ul>
+        </div>
+        <div class="content-wrapper">
+            <div class="content"></div>
+        </div>
+        <div class="footer">
+            <div class="footer__legend">
+                <div class="footer__legend-square accept"></div>
+                <span class="min-range">200</span>< МАССА<<span class="max-range">800</span>
+            </div>
+            <div class="footer__legend">
+                <div class="footer__legend-square reject"></div>
+                <div class="footer__legend-column">
+                    <div>МАССА < <span class="min-range">200</span></div>
+                    <div>МАССА < <span class="max-range">800</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/main.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+</html>

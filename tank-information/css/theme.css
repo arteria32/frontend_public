@@ -1,0 +1,50 @@
+.dark-theme {
+    --bg-main-color: #1B1E27;
+    --bg-header-color: #272A38;
+    --bg-subheader-color: rgba(39, 42, 56, 0.5);
+    --bg-button-color: #303549;
+    --bg-content-color: rgba(18, 21, 30, 0.5);
+    --bg-tank-line-color: #303549;
+    --bg-emptiness-color: #232532;
+    --bg-white-line-color: #FFFFFF;
+
+    --font-header-color: #D7E2F2;
+    --font-main-color: #FFFFFF;
+    --font-tab-color: #606580;
+
+    --blue-main-color: #0089FF;
+    --underline-color: #0089FF;
+
+    --green-tank-color: #04978D;
+    --red-tank-color: #EB5757;
+
+    --bg-scroll-color: #303549;
+    --track-scroll-color: #606580;
+
+    --gradient: linear-gradient(0deg, rgba(35, 120, 217, 0.25) 0%, rgba(35, 120, 217, 0) 100%);
+}
+.light-theme {
+    --bg-main-color: #e4e1d8;
+    --bg-header-color: #d8d5c7;
+    --bg-subheader-color: rgba(218, 190, 131, 0.1);
+    --bg-button-color: #cfcab6;
+    --bg-content-color: #ffffff2a;
+    --bg-tank-line-color: #cfcab6;
+    --bg-emptiness-color: #dcdacd;
+    --bg-white-line-color: #000000;
+
+    --font-header-color: #281d0d;
+    --font-main-color: #000000;
+    --font-tab-color: #9f9a7f;
+    
+    --blue-main-color: #0089FF;
+    --underline-color: #E5A900;
+
+    --green-tank-color: #04978D;
+    --red-tank-color: #EB5757;
+
+    --bg-scroll-color: #cfcab6;
+    --track-scroll-color: #9f9a7f;
+
+    --gradient: linear-gradient(0deg, rgba(206, 211, 145, 0.25) 0%, rgba(206, 211, 145, 0) 100%);
+}
