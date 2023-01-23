@@ -1,0 +1,130 @@
+.card {
+  width: 197px;
+  margin-bottom: 87px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+.card__weight-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9px;
+}
+
+.card__weight-container__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+.card__weight-container__title p {
+  margin: 0;
+}
+
+.card__weight-container__value {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.card__line {
+  height: 10px;
+  opacity: 0.89;
+  background: #303549;
+}
+
+.card__indicator {
+  opacity: 0.89;
+  height: 4px;
+}
+
+.card__indicator_red {
+  background: #EB5757;
+}
+
+.card__indicator_green {
+  background: #00A99D;
+}
+
+.card__tank-level-container {
+  background: #232532;
+  margin: 0 6px;
+  height: 115px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 50;
+}
+
+.card__tank-level-container__content {
+  position: absolute;
+  background: #0089FF;
+  bottom: 0;
+  width: 100%;
+}
+
+.card__tank-level-container .card__tank-level-container__line:nth-child(2) {
+  margin-top: 29px;
+}
+
+.card__tank-level-container .card__tank-level-container__line:nth-child(4) {
+  margin-bottom: 29px;
+}
+
+.card__tank-level-container__line {
+  width: 38px;
+  height: 1px;
+  margin-left: 18px;
+  background: #F9F9F9;
+  z-index: 100;
+}
+
+.card__footer {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 6px 0;
+}
+
+.card__footer__percent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 56px;
+  width: 56px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  background: #232532;
+  color: #FFFFFF;
+  opacity: 0.89;
+  border-radius: 6px;
+}
+
+.card__footer__percent p {
+  margin: 0;
+}
+
+.card__footer__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 120px;
+  margin-left: 9px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: start;
+  vertical-align: center;
+  color: #FFFFFF;
+}
+
+.card__footer__description p {
+  margin: 0;
+}

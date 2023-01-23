@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card__weight-container">
+    <div class="card__weight-container__title"><p>Масса</p></div>
+    <div class="card__weight-container__value">{{reservoir.volume}}</div>
+  </div>
+  <div class="card__indicator"
+       [class.card__indicator_red]="!reservoir.isCorrectVolume"
+       [class.card__indicator_green]="reservoir.isCorrectVolume"></div>
+  <div class="card__line"></div>
+  <div class="card__tank-level-container">
+    <div [style.height]="(reservoir.volume / 10).toFixed(0)+'%'" class="card__tank-level-container__content"></div>
+    <div class="card__tank-level-container__line"></div>
+    <div class="card__tank-level-container__line"></div>
+    <div class="card__tank-level-container__line"></div>
+  </div>
+  <div class="card__line"></div>
+  <div class="card__footer">
+    <div class="card__footer__percent"><p>{{(reservoir.volume / 10).toFixed(0)}}%</p></div>
+    <div class="card__footer__description"><p>Уровень керосина в резервуаре {{reservoir.name}}</p></div>
+  </div>
+</div>

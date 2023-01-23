@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Reservoir_1",
+    "volume": 100
+  },
+  {
+    "name": "Reservoir_2",
+    "volume": 200
+  },
+  {
+    "name": "Reservoir_3",
+    "volume": 300
+  },
+  {
+    "name": "Reservoir_4",
+    "volume": 400
+  },
+  {
+    "name": "Reservoir_5",
+    "volume": 500
+  },
+  {
+    "name": "Reservoir_6",
+    "volume": 600
+  }
+]

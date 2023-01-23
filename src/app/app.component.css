@@ -1,0 +1,31 @@
+.page {
+  padding: 25px 30px 32px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.top-part {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.reservoirs {
+  margin-top: 73px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 74px;
+}
+
+.reservoirs app-card {
+  display: block;
+  width: fit-content;
+}
+
+app-footer {
+  display: block;
+}

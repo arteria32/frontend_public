@@ -1,0 +1,27 @@
+.tabs {
+  width: 100%;
+  background: rgba(39, 42, 56, 0.5);
+  display: flex;
+  justify-content: center;
+}
+
+.tab {
+  width: 94px;
+}
+
+.tab__name {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #606580;
+  text-align: center;
+}
+
+.tab.tab_active {
+  color: #FFFFFF;
+  border-bottom: 2px solid #0089FF;
+}
+
+.tab.tab_active .tab__name {
+  color: #FFFFFF;
+}

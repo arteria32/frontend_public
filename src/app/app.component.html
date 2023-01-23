@@ -1,0 +1,13 @@
+<div class="page">
+  <div class="top-part">
+    <app-panel
+      (uploadDataEvent)="uploadReservoirs()"
+      (changeBoundsEvent)="changeBounds($event)"></app-panel>
+    <app-tabs></app-tabs>
+    <div class="reservoirs">
+      <app-card *ngFor="let reservoir of reservoirs"
+                [reservoir]="reservoir"></app-card>
+    </div>
+  </div>
+  <app-footer [bounds]="bounds"></app-footer>
+</div>
