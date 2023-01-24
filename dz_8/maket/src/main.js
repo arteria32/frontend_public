@@ -1,9 +1,13 @@
 const mainContent = document.getElementsByClassName("main-content")[0];
+
+const minPossibleValue = 0;
+const maxPossibleValue = 1000;
+
 let minAcceptableValue = 200;
 let maxAcceptableValue = 800;
 
-const inputMinValueMessage = "Введите минимальное значение ≧ 0 и ≦ 1000";
-const inputMaxValueMessage = "Введите максимальное значение ≦ 1000 и ≧ 0";
+const inputMinValueMessage = `Введите минимальное значение ≧ ${minPossibleValue} и ≦ ${maxPossibleValue}`;
+const inputMaxValueMessage = `Введите максимальное значение ≦ ${maxPossibleValue} и ≧ ${minPossibleValue}`;
 
 const inputValidationResult = {
   OK: "ok",
@@ -84,7 +88,7 @@ const validateInput = (input) => {
     return inputValidationResult.NaN;
   }
   let boundaryValue = parseInt(input);
-  if (boundaryValue < 0 || boundaryValue > 1000) {
+  if (boundaryValue < minPossibleValue || boundaryValue > maxPossibleValue) {
     return inputValidationResult.Invalid;
   }
   return inputValidationResult.OK;
@@ -96,7 +100,9 @@ const showValidationError = (validationResult) => {
       alert("Введите число");
       break;
     case inputValidationResult.Invalid:
-      alert("Значение должно быть ≧ 0 и ≦ 1000");
+      alert(
+        `Значение должно быть ≧ ${minPossibleValue} и ≦ ${maxPossibleValue}`
+      );
       break;
   }
 };
