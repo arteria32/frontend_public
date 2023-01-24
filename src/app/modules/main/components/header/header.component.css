@@ -1,0 +1,37 @@
+:host {
+  display: block;
+  font-family: Tahoma, sans-serif;
+  background-color: var(--main-header-bg-color);
+}
+
+.main__navigation {
+  padding: 18px 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 40px;
+}
+
+
+.main__link {
+  font-size: 14px;
+  color: var(--main-link-color);
+}
+
+.main__link:hover {
+  color: var(--text-color);
+}
+
+.main__link::after {
+  width: 0;
+  content: "";
+  display: block;
+  margin-top: 16px;
+  border-bottom: 2px solid var(--main-link-hover-color);
+  transition: width 0.4s ease-in-out;
+}
+
+.main__link:hover::after {
+  width: 100%;
+  box-shadow: 0 -3px 10px rgba(35, 120, 217, 0.7);
+}

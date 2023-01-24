@@ -1,0 +1,35 @@
+<div class="cistern">
+  <div class="cistern__body">
+    <div
+      class="cistern__weight"
+      [ngClass]="{
+        'cistern__weight_border-bottom_green':
+          getFrontierValue(0) < reservoir.volume &&
+          reservoir.volume < getFrontierValue(1),
+        'cistern__weight_border-bottom_red':
+          reservoir.volume <= getFrontierValue(0) ||
+          reservoir.volume >= getFrontierValue(1)
+      }"
+    >
+      <span class="cistern__title">Масса</span>
+      <span class="cistern__value">{{ reservoir.volume }}</span>
+    </div>
+    <div class="cistern__filling-wrapper">
+      <div class="cistern__threshold cistern__threshold_high"></div>
+      <div class="cistern__threshold cistern__threshold_medium"></div>
+      <div class="cistern__threshold cistern__threshold_low"></div>
+      <div
+        class="cistern__filling"
+        [ngStyle]="{ height: roundFilling(reservoir.volume) }"
+      ></div>
+    </div>
+  </div>
+  <div class="cistern__footer">
+    <div class="cistern__percent">
+      {{ roundFilling(reservoir.volume) }}
+    </div>
+    <p class="cistern__description">
+      Уровень керосина в {{ getCisternName(reservoir.name) }}
+    </p>
+  </div>
+</div>

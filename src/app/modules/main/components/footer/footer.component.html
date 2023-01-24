@@ -1,0 +1,24 @@
+<button
+  (click)="onClick()"
+  class="main__btn list__btn"
+>
+  Изменить границы
+</button>
+<ul class="main__notation-container list">
+  <li class="list__item">
+    <p class="main__notation main__notation_bg-color_green">
+      {{ getFrontierValue(0) }}
+      < МАССА <
+      {{ getFrontierValue(1) }}
+    </p>
+  </li>
+  <li class="list__item">
+    <p class="main__notation main__notation_bg-color_red">
+      МАССА <=
+      {{ getFrontierValue(0) }}
+      <br />
+      МАССА >=
+      {{ getFrontierValue(1) }}
+    </p>
+  </li>
+</ul>

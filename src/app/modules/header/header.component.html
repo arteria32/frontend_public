@@ -1,0 +1,14 @@
+<div class="header__info">Информация по резервуарам</div>
+<ul class="header__navigation list">
+  <li class="list__item">
+    <input
+      type="file"
+      class="header__upload-btn"
+      (change)="onChange($event)"
+      accept="application/json"
+    />
+    <button class="header__btn list__btn" (click)="onClick($event)">
+      Загрузить данные
+    </button>
+  </li>
+</ul>
