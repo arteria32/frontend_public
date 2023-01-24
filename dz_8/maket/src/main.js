@@ -8,6 +8,8 @@ let maxAcceptableValue = 800;
 
 const inputMinValueMessage = `Введите минимальное значение ≧ ${minPossibleValue} и ≦ ${maxPossibleValue}`;
 const inputMaxValueMessage = `Введите максимальное значение ≦ ${maxPossibleValue} и ≧ ${minPossibleValue}`;
+const exceededValueMessage =
+  "Минимальное значение не должно превышать максимальное";
 
 const inputValidationResult = {
   OK: "ok",
@@ -20,11 +22,11 @@ const getData = () => {
   let reader = new FileReader();
   reader.readAsText(file);
   reader.onload = () => {
-    addItem(JSON.parse(reader.result).data);
+    addItems(JSON.parse(reader.result).data);
   };
 };
 
-const addItem = (data) => {
+const addItems = (data) => {
   let div = "";
   data.forEach((el) => {
     const value = el.value;
@@ -63,7 +65,7 @@ const changeValues = () => {
   maxAcceptableValue = getBoundaryValue(inputMaxValueMessage);
 
   while (minAcceptableValue > maxAcceptableValue) {
-    alert("Минимальное значение не должно превышать максимальное");
+    alert(exceededValueMessage);
     minAcceptableValue = getBoundaryValue(inputMinValueMessage);
     maxAcceptableValue = getBoundaryValue(inputMaxValueMessage);
   }
@@ -77,10 +79,10 @@ const changeValues = () => {
   let levelIndicators = document.querySelectorAll(".level-indicator__header");
   let values = document.querySelectorAll(".item__weight-info-number");
 
-  for (let i = 0; i < levelIndicators.length; i++) {
-    levelIndicators[i].classList.remove(levelIndicators[i].classList.item(1));
-    levelIndicators[i].classList.add(defineLevel(+values[i].textContent));
-  }
+  levelIndicators.forEach((item, index) => {
+    item.classList.remove("level_red", "level_green");
+    item.classList.add(defineLevel(+values[index].textContent));
+  });
 };
 
 const validateInput = (input) => {
@@ -125,4 +127,5 @@ const defineLevel = (value) => {
     ? "level_green"
     : "level_red";
 };
+
 
