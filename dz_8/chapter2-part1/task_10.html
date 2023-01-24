@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+
+    td,
+    th {
+      border: 1px solid rgb(70, 68, 68);
+      padding: 10px;
+      text-align: center;
+    }
+    th:nth-last-child(-n+2) {
+        background-color: #eeb6a0;
+    }
+    th {
+      font-weight: bold;
+      background-color: #caeea0;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div id="calendar"></div>
+
+  <script>
+    function createCalendar(elem, year, month) {
+    month = month - 1; 
+    let date = new Date(year, month);
+    let table = `<table>
+    <tr>
+        <th>пн</th>
+        <th>вт</th>
+        <th>ср</th>
+        <th>чт</th>
+        <th>пт</th>
+        <th>сб</th>
+        <th>вс</th>
+    </tr>
+    <tr>`;
+    for (let i = 0; i < getDay(date); i++) {
+        table += '<td></td>';
+    }
+
+    while (date.getMonth() == month) {
+        table += '<td>' + date.getDate() + '</td>';
+
+        if (getDay(date) % 7 == 6) { 
+            table += '</tr><tr>';
+        }
+            date.setDate(date.getDate() + 1);
+    }
+
+    if (getDay(date) != 0) {
+        for (let i = getDay(date); i < 7; i++) {
+            table += '<td></td>';
+        }
+    }
+
+    table += '</tr></table>';
+    elem.innerHTML = table;
+}
+
+function getDay(date) { 
+    let day = date.getDay();
+    if (day == 0) day = 7; 
+    return day - 1;
+}
+
+    createCalendar(calendar, 2012, 9);
+  </script>
+
+</body>
+</html>
