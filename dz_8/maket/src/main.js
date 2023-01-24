@@ -2,6 +2,15 @@ const mainContent = document.getElementsByClassName("main-content")[0];
 let minAcceptableValue = 200;
 let maxAcceptableValue = 800;
 
+const inputMinValueMessage = "Введите минимальное значение ≧ 0 и ≦ 1000";
+const inputMaxValueMessage = "Введите максимальное значение ≦ 1000 и ≧ 0";
+
+const inputValidationResult = {
+  OK: "ok",
+  NaN: "not a number",
+  Invalid: "invalid number",
+};
+
 const getData = () => {
   let file = document.getElementById("file").files[0];
   let reader = new FileReader();
@@ -15,14 +24,14 @@ const addItem = (data) => {
   let div = "";
   data.forEach((el) => {
     const value = el.value;
-    const num = el.name.slice(-1);
+    const num = el.name.substring(10);
     const item = `<div class="item">
     <div class="item__weight-info">
         <span>Масса</span>
         <span class="item__weight-info-number">${value}</span>
     </div>
     <div class="item__level-indicator">
-        <div class="level-indicator__header ${validation(value)} "></div>
+        <div class="level-indicator__header ${defineLevel(value)} "></div>
             <div class="level-indicator__borders"></div>
                 <div class="level-indicator__reservoir">
                     <div class="level-indicator__reservoir__amount-of-substance" 
@@ -46,54 +55,68 @@ const addItem = (data) => {
 };
 
 const changeValues = () => {
-  minAcceptableValue = getMinValue();
-  maxAcceptableValue = getMaxValue();
+  minAcceptableValue = getBoundaryValue(inputMinValueMessage);
+  maxAcceptableValue = getBoundaryValue(inputMaxValueMessage);
+
+  while (minAcceptableValue > maxAcceptableValue) {
+    alert("Минимальное значение не должно превышать максимальное");
+    minAcceptableValue = getBoundaryValue(inputMinValueMessage);
+    maxAcceptableValue = getBoundaryValue(inputMaxValueMessage);
+  }
 
   const divGreenSection = document.getElementById("green_type");
   divGreenSection.innerHTML = `${minAcceptableValue} ≦ МАССА ≦ ${maxAcceptableValue}`;
   const divRedSection = document.getElementById("red_type");
   divRedSection.innerHTML = `<div>МАССА < ${minAcceptableValue}</div>
-                            <div>МАССА > ${maxAcceptableValue}</div>`;
+                             <div>МАССА > ${maxAcceptableValue}</div>`;
 
-  let lines = document.querySelectorAll(".level-indicator__header");
+  let levelIndicators = document.querySelectorAll(".level-indicator__header");
   let values = document.querySelectorAll(".item__weight-info-number");
 
-  for (let i = 0; i < lines.length; i++) {
-    lines[i].classList.remove(lines[i].classList.item(1));
-    lines[i].classList.add(validation(+values[i].textContent));
+  for (let i = 0; i < levelIndicators.length; i++) {
+    levelIndicators[i].classList.remove(levelIndicators[i].classList.item(1));
+    levelIndicators[i].classList.add(defineLevel(+values[i].textContent));
   }
 };
 
-const getMinValue = () => {
-  let minValueInput = prompt("Введите минимальное значение ≧ 0 и < 1000");
-  if (isNaN(minValueInput) || minValueInput == "") {
-    alert("Введите число");
-    return getMinValue();
+const validateInput = (input) => {
+  if (isNaN(input) || input === "") {
+    return inputValidationResult.NaN;
   }
-  let minValue = parseInt(minValueInput);
-  if (minValue < 0 || minValue >= 1000) {
-    alert("Минимальное значение должно быть больше или равно 0 и меньше 1000");
-    return getMinValue();
+  let boundaryValue = parseInt(input);
+  if (boundaryValue < 0 || boundaryValue > 1000) {
+    return inputValidationResult.Invalid;
   }
-  return minValue;
+  return inputValidationResult.OK;
 };
 
-const getMaxValue = () => {
-  let maxValueInput = prompt("Введите максимальное значение ≦ 1000 и больше 0");
-  if (isNaN(maxValueInput) > 0 || maxValueInput == "") {
-    alert("Введите число");
-    return getMaxValue();
+const showValidationError = (validationResult) => {
+  switch (validationResult) {
+    case inputValidationResult.NaN:
+      alert("Введите число");
+      break;
+    case inputValidationResult.Invalid:
+      alert("Значение должно быть ≧ 0 и ≦ 1000");
+      break;
   }
-  let maxValue = parseInt(maxValueInput);
-  if (maxValue <= 0 || maxValue > 1000) {
-    alert("Максимальное значение должно быть меньше или равно 1000 и больше 0");
-    return getMaxValue();
-  }
-  return maxValue;
 };
 
-const validation = (value) => {
+const getBoundaryValue = (inputValueMessage) => {
+  let boundaryValueInput = prompt(inputValueMessage);
+  let validationResult = validateInput(boundaryValueInput);
+
+  while (validationResult !== inputValidationResult.OK) {
+    showValidationError(validationResult);
+    boundaryValueInput = prompt(inputValueMessage);
+    validationResult = validateInput(boundaryValueInput);
+  }
+
+  return parseInt(boundaryValueInput);
+};
+
+const defineLevel = (value) => {
   return value >= minAcceptableValue && value <= maxAcceptableValue
     ? "level_green"
     : "level_red";
 };
+
