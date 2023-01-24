@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --bg-color: #1b1e27;
+  --header-bg-color: #272a38;
+  --header-font-color: #d7e2f2;
+  --main-bg-color: rgba(18, 21, 30, 0.5);
+  --main-header-bg-color: rgba(39, 42, 56, 0.5);
+  --main-link-color: #606580;
+  --main-link-hover-color: #0089ff;
+  --main-footer-bg-color: rgba(39, 42, 56, 0.5);
+  --main-notation-bg-color-green: #04978d;
+  --main-notation-bg-color-red: #eb5757;
+  --cistern-body-bottom-border-color: #303549;
+  --cistern-filling-wrapper-color: #232532;
+  --cistern-filling-color: #0089ff;
+  --cistern-weight-border-top-color: #303549;
+  --cistern-weight-border-top-red-color: #eb5757;
+  --cistern-weight-border-top-green-color: #00a99d;
+  --cistern-threshold-border-color: #f9f9f9;
+  --cistern-percent-bg-color: #232532;
+  --list-btn-color: #303549;
+  --text-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  padding: 25px 30px 32px;
+  box-sizing: border-box;
+  background-color: var(--bg-color);
+}
+
+/* List */
+.list {
+  list-style: none;
+}
+
+.list__btn {
+  cursor: pointer;
+  border: none;
+}
+
+.list__link {
+  text-decoration: none;
+}

@@ -1,0 +1,7 @@
+<main-header></main-header>
+<div class="main__cistern-container">
+  <ng-container *ngFor="let reservoir of reservoirs">
+    <cistern *ngIf="reservoir.volume <= 1000" [reservoir]="reservoir"></cistern>
+  </ng-container>
+</div>
+<main-footer></main-footer>

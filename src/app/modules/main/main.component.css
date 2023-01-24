@@ -1,0 +1,23 @@
+:host {
+  display: block;
+  position: relative;
+  min-height: calc(100vh - 110px);
+  background-color: var(--main-bg-color);
+}
+
+.main__cistern-container {
+  display: grid;
+  justify-items: center;
+  row-gap: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  padding: 3.8% 2.6% calc(7.7% + 55px) 2.86%;
+  color: var(--text-color);
+  font-family: Roboto, sans-serif;
+}
+
+@media screen and (max-width: 665px) {
+  .main__cistern-container {
+    padding-top: 10%;
+    padding-bottom: calc(15% + 154px);
+  }
+}
