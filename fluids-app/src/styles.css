@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color:  #1B1E27;
+    --main-text-color: white;
+    --green-level-color: #00A99D;
+    --red-level-color:  #EB5757;
+    --level-indicator-elem2-color: #303549;
+    --reservoir-color: #232532;
+    --fluid-color: #0089FF;
+}
+
+body {
+    background: var(--main-bg-color);
+    color: var(--main-text-color);
+    height: auto;
+}
