@@ -68,15 +68,15 @@ export class BorderService {
       boundaryValueInput = prompt(inputValueMessage);
       validationResult = this.validateInput(boundaryValueInput);
     }
-    if (boundaryValueInput === null) {
-      switch(inputValueMessage){
-        case this.inputMinValueMessage:
-          return val.minAcceptableValue;
-        case this.inputMaxValueMessage:
-          return val.maxAcceptableValue;
-      }
+    // if (boundaryValueInput === null) {
+    //   switch(inputValueMessage){
+    //     case this.inputMinValueMessage:
+    //       return val.minAcceptableValue;
+    //     case this.inputMaxValueMessage:
+    //       return val.maxAcceptableValue;
+    //   }
 
-    } 
+    // } 
     return parseInt(boundaryValueInput === null ? "" : boundaryValueInput)
   };
 }
