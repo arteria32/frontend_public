@@ -3,25 +3,27 @@ import { Injectable } from '@angular/core';
 import * as val  from '../common-data/values';
 
 @Injectable({ providedIn: 'root' })
-export class Borderservice {
-    private currentAcceptableValue: number[] = [];
+export class BorderService {
 
-    private minPossibleValue:number = val.minPossibleValue;
-    private maxPossibleValue:number = val.maxPossibleValue;
-    private minAcceptableValue:number = val.minAcceptableValue;
-    private maxAcceptableValue:number = val.maxAcceptableValue;
+  private minAcceptableValue:number = val.minAcceptableValue;
+  private maxAcceptableValue:number = val.maxAcceptableValue;
 
-    private inputMinValueMessage:string = val.inputMinValueMessage;
-    private inputMaxValueMessage:string = val.inputMaxValueMessage;
-    private exceededValueMessage:string = val.exceededValueMessage;
+  public currentAcceptableValue: number[] = [];
 
-    private inputValidationResult = val.inputValidationResult;
+  private minPossibleValue:number = val.minPossibleValue;
+  private maxPossibleValue:number = val.maxPossibleValue;
+
+  private inputMinValueMessage:string = val.inputMinValueMessage;
+  private inputMaxValueMessage:string = val.inputMaxValueMessage;
+  private exceededValueMessage:string = val.exceededValueMessage;
+
+  private inputValidationResult = val.inputValidationResult;
 
   constructor() {
     this.currentAcceptableValue = [val.minAcceptableValue, val.maxAcceptableValue];
   }
 
-  changeValues() {
+  changeValues():void {
     this.minAcceptableValue = this.getBoundaryValue(val.inputMinValueMessage);
     this.maxAcceptableValue = this.getBoundaryValue(val.inputMaxValueMessage);
   
@@ -30,10 +32,10 @@ export class Borderservice {
       this.minAcceptableValue = this.getBoundaryValue(this.inputMinValueMessage);
       this.maxAcceptableValue = this.getBoundaryValue(this.inputMaxValueMessage);
     }
-  
+    this.currentAcceptableValue = [this.minAcceptableValue, this.maxAcceptableValue];
   };
   
-  validateInput(input:any){
+  validateInput(input:any):string {
     if (isNaN(input) || input === "") {
       return this.inputValidationResult.NaN;
     }
@@ -44,7 +46,7 @@ export class Borderservice {
     return this.inputValidationResult.OK;
   };
   
-    showValidationError(validationResult:string)  {
+    showValidationError(validationResult:string):void  {
     switch (validationResult) {
       case this.inputValidationResult.NaN:
         alert("Введите число");
@@ -57,7 +59,7 @@ export class Borderservice {
     }
   };
   
-  getBoundaryValue(inputValueMessage: string) {
+  getBoundaryValue(inputValueMessage: string):number {
     let boundaryValueInput = prompt(inputValueMessage) ;
     let validationResult = this.validateInput(boundaryValueInput);
   

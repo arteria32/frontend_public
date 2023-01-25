@@ -1,0 +1,11 @@
+<div class="rectangle-footer__text" id="red_type">
+    <div>МАССА < {{ setBoundaryValue(0) }}</div>
+    <div>МАССА > {{ setBoundaryValue(1) }}</div>
+</div>
+<div class="rectangle-footer__color-explanation level_red "></div>
+<div class="rectangle-footer__text" id="green_type">
+    {{ setBoundaryValue(0) }} ≦ МАССА ≦ {{ setBoundaryValue(1) }}
+</div>
+<div class="rectangle-footer__color-explanation level_green "></div>
+<button class="btn" (click)="onClick()">Изменить допустимые значения</button>
+
