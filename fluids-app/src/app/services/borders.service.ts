@@ -1,59 +1,50 @@
 import { Injectable } from '@angular/core';
 
-import * as val  from '../common-data/values';
+import * as constValues  from '../common-data/const-values';
+import {minAcceptableValue, maxAcceptableValue}  from '../common-data/values';
 
 @Injectable({ providedIn: 'root' })
 export class BorderService {
 
-  private minAcceptableValue = val.minAcceptableValue;
-  private maxAcceptableValue = val.maxAcceptableValue;
-
   public currentAcceptableValue: number[] = [];
-
-  private minPossibleValue:number = val.minPossibleValue;
-  private maxPossibleValue:number = val.maxPossibleValue;
-
-  private inputMinValueMessage:string = val.inputMinValueMessage;
-  private inputMaxValueMessage:string = val.inputMaxValueMessage;
-  private exceededValueMessage:string = val.exceededValueMessage;
-
-  private inputValidationResult = val.inputValidationResult;
+  public minAcceptableValue:number = minAcceptableValue;
+  public maxAcceptableValue:number = maxAcceptableValue;
 
   constructor() {
-    this.currentAcceptableValue = [val.minAcceptableValue, val.maxAcceptableValue];
+    this.currentAcceptableValue = [this.minAcceptableValue, this.maxAcceptableValue];
   }
 
   changeValues() {
-    this.minAcceptableValue = this.getBoundaryValue(val.inputMinValueMessage);
-    this.maxAcceptableValue = this.getBoundaryValue(val.inputMaxValueMessage);
+    this.minAcceptableValue = this.getBoundaryValue(constValues.inputMinValueMessage);
+    this.maxAcceptableValue = this.getBoundaryValue(constValues.inputMaxValueMessage);
   
-    while (this.minAcceptableValue > this.maxAcceptableValue) {
-      alert(this.exceededValueMessage);
-      this.minAcceptableValue = this.getBoundaryValue(this.inputMinValueMessage);
-      this.maxAcceptableValue = this.getBoundaryValue(this.inputMaxValueMessage);
+    while (minAcceptableValue > maxAcceptableValue) {
+      alert(constValues.exceededValueMessage);
+      this.minAcceptableValue = this.getBoundaryValue(constValues.inputMinValueMessage);
+      this.maxAcceptableValue = this.getBoundaryValue(constValues.inputMaxValueMessage);
     }
     this.currentAcceptableValue = [this.minAcceptableValue, this.maxAcceptableValue];
   };
   
   validateInput(input:any):string {
     if (isNaN(input) || input === "") {
-      return this.inputValidationResult.NaN;
+      return constValues.inputValidationResult.NaN;
     }
     let boundaryValue = parseInt(input);
-    if (boundaryValue < this.minPossibleValue || boundaryValue > this.maxPossibleValue) {
-      return this.inputValidationResult.Invalid;
+    if (boundaryValue < constValues.minPossibleValue || boundaryValue > constValues.maxPossibleValue) {
+      return constValues.inputValidationResult.Invalid;
     }
-    return this.inputValidationResult.OK;
+    return constValues.inputValidationResult.OK;
   };
   
     showValidationError(validationResult:string):void  {
     switch (validationResult) {
-      case this.inputValidationResult.NaN:
+      case constValues.inputValidationResult.NaN:
         alert("Введите число");
         break;
-      case this.inputValidationResult.Invalid:
+      case constValues.inputValidationResult.Invalid:
         alert(
-          `Значение должно быть ≧ ${this.minPossibleValue} и ≦ ${this.maxPossibleValue}`
+          `Значение должно быть ≧ ${constValues.minPossibleValue} и ≦ ${constValues.maxPossibleValue}`
         );
         break;
     }
@@ -63,20 +54,19 @@ export class BorderService {
     let boundaryValueInput = prompt(inputValueMessage) ;
     let validationResult = this.validateInput(boundaryValueInput);
   
-    while (validationResult !== this.inputValidationResult.OK) {
+    while (validationResult !== constValues.inputValidationResult.OK) {
         this.showValidationError(validationResult);
       boundaryValueInput = prompt(inputValueMessage);
       validationResult = this.validateInput(boundaryValueInput);
     }
-    // if (boundaryValueInput === null) {
-    //   switch(inputValueMessage){
-    //     case this.inputMinValueMessage:
-    //       return val.minAcceptableValue;
-    //     case this.inputMaxValueMessage:
-    //       return val.maxAcceptableValue;
-    //   }
-
-    // } 
+    if (boundaryValueInput === null) {
+      switch(inputValueMessage){
+        case constValues.inputMinValueMessage:
+          return this.minAcceptableValue;
+        case constValues.inputMaxValueMessage:
+          return this.maxAcceptableValue;
+      }
+    } 
     return parseInt(boundaryValueInput === null ? "" : boundaryValueInput)
   };
 }
