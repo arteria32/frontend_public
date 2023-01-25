@@ -58,7 +58,7 @@ export class Borderservice {
   };
   
   getBoundaryValue(inputValueMessage: string) {
-    let boundaryValueInput = prompt(inputValueMessage);
+    let boundaryValueInput = prompt(inputValueMessage) ;
     let validationResult = this.validateInput(boundaryValueInput);
   
     while (validationResult !== this.inputValidationResult.OK) {
@@ -67,7 +67,7 @@ export class Borderservice {
       validationResult = this.validateInput(boundaryValueInput);
     }
   
-    return parseInt(boundaryValueInput);
+    return parseInt(boundaryValueInput === null ? "" : boundaryValueInput);
   };
 
     
