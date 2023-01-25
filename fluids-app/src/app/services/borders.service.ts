@@ -5,8 +5,8 @@ import * as val  from '../common-data/values';
 @Injectable({ providedIn: 'root' })
 export class BorderService {
 
-  private minAcceptableValue:number = val.minAcceptableValue;
-  private maxAcceptableValue:number = val.maxAcceptableValue;
+  private minAcceptableValue = val.minAcceptableValue;
+  private maxAcceptableValue = val.maxAcceptableValue;
 
   public currentAcceptableValue: number[] = [];
 
@@ -23,7 +23,7 @@ export class BorderService {
     this.currentAcceptableValue = [val.minAcceptableValue, val.maxAcceptableValue];
   }
 
-  changeValues():void {
+  changeValues() {
     this.minAcceptableValue = this.getBoundaryValue(val.inputMinValueMessage);
     this.maxAcceptableValue = this.getBoundaryValue(val.inputMaxValueMessage);
   
@@ -59,7 +59,7 @@ export class BorderService {
     }
   };
   
-  getBoundaryValue(inputValueMessage: string):number {
+  getBoundaryValue(inputValueMessage: string) {
     let boundaryValueInput = prompt(inputValueMessage) ;
     let validationResult = this.validateInput(boundaryValueInput);
   
@@ -68,9 +68,15 @@ export class BorderService {
       boundaryValueInput = prompt(inputValueMessage);
       validationResult = this.validateInput(boundaryValueInput);
     }
-  
-    return parseInt(boundaryValueInput === null ? "" : boundaryValueInput);
-  };
+    if (boundaryValueInput === null) {
+      switch(inputValueMessage){
+        case this.inputMinValueMessage:
+          return val.minAcceptableValue;
+        case this.inputMaxValueMessage:
+          return val.maxAcceptableValue;
+      }
 
-    
+    } 
+    return parseInt(boundaryValueInput === null ? "" : boundaryValueInput)
+  };
 }

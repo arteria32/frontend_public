@@ -13,8 +13,8 @@ export class FooterComponent  {
     this.borderService.changeValues();
   }
 
-  setBoundaryValue(i:number) {
-    return this.borderService.currentAcceptableValue[i];
+  setBoundaryValue(index:number) {
+    return this.borderService.currentAcceptableValue[index];
   }
   
 }
