@@ -5,7 +5,10 @@
   background-color: #171922;
 }
 
-app-main {
-  padding: 3.9% 2.95% 7.9%;
-  flex: 1 0 auto;
+app-header {
+  flex: 0 0 auto;
+}
+
+app-footer {
+  flex: 0 0 auto;
 }

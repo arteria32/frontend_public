@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("../src/fonts/Roboto-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+  src: url("../src/fonts/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: "Tahoma";
-  src: url("../fonts/Tahoma-400.woff") format("woff");
+  src: url("../src/fonts/Tahoma-400.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -49,4 +49,8 @@ body {
   font-size: 14px;
   line-height: 16px;
   padding: 25px 30px 32px;
+}
+
+.layer {
+  background-color: rgba(39, 42, 56, 0.5);
 }

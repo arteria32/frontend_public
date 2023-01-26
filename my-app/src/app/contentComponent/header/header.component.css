@@ -1,6 +1,81 @@
-.page-header {
+.header-wrapper {
   font-family: Tahoma, sans-serif;
-  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
+}
+
+.first_layer_header {
+  padding: 10px 11px;
+  background-image: url("../../../img/Vector.svg");
+  background-color: #1f212d;
+  background-repeat: no-repeat;
+  background-size: 16px 14px;
+  background-position: 14px center;
+  background-color: #272a38;
+  border-radius: 2px 2px 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.information {
+  font-size: 12px;
+  margin-left: 40px;
+}
+
+.admin_panel {
+  background-color: var(--button-color);
+  border-radius: 4px;
+  color: inherit;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 9px 20px 10px 20px;
+  text-align: center;
+}
+
+.oil_type_list {
+  font-family: Tahoma, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 55px;
+  flex-wrap: wrap;
+}
+
+.oil_type_item {
+  list-style-type: none;
+  text-align: center;
+}
+
+.oil_type-link {
+  color: #606580;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.oil_type-link-current {
+  position: relative;
+}
+
+.oil_type-link-current::after {
+  display: block;
+  position: absolute;
+  text-align: center;
+  height: 10px;
+  left: -26.5%;
+  bottom: -18px;
+  width: 153%;
+  content: "";
+  background: linear-gradient(
+    0deg,
+    rgba(35, 120, 217, 0.25) 0%,
+    rgba(35, 120, 217, 0) 100%
+  );
+  border-bottom: 2px solid #0089ff;
 }

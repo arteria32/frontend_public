@@ -1,1 +1,32 @@
-<p>footer works!</p>
+<div class="buttons_block">
+  <button class="btn download-reservoir">Загрузить данные</button>
+  <button class="btn change-borders">Поменять границы резервуара</button>
+  <div class="input_block">
+    <input
+      class="input-left-border"
+      type="text"
+      value="200"
+      min="0"
+      max="1000"
+    />
+    <input
+      class="input-right-border"
+      type="text"
+      value="800"
+      min="0"
+      max="1000"
+    />
+  </div>
+</div>
+<div class="footer-wrapper">
+  <div class="green-card-information">
+    <p>
+      <span class="left-border">200</span> &lt; МАССА &lt;
+      <span class="right-border">800</span>
+    </p>
+  </div>
+  <div class="red-card-information">
+    <p>МАССА &lt; <span class="left-border">200</span></p>
+    <p>МАССА &gt; <span class="right-border">800</span></p>
+  </div>
+</div>
