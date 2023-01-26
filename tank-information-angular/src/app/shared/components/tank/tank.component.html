@@ -1,0 +1,23 @@
+<div class='tank'>
+  <div class='tank__header'>
+    <span> Масса </span>
+    <span class='tank__header-mass'> {{tank.value}} </span>
+  </div>
+  <div class='tank__legend-line' [ngClass]="level ? 'accept' : 'reject'"></div>
+  <div class='tank__line'></div>
+  <div class='tank__emptiness'>
+    <div class='tank__white-line'></div>
+    <div class='tank__white-line'></div>
+    <div class='tank__white-line'></div>
+    <div [id]="tankFillingId" class='tank__filling'></div>
+  </div>
+  <div class='tank__line'></div>
+  <div class='tank__level'>
+    <div class='tank__level-percent'>
+      {{percent}}
+    </div>
+    <div class='tank__level-label'>
+      Уровень керосина в резервуаре №{{index}}
+    </div>
+  </div>
+</div>

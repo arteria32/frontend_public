@@ -1,0 +1,62 @@
+<div class="container">
+
+  <div class="header">
+    <div class="header__title">
+      <img draggable="false" src="../../assets/icons/header-tank.svg">
+      <span> Информация по резервуарам</span>
+    </div>
+    <div class="header__buttons">
+      <div id="change-range-mass" class="header__button" (click)="changeRange()">
+        Изменить диапазон
+      </div>
+      <div id="change-theme" class="header__button" (click)="changeTheme()">
+        Изменить тему
+      </div>
+      <label for="file-upload" class="header__button">
+        <span>Загрузить данные</span>
+        <input type="file" id="file-upload" accept="application/json" (change)="inputFile($event)">
+      </label>
+    </div>
+  </div>
+
+  <div class="subheader">
+    <div class="subheader__navbar">
+      <ng-container *ngFor="let group of groupMassive">
+        <div [ngClass]="selectedGroup === group? 'active-selector' : ''"
+             (click)="changeGroup(group)">
+          {{group}}
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="content-wrapper">
+    <div class="content">
+      <ng-container *ngIf="groupedTanks.has(selectedGroup)">
+        <ng-container *ngFor="let tank of groupedTanks.get(selectedGroup); let i = index">
+          <app-tank [tank]="tank"
+                    [tankFillingId]="'tank__filling_' + i"
+                    [index]="i"
+                    [minRange]="minRange"
+                    [maxRange]="maxRange"
+          ></app-tank>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer__legend">
+      <div class="footer__legend-square accept"></div>
+      <span class="min-range">{{minRange}}</span>< МАССА<<span class="max-range">{{maxRange}}</span>
+    </div>
+    <div class="footer__legend">
+      <div class="footer__legend-square reject"></div>
+      <div class="footer__legend-column">
+        <div>МАССА < <span class="min-range">{{minRange}}</span></div>
+        <div>МАССА < <span class="max-range">{{maxRange}}</span></div>
+      </div>
+    </div>
+  </div>
+
+</div>

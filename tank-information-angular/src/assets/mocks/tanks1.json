@@ -1,0 +1,36 @@
+ {
+    "data": [
+        {
+            "name": "Reservoir_1",
+            "value": 200
+        },
+        {
+            "name": "Reservoir_2",
+            "value": 900
+        },
+        {
+            "name": "Reservoir_3",
+            "value": 300
+        },
+        {
+            "name": "Reservoir_4",
+            "value": 800
+        },
+        {
+            "name": "Reservoir_5",
+            "value": 170
+        },
+        {
+            "name": "Reservoir_6",
+            "value": 250
+        },
+        {
+            "name": "Reservoir_7",
+            "value": 200
+        },
+        {
+            "name": "Reservoir_8",
+            "value": 300
+        }
+    ]
+}
