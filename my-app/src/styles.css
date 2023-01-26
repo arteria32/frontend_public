@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tahoma";
+  src: url("../fonts/Tahoma-400.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --card-lines-color: #303549;
+  --weight-color-from-val-to-val: #00a99d;
+  --weight-color-less-val-more-val: #eb5757;
+  --button-color: #303549;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  color: #ffffff;
+  background-color: #1b1e27;
+  font-family: "Roboto", Tahoma, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 25px 30px 32px;
+}

@@ -1,0 +1,11 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: #171922;
+}
+
+app-main {
+  padding: 3.9% 2.95% 7.9%;
+  flex: 1 0 auto;
+}

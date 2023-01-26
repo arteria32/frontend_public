@@ -1,0 +1,6 @@
+.page-header {
+  font-family: Tahoma, sans-serif;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+}
