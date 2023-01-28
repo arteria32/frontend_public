@@ -10,11 +10,6 @@ export class ReservoirService {
   title = '';
   rese: Subject<Reservoir[]> = new Subject<Reservoir[]>();
   constructor(private request: HttpClient) {}
-  getReservoirs(): Observable<Reservoir[]> {
-    return this.request.get<Reservoir[]>(
-      '/assets/information_about_reservoir.json'
-    );
-  }
 
   async uploadReservData() {
     const result = await lastValueFrom(
