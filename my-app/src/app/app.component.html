@@ -1,9 +1,5 @@
 <div class="wrapper">
   <app-header></app-header>
-  <app-main [reservoirs]="reservoirs" [bounds]="bounds"></app-main>
-  <app-footer
-    class="layer"
-    (onChangeData)="updateData($event)"
-    (onChangeBounds)="boundsValue($event)"
-  ></app-footer>
+  <app-main [bounds]="bounds"></app-main>
+  <app-footer class="layer" (onChangeBounds)="boundsValue($event)"></app-footer>
 </div>

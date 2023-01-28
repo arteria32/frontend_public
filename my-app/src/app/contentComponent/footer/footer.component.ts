@@ -15,10 +15,6 @@ import { ReservoirService } from 'src/app/services/reservoir.service';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent {
-  @Output() onChangeData: EventEmitter<Reservoir[]> = new EventEmitter<
-    Reservoir[]
-  >();
-  reservoirs: Reservoir[] = [];
   @Output() onChangeBounds: EventEmitter<Bounds> = new EventEmitter<Bounds>();
   leftBound = 200;
   rightBound = 800;
@@ -26,10 +22,7 @@ export class FooterComponent {
   @ViewChild('rightInput', { static: false }) rightInput: ElementRef;
   constructor(private service: ReservoirService) {}
   uploadData(): void {
-    this.service.getReservoirs().subscribe((reservoirs) => {
-      this.reservoirs = reservoirs;
-      this.onChangeData.emit(this.reservoirs);
-    });
+    this.service.uploadReservData();
   }
 
   changeBounds(): void {

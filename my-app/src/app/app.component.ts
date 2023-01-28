@@ -13,16 +13,11 @@ import { ReservoirService } from './services/reservoir.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  reservoirs: Reservoir[] = [];
   bounds: Bounds = {
     leftBound: 200,
     rightBound: 800,
   };
   constructor(private service: ReservoirService) {}
-
-  updateData(reservoirs: Reservoir[]): void {
-    this.reservoirs = reservoirs;
-  }
 
   boundsValue(bounds: Bounds) {
     this.bounds = bounds;

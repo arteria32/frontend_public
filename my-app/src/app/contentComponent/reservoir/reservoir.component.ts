@@ -13,14 +13,7 @@ export class ReservoirComponent implements OnChanges {
     name: 'name 1',
     volume: 900,
   };
-  @Input() bounds: Bounds;
   constructor(private service: ReservoirService) {}
 
-  ngOnChanges(): void {
-    this.reservoir.borderType = this.service.boundsType(
-      this.reservoir.volume,
-      this.bounds.leftBound,
-      this.bounds.rightBound
-    );
-  }
+  ngOnChanges(): void {}
 }
