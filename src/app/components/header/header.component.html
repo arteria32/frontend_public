@@ -1,0 +1,59 @@
+<div class="tank-information__panel">
+  <div class="tank-information__panel__info">
+    <img
+      src="./../assets/icon.svg"
+      alt="icon"
+      class="tank-information__panel__icon"
+    />
+    <div class="tank-information__panel__text">Информация по резервуарам</div>
+  </div>
+  <input
+    type="file"
+    id="file-input"
+    accept=".json"
+    (change)="handleFileInput($event)"
+  />
+  <label
+    for="file-input"
+    class="tank-information__panel__button"
+    id="file-input-label"
+  >
+    Загрузить данные
+  </label>
+</div>
+<div class="tank-information__fuel-choice__list">
+  <input type="radio" name="fuel" id="ai-92" />
+  <label for="ai-92">
+    <div class="tank-information__fuel-choice__list__item">АИ-92</div>
+  </label>
+  <input type="radio" name="fuel" id="kerosin" checked />
+  <label for="kerosin"
+    ><div class="tank-information__fuel-choice__list__item">КЕРОСИН</div></label
+  >
+  <input type="radio" name="fuel" id="dt-winter" />
+  <label for="dt-winter"
+    ><div class="tank-information__fuel-choice__list__item">
+      ДТ ЗИМНЕЕ
+    </div></label
+  >
+  <input type="radio" name="fuel" id="ts-1" />
+  <label for="ts-1"
+    ><div class="tank-information__fuel-choice__list__item">ТС-1</div></label
+  >
+  <input type="radio" name="fuel" id="ai-95" />
+  <label for="ai-95"
+    ><div class="tank-information__fuel-choice__list__item">АИ-95</div></label
+  >
+  <input type="radio" name="fuel" id="mazut" />
+  <label for="mazut"
+    ><div class="tank-information__fuel-choice__list__item">МАЗУТ</div></label
+  >
+  <input type="radio" name="fuel" id="gasoil" />
+  <label for="gasoil"
+    ><div class="tank-information__fuel-choice__list__item">ГАЗОЙЛЬ</div></label
+  >
+  <input type="radio" name="fuel" id="oil" />
+  <label for="oil"
+    ><div class="tank-information__fuel-choice__list__item">НЕФТЬ</div></label
+  >
+</div>

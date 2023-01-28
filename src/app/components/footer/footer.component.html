@@ -1,0 +1,33 @@
+<div class="tank-information__legend">
+  <div class="tank-information__legend__item">
+    <div class="tank-information__legend__item__square accepted"></div>
+    <div class="tank-information__legend__item__text">
+      <input
+        type="text"
+        name=""
+        id=""
+        [value]="leftBorder"
+        class="tank-information__legend__item__text__input"
+        [(ngModel)]="leftBorder"
+        (change)="handleBorder($event, 'left')"
+      />
+      &lt; МАССА &lt;
+      <input
+        type="text"
+        name=""
+        id=""
+        [value]="rightBorder"
+        class="tank-information__legend__item__text__input"
+        [(ngModel)]="rightBorder"
+        (change)="handleBorder($event, 'right')"
+      />
+    </div>
+  </div>
+  <div class="tank-information__legend__item">
+    <div class="tank-information__legend__item__square critical"></div>
+    <div class="tank-information__legend__item__text">
+      МАССА &lt; {{ leftBorder }} <br />
+      МАССА &gt; {{ rightBorder }}
+    </div>
+  </div>
+</div>

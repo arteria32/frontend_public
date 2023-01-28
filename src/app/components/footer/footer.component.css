@@ -1,0 +1,30 @@
+.tank-information__legend {
+  height: 54px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--second-bg-color);
+  column-gap: 25px;
+}
+
+.tank-information__legend__item {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+  margin-right: 25px;
+}
+
+.tank-information__legend__item__square {
+  width: 25px;
+  height: 25px;
+  border-radius: 3px;
+}
+
+.tank-information__legend__item__text {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.tank-information__legend__item__text__input {
+  width: 35px;
+}

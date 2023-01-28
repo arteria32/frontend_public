@@ -1,0 +1,69 @@
+.tank-information__panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--head-font);
+  line-height: 14px;
+  height: 54px;
+  background-color: var(--first-bg-color);
+}
+
+.tank-information__panel__info {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 14px;
+  color: #d7e2f2;
+  gap: 13px;
+}
+
+input#file-input {
+  display: none;
+}
+
+.tank-information__panel__button {
+  background-color: var(--third-bg-color);
+  border: none;
+  text-align: center;
+  padding-top: 0.8em;
+  font-family: var(--head-font);
+  font-size: 13px;
+  line-height: 16px;
+  border-radius: 4px;
+  color: var(--main-text-color);
+  margin-right: 11px;
+  height: 40px;
+  width: 190px;
+  cursor: pointer;
+  transition: all ease-in-out 0.1s;
+}
+.tank-information__panel__button:hover {
+  transform: scale(1.1);
+}
+
+.tank-information__fuel-choice__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  height: 54px;
+  background-color: var(--second-bg-color);
+  color: var(--not-hovered-text-color);
+}
+
+.tank-information__fuel-choice__list__item {
+  cursor: pointer;
+  height: 100%;
+  padding: 19px;
+  transition: all ease-in-out 0.1s;
+}
+
+.tank-information__fuel-choice__list__item:hover {
+  color: var(--main-text-color);
+}
+
+input[type="radio"]:checked + label > div {
+  border-bottom: 2px solid #0089ff;
+  box-shadow: inset 0 -4px 2px -2px #0088ffc0;
+  color: var(--main-text-color);
+}

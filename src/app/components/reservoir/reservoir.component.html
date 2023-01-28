@@ -1,0 +1,50 @@
+<div class="tank-information__tanks__tank">
+  <div class="tank-information__tanks__tank__mass">
+    <div class="tank-information__tanks__tank__mass__text">Масса</div>
+    <div class="tank-information__tanks__tank__mass__number">
+      {{ reservoir.volume }}
+    </div>
+  </div>
+  <div
+    class="tank-information__tanks__tank__line"
+    [ngClass]="{
+      accepted:
+        getBorder('left') < reservoir.volume &&
+        reservoir.volume < getBorder('right'),
+      critical:
+        reservoir.volume <= getBorder('left') ||
+        reservoir.volume >= getBorder('right')
+    }"
+  ></div>
+  <div class="tank-information__tanks__tank__container">
+    <div class="tank-information__tanks__tank__container__border"></div>
+    <div class="tank-information__tanks__tank__container__space">
+      <div
+        class="tank-information__tanks__tank__container__space__liquid"
+        [ngStyle]="{ 'height.%': reservoir.volume / 10 }"
+      ></div>
+      <div style="position: relative; width: 0; height: 0">
+        <div
+          class="tank-information__tanks__tank__container__line line25"
+        ></div>
+        <div
+          class="tank-information__tanks__tank__container__line line50"
+        ></div>
+        <div
+          class="tank-information__tanks__tank__container__line line75"
+        ></div>
+      </div>
+    </div>
+    <div class="tank-information__tanks__tank__container__border"></div>
+  </div>
+  <div class="tank-information__tanks__tank__level">
+    <div class="tank-information__tanks__tank__level__percent">
+      {{ reservoir.volume / 10 + "%" }}
+    </div>
+    <div class="tank-information__tanks__tank__level__text">
+      Уровень <br />
+      керосина <br />
+      в резервуаре №1
+    </div>
+  </div>
+</div>

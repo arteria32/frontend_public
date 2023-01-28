@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --main-bg-color: #1b1e27;
+
+  --first-bg-color: #272a38;
+  --second-bg-color: #272a3880;
+  --third-bg-color: #303549;
+  --fourth-bg-color: #171923;
+
+  --container-empty-color: #232532;
+  --container-liquid-color: #0089ff;
+
+  --main-text-color: #ffffff;
+  --not-hovered-text-color: #606580;
+  --main-font: "Roboto", sans-serif;
+  --head-font: "Tahoma", sans-serif;
+
+  --critical-color: #eb5757;
+  --accepted-color: #00a99d;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  font-family: var(--main-font);
+  font-style: normal;
+  font-size: 12px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.tank-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 98%;
+  padding: 25px 30px;
+}
+
+.tank-information__tanks {
+  background-color: var(--fourth-bg-color);
+}
+
+.tanks-flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 80px 65px;
+  margin: 95px 80px;
+}
+
+.critical {
+  background-color: var(--critical-color);
+}
+
+.accepted {
+  background-color: var(--accepted-color);
+}

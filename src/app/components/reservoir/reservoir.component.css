@@ -1,0 +1,81 @@
+.tank-information__tanks__tank {
+  width: 180px;
+}
+
+.tank-information__tanks__tank__mass {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 9px 0px;
+}
+
+.tank-information__tanks__tank__mass__text {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.tank-information__tanks__tank__mass__number {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.tank-information__tanks__tank__line {
+  height: 4px;
+}
+
+.tank-information__tanks__tank__container__border {
+  height: 10px;
+  background-color: var(--third-bg-color);
+}
+
+.tank-information__tanks__tank__container__space {
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  margin: 0 5px;
+  background-color: var(--container-empty-color);
+}
+
+.tank-information__tanks__tank__container__space__liquid {
+  margin-top: auto;
+  background-color: var(--container-liquid-color);
+}
+
+.tank-information__tanks__tank__container__line {
+  position: absolute;
+  width: 38px;
+  height: 1px;
+  background-color: var(--main-text-color);
+  left: 15px;
+}
+
+.line25 {
+  bottom: 30px;
+}
+.line50 {
+  bottom: 60px;
+}
+.line75 {
+  bottom: 90px;
+}
+
+.tank-information__tanks__tank__level {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 30px 5px 0;
+}
+
+.tank-information__tanks__tank__level__percent {
+  background-color: var(--container-empty-color);
+  border-radius: 6px;
+  padding: 18px 9px;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 700;
+}
+
+.tank-information__tanks__tank__level__text {
+  font-size: 14px;
+  line-height: 16px;
+}
