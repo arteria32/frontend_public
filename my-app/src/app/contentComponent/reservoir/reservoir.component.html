@@ -1,1 +1,30 @@
-<p>reservoir works!</p>
+<li class="card_item">
+  <div class="card-wrapper">
+    <div class="card-body">
+      <div
+        class="card-header"
+        [class.card_border-bottom_green]="reservoir.borderType"
+        [class.card_border-bottom_red]="!reservoir.borderType"
+      >
+        <p class="weight-word">Масса</p>
+        <p class="weight-value">{{ reservoir.volume }}</p>
+      </div>
+      <div class="card-main">
+        <div
+          class="card-filling"
+          [style.height]="reservoir.volume / 10 + '%'"
+        ></div>
+        <div class="half-percent-line"></div>
+        <div class="half-percent-line"></div>
+        <div class="half-percent-line"></div>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <p class="occupancy_percantage_text">{{ reservoir.volume / 10 }}%</p>
+      <p class="card-footer-text">
+        Уровень керосина в резервуаре №{{ reservoir.name.slice(-1) }}
+      </p>
+    </div>
+  </div>
+</li>

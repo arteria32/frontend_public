@@ -1,0 +1,176 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 25px;
+  align-items: center;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.red-card-information {
+  margin-left: 101px;
+  position: relative;
+}
+
+.red-card-information > p:first-child {
+  margin-bottom: 2px;
+}
+
+.red-card-information::before {
+  display: block;
+  content: "";
+  position: absolute;
+  background-color: var(--weight-color-less-val-more-val);
+  width: 23px;
+  height: 23px;
+  left: -51px;
+  top: 5px;
+  border-radius: 3px;
+}
+
+.green-card-information {
+  position: relative;
+}
+
+.green-card-information::before {
+  display: block;
+  content: "";
+  position: absolute;
+  background-color: var(--weight-color-from-val-to-val);
+  width: 23px;
+  left: -46px;
+  top: -3.5px;
+  height: 23px;
+  border-radius: 3px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background-color: var(--button-color);
+  border-radius: 4px;
+  color: inherit;
+  font-size: 13px;
+  text-decoration: none;
+  padding: 9px 20px 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.6s;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 #252938;
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 0 #252938;
+}
+
+.buttons_block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 100px;
+}
+
+.input_block {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 100px;
+  position: relative;
+}
+
+input {
+  border: 0;
+  border-radius: 4px;
+  display: inline-block;
+  height: 25px;
+  box-sizing: border-box;
+  width: 40px;
+  margin-left: 30px;
+  text-align: center;
+}
+
+.input_block::before {
+  display: inline;
+  content: "Левая граница:";
+  position: absolute;
+  left: -75px;
+  top: 5px;
+}
+.input_block::after {
+  display: inline;
+  content: "Правая граница:";
+  position: absolute;
+  right: 45px;
+  top: 5px;
+}
+
+@media screen and (max-width: 1362px) {
+  :host {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .buttons_block {
+    gap: 80px;
+  }
+}
+
+@media screen and (max-width: 952px) {
+  .buttons_block {
+    gap: 50px;
+  }
+
+  .input_block::after {
+    top: 38px;
+    white-space: nowrap;
+  }
+
+  .input_block {
+    gap: 10px;
+    flex-direction: column;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .red-card-information {
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  .red-card-information::before {
+    left: -65px;
+  }
+
+  :host {
+    align-items: center;
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons_block {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

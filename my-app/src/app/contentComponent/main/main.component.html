@@ -1,25 +1,7 @@
-<div class="main-kerosin">
-  <ul class="card_list">
-    <!-- <li class="card_item">
-      <div class="card-wrapper">
-        <div class="card-body">
-          <div class="card-header card_border-bottom_red">
-            <p class="weight-word">Масса</p>
-            <p class="weight-value">980</p>
-          </div>
-          <div class="card-main">
-            <div class="card-filling Occupancy_rate_98"></div>
-            <div class="half-percent-line"></div>
-            <div class="half-percent-line"></div>
-            <div class="half-percent-line"></div>
-          </div>
-        </div>
-
-        <div class="card-footer">
-          <p class="occupancy_percantage_text">98%</p>
-          <p class="card-footer-text">Уровень керосина в резервуаре №1</p>
-        </div>
-      </div>
-    </li> -->
-  </ul>
-</div>
+<ul class="card_list">
+  <app-reservoir
+    *ngFor="let reservoir of reservoirs"
+    [reservoir]="reservoir"
+    [bounds]="bounds"
+  ></app-reservoir>
+</ul>

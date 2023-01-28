@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReservoirComponent } from './reservoir.component';
+import ReservoirComponent from './reservoir.component';
 
 describe('ReservoirComponent', () => {
   let component: ReservoirComponent;
@@ -8,9 +8,8 @@ describe('ReservoirComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ReservoirComponent ]
-    })
-    .compileComponents();
+      declarations: [ReservoirComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ReservoirComponent);
     component = fixture.componentInstance;

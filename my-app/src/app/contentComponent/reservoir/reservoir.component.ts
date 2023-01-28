@@ -1,10 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Bounds } from 'src/app/interface/bounds';
+import { Reservoir } from 'src/app/interface/reservoir';
+import { ReservoirService } from 'src/app/services/reservoir.service';
 
 @Component({
   selector: 'app-reservoir',
   templateUrl: './reservoir.component.html',
-  styleUrls: ['./reservoir.component.css']
+  styleUrls: ['./reservoir.component.css'],
 })
-export class ReservoirComponent {
+export class ReservoirComponent implements OnChanges {
+  @Input() reservoir: Reservoir = {
+    name: 'name 1',
+    volume: 900,
+  };
+  @Input() bounds: Bounds;
+  constructor(private service: ReservoirService) {}
 
+  ngOnChanges(): void {
+    console.log('HI');
+    this.reservoir.borderType = this.service.boundsType(
+      this.reservoir.volume,
+      this.bounds.leftBound,
+      this.bounds.rightBound
+    );
+  }
 }
