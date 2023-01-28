@@ -17,7 +17,6 @@ export class ReservoirComponent implements OnChanges {
   constructor(private service: ReservoirService) {}
 
   ngOnChanges(): void {
-    console.log('HI');
     this.reservoir.borderType = this.service.boundsType(
       this.reservoir.volume,
       this.bounds.leftBound,
