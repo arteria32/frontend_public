@@ -1,0 +1,7 @@
+<app-header
+  (uploadRezervoirEvent)="uploadRezervoir()"
+  (changeBorderEvent)="updateBorder($event)"
+></app-header>
+<app-navbar></app-navbar>
+<app-main [rezervoirs]="rezervoirs"></app-main>
+<app-footer [border]="border"></app-footer>
