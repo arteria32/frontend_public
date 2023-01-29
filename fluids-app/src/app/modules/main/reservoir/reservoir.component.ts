@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { BorderService } from 'src/app/services/borders.service';
+import { Component, Input } from '@angular/core';
+import { UserInputService } from 'src/app/services/userInput.service';
 @Component({
   selector: 'app-reservoir',
   templateUrl: './reservoir.component.html',
   styleUrls: ['./reservoir.component.css']
 })
 export class ReservoirComponent {
+  @Input() value: number = 0;
+  @Input() number: number = 0;
 
-  constructor(private borderService: BorderService) { }
+  constructor(private userInputService: UserInputService) { }
+  
   setBoundaryValue(index:number) {
-    return this.borderService.currentAcceptableValue[index];
+    // return this.userInputService.currentAcceptableValue[index];
   }
-
-
 }

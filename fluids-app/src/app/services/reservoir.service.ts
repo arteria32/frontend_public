@@ -1,15 +1,26 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
+
+export interface Vedro {
+    name: number;
+    value: number;
+  }
+
+  
 @Injectable({ providedIn: 'root' })
 export class ReservoirService {
-    private reservoirs:object = {};
 
-    getData(file:any) {
-        let reader = new FileReader();
-        reader.readAsText(file);
-        reader.onload = () => {
-        //   addItems(JSON.parse(reader.result).data);
-        };
-      };
+    public reservoirs:[] = [];
+    private readonly reservoirs$ = new BehaviorSubject<Vedro[]>([]);
+
+    constructor() { }
+    public get reservoirsData$(): Observable<Vedro[]> {
+        return this.reservoirs$.asObservable();
+      }
+    updateData(data:any) {
+        this.reservoirs = data.information;
+        console.log(this.reservoirs)
+    }
       
 }

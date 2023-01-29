@@ -1,5 +1,6 @@
 import { Component  } from '@angular/core';
 import { ReservoirService } from "../../services/reservoir.service"
+import {readFromFile} from "../../common-data/read-from-file";
 
 @Component({
   selector: 'app-header',
@@ -10,9 +11,8 @@ export class HeaderComponent  {
 
   constructor(private reservoirService: ReservoirService) { }
 
-  onChange(event: any) {
-    const target = event.target;
-    this.reservoirService.getData(target.files[0]);
+  loadData() {
+    readFromFile().then(data => this.reservoirService.updateData(data));
   }
 
 }

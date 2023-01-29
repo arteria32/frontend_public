@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BorderService } from 'src/app/services/borders.service';
+import { UserInputService } from 'src/app/services/userInput.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,14 +7,15 @@ import { BorderService } from 'src/app/services/borders.service';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent  {
-  constructor(private borderService: BorderService) { }
+  constructor(public userInputService: UserInputService) { }
 
-  onClick() {
-    this.borderService.changeValues();
+  changeValues() { //переназови changeValues
+    this.userInputService.setValues(); //getVal
+
   }
 
-  setBoundaryValue(index:number) {
-    return this.borderService.currentAcceptableValue[index];
-  }
+  // setBoundaryValue(index:number) {
+  //   return this.userInputService.currentAcceptableValue[index];
+  // }
   
 }

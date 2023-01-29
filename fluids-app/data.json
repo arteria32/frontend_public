@@ -1,0 +1,44 @@
+{
+    "information": [
+        {
+            "name": "Reservoir_1",
+            "value": 500
+        },
+        {
+            "name": "Reservoir_2",
+            "value": 700
+        },
+        {
+            "name": "Reservoir_3",
+            "value": 1000
+        },
+        {
+            "name": "Reservoir_4",
+            "value": 230
+        },
+        {
+            "name": "Reservoir_5",
+            "value": 690
+        },
+        {
+            "name": "Reservoir_6",
+            "value": 250
+        },
+        {
+            "name": "Reservoir_7",
+            "value": 90
+        },
+        {
+            "name": "Reservoir_8",
+            "value": 300
+        },
+        {
+            "name": "Reservoir_9",
+            "value": 270
+        },
+        {
+            "name": "Reservoir_10",
+            "value": 0
+        }
+    ]
+}
