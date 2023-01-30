@@ -11,11 +11,6 @@ export class FooterComponent  {
 
   changeValues() { 
     this.userInputService.setValues(); 
-
   }
 
-  // setBoundaryValue(index:number) {
-  //   return this.userInputService.currentAcceptableValue[index];
-  // }
-  
 }
