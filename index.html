@@ -1,11 +1,66 @@
+<!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Информация по резервуарам</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+    </head>
 
-<head>
-    <title>Hello World!</title>
-</head>
+    <body>
+        <div class="nav">
+            <ul class="nav__title">
+                <li><img src="./images/icon.png" width="16px" height="13.26px"></li>
+                <li>Информация по резервуарам</li>
+            </ul>
+            <ul class="nav__buttons">
+                <li>
+                    <input type="file" id="file__upload" />
+                    <input class="nav__button" type="button"
+                        onclick="document.getElementById('file__upload').click()" 
+                        value="Загрузить данные" />
+                </li>
+                <li><button class="nav__button" id="change__range">Изменить диапазон массы</button></li>
+                <li><button class="nav__button">Панель администратора</button></li>
+            </ul>
+        </div>
 
-<body>
-    hello,world
-</body>
+        <div class="header">
+            <ul>
+                <li>АИ-92</li>
+                <li id="header__current">КЕРОСИН</li>
+                <li>ДТ ЗИМНЕЕ</li>
+                <li>ТС-1</li>
+                <li>АИ-95</li>
+                <li>МАЗУТ</li>
+                <li>ГАЗОЙЛЬ</li>
+                <li>НЕФТЬ</li>
+            </ul>
+        </div>
 
+        <ul class="elements__wrapper"></ul>
+
+        <div class="bottom">
+            <div class="bottom__wrapper">
+                <ul class="bottom__info">
+                    <li class="bottom__bluesquare"></li>
+                    <li><span class="minRange">200</span>&lt;МАССА&lt;<span class="maxRange">800</span></li>
+                </ul>
+
+                <ul class="bottom__info">
+                    <li class="bottom__redsquare"></li>
+                    <li>
+                        <ul class="bottom__redinfo">
+                            <li>МАССА&lt;<span class="minRange">200</span></li>
+                            <li>МАССА&gt;<span class="maxRange">800</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <script src="./DOM.js"></script>
+
+    </body>
 </html>
