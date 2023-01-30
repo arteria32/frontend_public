@@ -1,0 +1,65 @@
+.rectangle-info {
+    background: #272A38;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.rectangle-info div {
+    display: flex;
+    align-items: center;
+}
+
+.rectangle-info div img {
+    margin-left: 14px;
+    margin-right: 13px;
+    height: 13.258986473083496px;
+    width: 16px;
+    left: 44px;
+    border-radius: 0px;
+}
+
+.rectangle-info div div {
+    font-family: 'Tahoma';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    /*line-height: 14px;*/
+    color: #D7E2F2;
+}
+
+.rectangle-navbar {
+    background: rgba(39, 42, 56, 0.5);
+    justify-content: center;
+}
+
+.rectangle-navbar a {
+    text-decoration: none;
+    color: #606580;
+}
+
+.rectangle-navbar a li {
+    width: 94px;
+    font-family: 'Tahoma';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px 0 5px;
+    min-height: 5.27vh;
+}
+
+.active, .rectangle-navbar a li:hover {
+    border-bottom: var(--fluid-color) solid 2px;
+    border-radius: 0px;
+    background: linear-gradient(0deg, rgba(35, 120, 217, 0.25) 0%, rgba(35, 120, 217, 0) 25%);
+    color: var(--main-text-color);
+}
+
+@media only screen and (max-width : 768px)  {
+    .rectangle-navbar li {
+        margin: 0 3px 0 3px;
+    }
+}

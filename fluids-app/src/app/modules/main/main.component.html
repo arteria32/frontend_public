@@ -1,10 +1,8 @@
 <div class="main-content">
-    <!-- <ng-container *ngIf="(limitedValues$ | async) as limVal"> -->
-        <app-reservoir  class="item" *ngFor="let reservoir of (reservoirs$ | async)"
+        <app-reservoir class="item" *ngFor="let reservoir of (reservoirs$ | async)"
                    [name]="reservoir.name.substring(10)"
                    [value]="reservoir.value"
                    [min]="userInputService.minAcceptableValue"
                    [max]="userInputService.maxAcceptableValue">
         </app-reservoir>
-      <!-- </ng-container> -->
 </div>

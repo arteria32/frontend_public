@@ -1,0 +1,116 @@
+.weight-info {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 109.99%;
+    margin-bottom: 9px;
+}
+
+.weight-info-number{
+    font-size: 26px;
+}
+
+
+
+
+.level-indicator_ {
+    opacity: 0.89;
+}
+
+.level-indicator__header {
+    height: 4.1px;
+}
+
+.level-indicator__borders {
+    height: 10.1px;
+    background: var(--level-indicator-elem2-color);
+}
+
+.level_red {
+ background: var(--red-level-color);
+}
+
+.level_green {
+    background: var(--green-level-color);
+}
+
+.level-indicator__reservoir {
+    position: relative;
+    height: 123.91px;
+    background: var(--reservoir-color);
+    margin: 0 6px 0 6px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.level-indicator__reservoir__amount-of-substance {
+    background: var(--fluid-color);
+    /* height: 23px; */
+}
+
+.line {
+    position: absolute;
+    z-index: 2;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 25%;
+    margin-left: 9.5%;
+    width: 20.5%;
+}
+
+.line__1 {
+    top: 25%;
+}
+.line__2 {
+    top: 50%;
+}
+.line__3 {
+    top: 75%;
+}
+
+.percentage-level {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.percentage-level-number {
+    width: 3em;
+    height: 3em;
+    background: linear-gradient(90deg, #272A38 94673%, #FFFFFF 114385%);
+    opacity: 0.89;
+    border-radius: 6px;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 9px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.percentage-level-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    height: 48px;
+    width: 120px;
+    color: var(--main-text-color);
+}
+
+.rectangle-footer__color-explanation {
+    width: 23px;
+    height: 23px;
+    border-radius: 3px;
+    margin: 0 23px 0;
+}
+
+
