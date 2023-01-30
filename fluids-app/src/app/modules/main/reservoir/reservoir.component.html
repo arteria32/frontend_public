@@ -1,0 +1,21 @@
+<div class="weight-info">
+    <span>Масса</span>
+    <span class="weight-info-number">{{value}}</span>
+</div>
+<div class="level-indicator">
+    <div class="level-indicator__header" [ngClass]="{ 'level_red': value > max || value < min, 'level_green': value <= max && value >= min }"></div>
+        <div class="level-indicator__borders"></div>
+            <div class="level-indicator__reservoir">
+                <div class="level-indicator__reservoir__amount-of-substance" [ngStyle]="{'height.%': value / 10}" ></div>
+                <div class="line line__1"></div>
+                <div class="line line__2"></div>
+                <div class="line line__3"></div>
+            </div>
+        <div class="level-indicator__borders"></div>
+    </div>
+    <div class="percentage-level">
+    <div class="percentage-level-number">{{value / 10}}%</div>
+    <div class="percentage-level-text">Уровень
+        керосина
+        в резервуаре № {{name}}</div>
+</div>

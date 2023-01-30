@@ -1,0 +1,11 @@
+<div class="rectangle-footer__text" id="red_type">
+    <div>МАССА < {{ userInputService.minAcceptableValue }}</div>
+    <div>МАССА > {{ userInputService.maxAcceptableValue  }}</div>
+</div>
+<div class="rectangle-footer__color-explanation level_red "></div>
+<div class="rectangle-footer__text" id="green_type">
+    {{ userInputService.minAcceptableValue  }} ≦ МАССА ≦ {{ userInputService.maxAcceptableValue }}
+</div>
+<div class="rectangle-footer__color-explanation level_green "></div>
+<button class="btn" (click)="changeValues()">Изменить допустимые значения</button>
+
