@@ -6,12 +6,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
-export class MainComponent implements OnInit {
-  public reservoirs:[] = this.reservoirService.reservoirs;
+export class MainComponent{
+  // public reservoirs:[] = this.reservoirService.reservoirs;
+
+  public reservoirs$ = this.reservoirService.reservoirsData$;
+
   constructor(private  reservoirService: ReservoirService) { }
 
-  ngOnInit(): void {
-    console.log(this.reservoirs)
-  }
+
 
 }

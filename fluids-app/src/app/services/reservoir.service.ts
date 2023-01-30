@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 
-export interface Vedro {
-    name: number;
-    value: number;
+export interface Reservoir {
+    'name': string,
+    'value': string
   }
 
   
@@ -12,15 +12,22 @@ export interface Vedro {
 export class ReservoirService {
 
     public reservoirs:[] = [];
-    private readonly reservoirs$ = new BehaviorSubject<Vedro[]>([]);
+    private readonly reservoirs$ = new BehaviorSubject<Reservoir[]>([]);
 
     constructor() { }
-    public get reservoirsData$(): Observable<Vedro[]> {
+
+    public get reservoirsData$(): Observable<Reservoir[]> {
         return this.reservoirs$.asObservable();
       }
-    updateData(data:any) {
-        this.reservoirs = data.information;
-        console.log(this.reservoirs)
+
+  
+    public updateData(data: any): void {
+        let newData: Reservoir[] = data.information;
+        // проверка на "неправильность"
+        if (newData && newData.length > 0) {
+          // обновление значения с помощью метода "next"
+          this.reservoirs$.next(newData);
+        }
+        console.log(this.reservoirsData$);
     }
-      
 }
