@@ -1,0 +1,26 @@
+<div class="tank">
+  <div class="title">
+    <div class="mass">Масса</div>
+    <div class="value">{{ tank.volume }}</div>
+  </div>
+  <div
+    [ngClass]="{
+      red_line: validator.validator(tank.volume) == false,
+      green_line: validator.validator(tank.volume)
+    }"
+  ></div>
+  <div class="border"></div>
+  <div class="diagram">
+    <div class="degree1"></div>
+    <div class="degree2"></div>
+    <div class="degree3"></div>
+    <div class="level" [style.height]="(tank.volume / 10) * 1.235 + 'px'"></div>
+  </div>
+  <div class="border"></div>
+  <div class="legend">
+    <div class="precent">{{ tank.volume / 10 + "%" }}</div>
+    <div class="text">
+      Уровень керосина <br />в резервуаре №{{ tank.name.split("_")[1] }}
+    </div>
+  </div>
+</div>

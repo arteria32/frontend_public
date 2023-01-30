@@ -1,0 +1,55 @@
+
+@import "/src/app/scss/variables.scss";
+@import "/src/app/scss/mixins.scss";
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: get-color(primary-second, base);
+  padding: 7px 11px 7px 14px;
+  align-items: center;
+  box-sizing: border-box;
+  height: 54px;
+}
+
+.tank_info {
+  align-items: center;
+  justify-content: center;
+  color: get-color(paragraph, base);
+  font-family: tahoma, sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  gap: 13px;
+  color: #d7e2f2;
+}
+
+.button {
+  background-color: #303549;
+  color: get-color(paragraph, base);
+  padding: 11px 22px 13px 22px;
+  border-radius: 4px;
+  border: none;
+  font-family: tahoma, sans-serif;
+  font-size: 13px;
+  line-height: 16px;
+  align-items: center;
+}
+
+.tablist {
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  color: #606580;
+  background-color: get-color(primary, base);
+  margin: 0;
+  font-family: tahoma, sans-serif;
+  font-size: 14px;
+  line-height: 16.9px;
+  box-sizing: border-box;
+  height: 54px;
+  overflow: auto;
+}

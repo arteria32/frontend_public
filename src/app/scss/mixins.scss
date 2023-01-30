@@ -1,0 +1,11 @@
+@import "variables";
+
+@function get-color($name, $state) {
+  $color: map-get($spa-colors, $name);
+
+  @if $color != null {
+    @return map-get($color, $state);
+  }
+
+  @return null;
+}

@@ -1,0 +1,25 @@
+<header>
+  <div class="tank_info">
+    <img draggable="false" src="../assets/icons/icon.svg" />
+    <div>Информация по резервуарам</div>
+  </div>
+  <button type="button" (click)="fileInput.click()" class="button">
+    <span>Загрузить данные</span>
+    <input
+      #fileInput
+      type="file"
+      (change)="dataService.uploadFile($event)"
+      hidden="hidden"
+    />
+  </button>
+</header>
+<ul class="tablist">
+  <li>АИ-92</li>
+  <li>КЕРОСИН</li>
+  <li>ДТ ЗИМНЕЕ</li>
+  <li>ТС-1</li>
+  <li>АИ-95</li>
+  <li>МАЗУТ</li>
+  <li>ГАЗОЙЛЬ</li>
+  <li>НЕФТЬ</li>
+</ul>

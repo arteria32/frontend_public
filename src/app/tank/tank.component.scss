@@ -1,0 +1,117 @@
+@import "/src/app/scss/variables.scss";
+@import "/src/app/scss/mixins.scss";
+
+.tank {
+  min-width: 197px;
+  margin-bottom: 37px;
+  font-family: roboto, sans-serif;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 9px;
+}
+
+.mass {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.value {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.red_line {
+  background-color: get-color(red, base);
+  height: 4px;
+  opacity: 0.89;
+}
+
+.green_line {
+  background-color: get-color(green, base);
+  height: 4px;
+  opacity: 0.89;
+}
+
+.border {
+  height: 10px;
+  background-color: #303549;
+}
+
+.diagram {
+  width: 94%;
+  height: 124px;
+  background-color: #232532;
+  margin-left: 6px;
+  position: relative;
+}
+
+.degree1 {
+  width: 38px;
+  height: 1px;
+  background-color: #f9f9f9;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  left: 9.5%;
+  top: 25%;
+}
+
+.degree2 {
+  width: 38px;
+  height: 1px;
+  background-color: #f9f9f9;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  left: 9.5%;
+  top: 50%;
+}
+
+.degree3 {
+  width: 38px;
+  height: 1px;
+  background-color: #f9f9f9;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  left: 9.5%;
+  top: 75%;
+}
+
+.level {
+  background-color: #0089ff;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.legend {
+  margin-top: 30px;
+  display: flex;
+}
+
+.precent {
+  min-width: 56px;
+  height: 56px;
+  background-color: get-color(primary-second, base);
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  margin-right: 9px;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 16px;
+  width: 61%;
+  display: flex;
+  align-items: flex-end;
+}

@@ -1,0 +1,14 @@
+@import "/src/app/scss/variables.scss";
+@import "/src/app/scss/mixins.scss";
+
+.content {
+  background-color: rgba(18, 21, 30, 0.5);
+  padding: 73px 49px 114px 55px;
+  font-family: roboto, sans-serif;
+  color: get-color(paragraph, base);
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  min-width: 0px;
+}

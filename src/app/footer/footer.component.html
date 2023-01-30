@@ -1,0 +1,19 @@
+<footer>
+  <button class="button" (click)="validator.changeBorders()" id="change-btn">
+    Изменить допустимые значения
+  </button>
+  <div class="rules">
+    <div class="rule">
+      <div class="rec_green"></div>
+      {{ validator.minAcceptableValue }} < МАССА <
+      {{ validator.maxAcceptableValue }}
+    </div>
+    <div class="rule">
+      <div class="rec_red"></div>
+      <div>
+        МАССА < {{ validator.minAcceptableValue }}<br />
+        МАССА > {{ validator.maxAcceptableValue }}
+      </div>
+    </div>
+  </div>
+</footer>
