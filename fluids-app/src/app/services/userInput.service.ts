@@ -2,6 +2,10 @@ import { Injectable } from '@angular/core';
 import * as constValues from '../common-data/const-values';
 import { minAcceptableValue, maxAcceptableValue } from '../common-data/values';
 
+export interface LimitValues {
+  min: number;
+  max: number;
+}
 
 @Injectable({ providedIn: 'root' })
 export class UserInputService {

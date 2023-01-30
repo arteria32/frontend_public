@@ -8,11 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent{
-  // public reservoirs:[] = this.reservoirService.reservoirs;
-
   public reservoirs$ = this.reservoirService.reservoirsData$;
 
   constructor(private  reservoirService: ReservoirService, public userInputService: UserInputService) {}
-
 
 }

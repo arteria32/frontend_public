@@ -1,4 +1,3 @@
-import { Reservoir } from './../../services/reservoir.service';
 import { Component  } from '@angular/core';
 import { ReservoirService } from "../../services/reservoir.service"
 import {readFromFile} from "../../common-data/read-from-file";
@@ -13,9 +12,7 @@ export class HeaderComponent  {
   constructor(private reservoirService: ReservoirService) { }
 
   loadData() {
-    // readFromFile().then(data => this.reservoirService.updateData(data));
     readFromFile().then(data => this.reservoirService.updateData(data));
-
   }
 
 }
