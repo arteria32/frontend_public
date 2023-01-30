@@ -9,8 +9,8 @@ import { UserInputService } from 'src/app/services/userInput.service';
 export class FooterComponent  {
   constructor(public userInputService: UserInputService) { }
 
-  changeValues() { //переназови changeValues
-    this.userInputService.setValues(); //getVal
+  changeValues() { 
+    this.userInputService.setValues(); 
 
   }
 
