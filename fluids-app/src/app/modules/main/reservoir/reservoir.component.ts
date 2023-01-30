@@ -7,7 +7,9 @@ import { UserInputService } from 'src/app/services/userInput.service';
 })
 export class ReservoirComponent {
   @Input() value: number = 0;
-  @Input() number: number = 0;
+  @Input() name: string = '';
+  @Input() min: number = 200;
+  @Input() max: number = 800;
 
   constructor(private userInputService: UserInputService) { }
   

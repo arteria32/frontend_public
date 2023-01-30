@@ -1,13 +1,13 @@
-<div class="item">
+
     <div class="item__weight-info">
         <span>Масса</span>
         <span class="item__weight-info-number">{{value}}</span>
     </div>
     <div class="item__level-indicator">
-        <div class="level-indicator__header ${defineLevel(value)} "></div>
+        <div class="level-indicator__header" [ngClass]="{ 'level_red': value > max || value < min, 'level_green': value <= max && value >= min }"></div>
             <div class="level-indicator__borders"></div>
                 <div class="level-indicator__reservoir">
-                    <div [ngStyle]="{'heigth': value / 10}" class="level-indicator__reservoir__amount-of-substance" ></div>
+                    <div class="level-indicator__reservoir__amount-of-substance" [ngStyle]="{'height.%': value / 10}" ></div>
                     <div class="line line__1"></div>
                     <div class="line line__2"></div>
                     <div class="line line__3"></div>
@@ -18,6 +18,6 @@
         <div class="item__percentage-level-number">{{value / 10}}%</div>
         <div class="item__percentage-level-text">Уровень
             керосина
-            в резервуаре № {{number}}</div>
+            в резервуаре № {{name}}</div>
     </div>
-</div>
+<!-- </div> -->

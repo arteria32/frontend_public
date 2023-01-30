@@ -3,8 +3,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
 
 
 export interface Reservoir {
-    'name': string,
-    'value': string
+    name: any;
+    value: any;
   }
 
   

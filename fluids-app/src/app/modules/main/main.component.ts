@@ -1,4 +1,5 @@
 import { ReservoirService } from './../../services/reservoir.service';
+import { UserInputService} from './../../services/userInput.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,8 +12,7 @@ export class MainComponent{
 
   public reservoirs$ = this.reservoirService.reservoirsData$;
 
-  constructor(private  reservoirService: ReservoirService) { }
-
+  constructor(private  reservoirService: ReservoirService, public userInputService: UserInputService) {}
 
 
 }
