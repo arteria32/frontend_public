@@ -1,11 +1,37 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Hello World!</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Резервуары</title>
 </head>
-
-<body>
-    hello,world
+<body class="page-container">
+        <header class="header-container">
+            <nav class="navigation main-navigation">
+                <div class="title-information">
+                    <img class="icons" src="/img/reservoir.svg" width="16" height="13.26" alt="Иконка резервуаров">
+                    <span class="title-information-link" href="#">Информация по резервуарам</span>
+                </div>
+                <button class="main-navigation-button" type="button" id="upload-data" >
+                    <span class="text-button">Загрузить данные</span>
+                </button>
+            </nav>
+            <nav class="navigation fuel-navigation">
+                <ul class="fuel-navigation-list"></ul>
+            </nav>
+        </header>
+        <main class="main-container">
+            <ul class="reservoir-container"></ul>
+        </main>
+        <footer class="footer-page">
+            <div class="footer-inputs">
+                <label>Мин: <input class="footer-input" id="min" type="number" /></label>
+                <label>Макс: <input class="footer-input" id="max" type="number" /></label>
+            </div>
+            <ul class="footer-info-list"></ul>
+        </footer>
+<script type="module" src="./index.js"></script>
 </body>
-
 </html>

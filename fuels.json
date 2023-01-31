@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Керосин",
+    "fuel": "kerosene"
+  },
+  {
+    "name": "АИ-95",
+    "fuel": "AI95"
+  },
+  {
+    "name": "ДТ",
+    "fuel": "diesel"
+  },
+  {
+    "name": "TC1",
+    "fuel": "TC1"
+  },
+  {
+    "name": "АИ-92",
+    "fuel": "AI92"
+  },
+  {
+    "name": "Мазут",
+    "fuel": "masut"
+  },
+  {
+    "name": "Нефть",
+    "fuel": "oil"
+  },
+  {
+    "name": "Газойл",
+    "fuel": "gasoil"
+  }
+ ]
+ 
