@@ -1,0 +1,4 @@
+.item {
+    width: calc(25% - 40px);
+    margin: 20px;
+}

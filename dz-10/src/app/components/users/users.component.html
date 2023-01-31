@@ -3,10 +3,12 @@
         <h2>Пользователи</h2>
         <button type="button" class="btn btn-light" (click)="getDataFromServer()">Загрузить данные</button>
     </div>
-    <div class="p-3 m-2 bg-light text-dark d-flex flex-column justify-content-around">
-        <app-user></app-user>
-        <app-user></app-user>
-        <app-user></app-user>
-        <app-user></app-user>
+    <div  class="p-3 m-2 bg-light text-dark d-flex flex-wrap">
+        <app-user class="border border-primary rounded p-3 item"  
+        *ngFor="let user of (users$ | async)"
+                    [name]="user.name"
+                    [email]="user.email"
+                    ></app-user>
+        
     </div>
 </div>

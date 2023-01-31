@@ -11,11 +11,10 @@ export class UsersComponent implements OnInit {
   constructor(public httpService: HttpService) { }
 
   ngOnInit(): void {
-
+    this.httpService.getData();
   }
 
   getDataFromServer() {
-    this.httpService.getData();
     console.log(this.users$)
   }
 
