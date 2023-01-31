@@ -1,0 +1,103 @@
+[
+  {
+    "name": "Reservoir_1",
+    "volume": 500,
+    "fuel": "kerosene"
+  },
+  {
+    "name": "Reservoir_2",
+    "volume": 700,
+    "fuel": "AI95"
+  },
+  {
+    "name": "Reservoir_3",
+    "volume": 100,
+    "fuel": "diesel"
+  },
+  {
+    "name": "Reservoir_4",
+    "volume": 300,
+    "fuel": "TC1"
+  },
+  {
+    "name": "Reservoir_5",
+    "volume": 800,
+    "fuel": "AI92"
+  },
+  {
+    "name": "Reservoir_6",
+    "volume": 876,
+    "fuel": "masut"
+  },
+  {
+    "name": "Reservoir_7",
+    "volume": 876,
+    "fuel": "oil"
+  },
+  {
+    "name": "Reservoir_8",
+    "volume": 876,
+    "fuel": "gasoil"
+  },
+  {
+    "name": "Reservoir_9",
+    "volume": 11,
+    "fuel": "oil"
+  },
+  {
+    "name": "Reservoir_10",
+    "volume": 534,
+    "fuel": "gasoil"
+  },
+  {
+    "name": "Reservoir_11",
+    "volume": 940,
+    "fuel": "kerosene"
+  },
+  {
+    "name": "Reservoir_12",
+    "volume": 147,
+    "fuel": "AI95"
+  },
+  {
+    "name": "Reservoir_13",
+    "volume": 787,
+    "fuel": "diesel"
+  },
+  {
+    "name": "Reservoir_14",
+    "volume": 126,
+    "fuel": "TC1"
+  },
+  {
+    "name": "Reservoir_15",
+    "volume": 994,
+    "fuel": "AI92"
+  },
+  {
+    "name": "Reservoir_16",
+    "volume": 389,
+    "fuel": "masut"
+  },
+  {
+    "name": "Reservoir_17",
+    "volume": 520,
+    "fuel": "oil"
+  },
+  {
+    "name": "Reservoir_18",
+    "volume": 199,
+    "fuel": "gasoil"
+  },
+  {
+    "name": "Reservoir_19",
+    "volume": 799,
+    "fuel": "oil"
+  },
+  {
+    "name": "Reservoir_20",
+    "volume": 666,
+    "fuel": "gasoil"
+  }
+ ]
+ 
