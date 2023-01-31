@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { HttpService } from "../../services/http.service"
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersComponent implements OnInit {
 
-  constructor() { }
+  constructor(public httpService: HttpService) { }
 
   ngOnInit(): void {
+
   }
+
+  getDataFromServer() {
+    this.httpService.getData();
+  }
+
 
 }
