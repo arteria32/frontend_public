@@ -6,6 +6,7 @@ import { HttpService } from "../../services/http.service"
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
+  public users$ = this.httpService.usersData$;
 
   constructor(public httpService: HttpService) { }
 
@@ -15,7 +16,7 @@ export class UsersComponent implements OnInit {
 
   getDataFromServer() {
     this.httpService.getData();
+    console.log(this.users$)
   }
-
 
 }
