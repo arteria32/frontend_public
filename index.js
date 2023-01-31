@@ -118,7 +118,6 @@ const renderMain = (reservoirs) => {
   const container = document.querySelector('.reservoir-container')
   container.innerHTML = ''
   reservoirs.forEach((item, index) => {
-    // в массиве для каждого резервуара вызываем метод renderReservoir, который возвращает НОДУ, не строку как innerHTML
     const reservoir = renderReservoir(item, index) // 6
     container.appendChild(reservoir);
   })
@@ -133,7 +132,6 @@ const renderReservoir = (item, index) => {
   // топливо в резервуаре
   const fuel = getFuelData(item?.fuel)?.name
 
-  // определение уровня в резервуаре по сути в px, но сами px мы тут не пишем, просто число пикселей
   const reservoirHeight = heightReservoirSquare * volume / maxVolume // (7)
 
   const reservoir = `
