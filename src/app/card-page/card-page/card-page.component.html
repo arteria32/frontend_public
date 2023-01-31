@@ -1,0 +1,42 @@
+<body class="page" [ngClass]="burgerMenuState ? 'page__wrap' : ''">
+  <app-header
+    [cardSelectors]="cardSelectors"
+    [cardGroupSelector]="cardGroupSelector"
+    [burgerMenuState]="burgerMenuState"
+    (getData)="getData()"
+    (changeGroup)="changeGroup($event)"
+    (toggleBurgerMenu)="toggleBurgerMenu()"
+  ></app-header>
+  <main class="page__main main">
+    <div class="main__container">
+      <div class="main__wrap">
+        <div class="storage-list">
+          <div *ngIf="cardList != undefined; else empty">
+            <app-card
+              class="storage-list__container"
+              [cardGroupSelector]="cardGroupSelector"
+              [cardList]="cardList"
+              [minThreshold]="settings.minThreshold"
+              [maxThreshold]="settings.maxCapacity"
+              [maxCapacity]="settings.maxCapacity"
+            >
+            </app-card>
+          </div>
+          <ng-template #empty>
+            <div class="storage-list__container">
+              <div class="storage-list__template">
+                <div >Загрузите данные</div>
+                <div>json-server --watch src/fakeServer/data.js</div>
+              </div>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </main>
+  <app-footer
+    (setMinThreshold)="setThreshold($event)"
+    [settings]="settings"
+    [settingsError]="settingsError"
+  ></app-footer>
+</body>

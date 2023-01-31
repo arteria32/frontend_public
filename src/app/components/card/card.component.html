@@ -1,0 +1,38 @@
+<div
+  *ngFor="let card of cardListBySelector; let id = index"
+  class="storage-list__item storage"
+>
+  <div class="storage__header">
+    <span class="storage__header-title">Масса</span>
+    <span class="storage__header-number">{{ card.volume }}</span>
+  </div>
+  <div class="storage__body chart">
+    <div
+      class="chart__indicator"
+      [ngClass]="{
+        chart__indicator_false:
+        card.volume < minThreshold ||
+        card.volume > maxThreshold
+      }"
+    ></div>
+    <div class="chart__divider"></div>
+    <div class="chart__volume">
+      <div class="chart__intercepts-list">
+        <div class="chart__intercepts-list-item"></div>
+        <div class="chart__intercepts-list-item"></div>
+        <div class="chart__intercepts-list-item"></div>
+      </div>
+    </div>
+    <div class="chart__divider"></div>
+  </div>
+  <div class="storage__footer">
+    <div class="storage__footer-number">
+      {{ (card.volume / maxCapacity) * 100 | number : "1.0-0" }}%
+    </div>
+    <div class="storage__footer-caption">
+      Уровень <br />
+      заполненности<br />
+      в резервуаре №{{ card.id + 1 }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+.chart {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&__indicator {
+		height: 4.1px;
+		width: 100%;
+		background-color: $storage-indicator-true;
+	}
+
+	&__indicator_false {
+		background-color: $storage-indicator-false;
+	}
+
+	&__intercepts-list {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		top: 30.98px;
+		left: 18.06px;
+		gap: 30.98px;
+	}
+
+	&__intercepts-list-item {
+		height: 1px;
+		width: 38.05px;
+		background-color: $storage-intercept;
+	}
+
+	&__volume {
+		width: 185.12px;
+		position: relative;
+		height: 124px;
+		 background: linear-gradient(to top, $storage-rate 0%, $storage-rate 98%, $storage-rate-empty 98%, $storage-rate-empty 100%);
+	}
+
+
+	&__divider {
+		background-color: $chart-divider;
+		height: 10.1px;
+		Width: 197.12px;
+	}
+}
+

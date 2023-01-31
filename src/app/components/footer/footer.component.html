@@ -1,0 +1,51 @@
+<footer class="footer">
+  <div class="footer__wrap">
+    <div class="footer__container">
+      <div class="footer__conditions">
+        <div class="footer__conditions-icon_true"></div>
+        <div class="footer__conditions-text">
+          <input
+            [class.footer__conditions-value_error]="settingsError"
+            (change)="onInputHandler($event, 'changeMin')"
+            type="text"
+            class="footer__conditions-value"
+            value="{{ settings.minThreshold }}"
+          />
+          <span>< МАССА < </span>
+          <input
+            [class.footer__conditions-value_error]="settingsError"
+            (change)="onInputHandler($event, 'changeMax')"
+            type="text"
+            class="footer__conditions-value"
+            value="{{ settings.maxThreshold }}"
+          />
+        </div>
+      </div>
+      <div class="footer__conditions">
+        <div class="footer__conditions-icon_false"></div>
+        <div class="footer__conditions-text-wrapper">
+          <div class="footer__conditions-text">
+            МАССА <
+            <input
+              [class.footer__conditions-value_error]="settingsError"
+              (change)="onInputHandler($event, 'changeMin')"
+              type="text"
+              class="footer__conditions-value"
+              value="{{ settings.minThreshold }}"
+            />
+          </div>
+          <div class="footer__conditions-text">
+            МАССА >
+            <input
+              [class.footer__conditions-value_error]="settingsError"
+              (change)="onInputHandler($event, 'changeMax')"
+              type="text"
+              class="footer__conditions-value"
+              value="{{ settings.maxThreshold }}"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

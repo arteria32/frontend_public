@@ -1,0 +1,51 @@
+.storage {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 9px;
+  }
+
+  &__header-title {
+    font-size: 18px;
+  }
+
+  &__header-number {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 26px;
+  }
+
+  &__body {
+    padding-bottom: 29.78px;
+  }
+
+  &__footer {
+    width: auto;
+    justify-content: space-around;
+    display: flex;
+    height: 48px;
+    gap: 9px;
+    align-items: center;
+  }
+
+  &__footer-number {
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 20px;
+
+    background-color: $storage-rate-empty;
+
+    height: 56px;
+    width: 56px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__footer-caption {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,53 @@
+<header class="header">
+  <div class="header__top">
+    <div class="header__wrap">
+      <div class="header__container">
+        <img
+          class="header__logo"
+          src="./assets/icons/header-icon.svg"
+          alt="Иконка резервуаров"
+        />
+        <h1 class="header__title">Информация по резервуарам</h1>
+      </div>
+      <div class="header__container">
+        <button
+          type="button"
+          class="header__button"
+          (click)="onGetDataHandler()"
+        >
+          Загрузить данные
+        </button>
+        <div
+          (click)="onBurgerToggle()"
+          class="header__menu-button"
+          aria-label="Меню"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav
+    class="header__bottom nav"
+    [ngClass]="burgerMenuState ? 'header__bottom_open' : ''"
+    id="nav"
+  >
+    <div class="nav__wrap">
+      <ul class="nav__list">
+        <ng-container *ngFor="let selector of cardSelectors; let id = index">
+          <li class="nav__item" (click)="onChangeGroupHandler(id)">
+            <a
+              id="{{ id }}"
+              class="nav__link"
+              [ngClass]="{ nav__link_active: id === cardGroupSelector }"
+              >{{ selector }}</a
+            >
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+  </nav>
+</header>
