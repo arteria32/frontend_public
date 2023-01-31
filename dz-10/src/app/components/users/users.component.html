@@ -1,13 +1,15 @@
 <div class="d-flex flex-column justify-content-around">
     <div class="p-3 m-2 bg-primary text-white d-flex justify-content-around">
         <h2>Пользователи</h2>
-        <button type="button" class="btn btn-light" (click)="getDataFromServer()">Загрузить данные</button>
     </div>
-    <div  class="p-3 m-2 bg-light text-dark d-flex flex-wrap">
-        <app-user class="border border-primary rounded p-3 item"  
+    <div  class="p-3 m-2 mt-0 bg-light text-dark d-flex flex-wrap">
+        <app-user  class="border  rounded p-3 bg-primary text-white item d-flex flex-column"
         *ngFor="let user of (users$ | async)"
                     [name]="user.name"
-                    [email]="user.email"
+                    [email]="user.email" 
+                    [website]="user.website"
+                    [company]="user.company.name"
+                    [city]="user.address.city"
                     ></app-user>
         
     </div>

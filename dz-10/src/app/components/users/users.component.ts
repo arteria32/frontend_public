@@ -14,8 +14,6 @@ export class UsersComponent implements OnInit {
     this.httpService.getData();
   }
 
-  getDataFromServer() {
-    console.log(this.users$)
-  }
+ 
 
 }

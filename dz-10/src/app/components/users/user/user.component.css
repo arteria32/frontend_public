@@ -1,0 +1,12 @@
+div {
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.user:hover {
+    cursor: pointer;
+}
+

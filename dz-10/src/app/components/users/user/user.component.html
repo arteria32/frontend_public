@@ -1,2 +1,28 @@
-<p>User's name: {{name}}</p>
-<p>email: {{email}}</p>
+<div (click)="toggle()" class="user">
+    <div class="d-flex justify-content-between">
+        <div>Name:</div>
+        <div>{{name}}</div>
+    </div>
+    <div class="d-flex justify-content-between">
+        <div>City: </div>
+        <div>{{city}}</div>
+    </div>
+    <div class="d-flex justify-content-between">
+        <div>Company: </div>
+        <div>{{company}}</div>
+    </div>
+    <div *ngIf="condition" class="d-flex flex-column">
+        <div class="d-flex justify-content-between">
+            <div>Email: </div>
+            <div>{{email}}</div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div>Website: </div>
+            <div><a  href={{website}} class="badge badge-primary">https://{{website}}</a></div>
+        </div>
+        <button type="button" class="btn btn-light mt-2" >View User Tasks</button>
+    </div>
+    
+    
+    
+</div>
