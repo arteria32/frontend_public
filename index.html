@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/styles.css">
-    <title>Резервуары</title>
+    <title>DZ8</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body class="page-container">
-        <header class="header-container">
-            <nav class="navigation main-navigation">
-                <div class="title-information">
-                    <img class="icons" src="/img/reservoir.svg" width="16" height="13.26" alt="Иконка резервуаров">
-                    <span class="title-information-link" href="#">Информация по резервуарам</span>
-                </div>
-                <button class="main-navigation-button" type="button" id="upload-data" >
-                    <span class="text-button">Загрузить данные</span>
-                </button>
-            </nav>
-            <nav class="navigation fuel-navigation">
-                <ul class="fuel-navigation-list"></ul>
-            </nav>
-        </header>
-        <main class="main-container">
-            <ul class="reservoir-container"></ul>
-        </main>
-        <footer class="footer-page">
-            <div class="footer-inputs">
-                <label>Мин: <input class="footer-input" id="min" type="number" /></label>
-                <label>Макс: <input class="footer-input" id="max" type="number" /></label>
+<body>
+    <div class="header">
+        <div class="info">
+          <img src="logo.png " class="info__img" />
+          <div class="info__text">Информация по резервуарам</div>
+        </div>
+        <div class="header_admin_panel">
+          <label class="admin_panel_text">
+            <input type="file" id="file" onchange="{file()}" />
+            <p>Загрузить данные</p>
+            <p></p
+          ></label>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="navbar_text">
+            <div class="navbar_text1"><a>АИ-92</a></div>
+            <div class="navbar_text_backlight"><a>КЕРОСИН</a></div>
+            <div class="navbar_text1"><a>ДТ ЗИМНИЕ</a></div>
+            <div class="navbar_text1"><a>ТС-1</a></div>
+            <div class="navbar_text1"><a>АИ-95</a></div>
+            <div class="navbar_text1"><a>МАЗУТ</a></div>
+            <div class="navbar_text1"><a>ГАЗОЙЛЬ</a></div>
+            <div class="navbar_text1"><a>НЕФТЬ</a></div>
+        </div>
+    </div>
+
+    <div class="main" id="mainContainer"></div>
+
+    <div class="footer">
+        <div class="footer_text" id="govern" ondblclick="{govern()}">
+            <div class="footer_green"></div>
+            <div class="footer_text_center">200 < МАССА < 800</div>
+            <div class="footer_red"></div>
+            <div class="footer_text_center">
+            <div>МАССА < 200</div>
+            <div>МАССА > 800</div>
             </div>
-            <ul class="footer-info-list"></ul>
-        </footer>
-<script type="module" src="./index.js"></script>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
