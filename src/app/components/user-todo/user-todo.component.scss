@@ -1,0 +1,31 @@
+@import "./src/app/styles/global/colors";
+
+.todos {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+
+
+
+}
+.todo {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  &__title {
+    max-width: 450px;
+  }
+  &__completed {
+    width: 23px;
+    height: 23px;
+    background-color: $todo-completed;
+    border-radius: 3px;
+  }
+  &__uncompleted {
+    width: 23px;
+    height: 23px;
+    background-color: $todo-uncompleted;
+    border-radius: 3px;
+  }
+}

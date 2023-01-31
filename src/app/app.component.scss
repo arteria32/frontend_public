@@ -1,0 +1,7 @@
+@import "./src/app/styles/global/colors";
+
+.page {
+  font-family: Tahoma, sans-serif;
+  background-color: $page-bg;
+  color: $main-text;
+}

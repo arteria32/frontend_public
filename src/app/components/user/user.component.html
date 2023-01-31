@@ -1,0 +1,41 @@
+<div class="users-container">
+  <div class="users">
+    <div class="user__img"></div>
+    <div class="user__info">
+      <div>
+        <h2>
+          <strong>{{ user.name | titlecase }}</strong>
+        </h2>
+        <div class="user__sub-info">
+          <small>Email: {{ user.email }}</small
+          ><br />
+          <small>Website: {{ user.website }}</small
+          ><br />
+          <div *ngIf="infoToggle">
+            <small>Company: {{ user.company.name }}</small
+            ><br />
+            <small>City: {{ user.address.city }}</small
+            ><br />
+            <small>Phone: {{ user.phone }}</small
+            ><br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="user__btns">
+      <button
+        [ngClass]="infoToggle ? 'user__btn-off' : 'user__btn'"
+        (click)="infoToggle = !infoToggle"
+      >
+        {{ infoToggle ? "Hide Info" : "Show more Info" }}
+      </button>
+      <button
+        *ngIf="infoToggle"
+        routerLink="/usersTodos/{{ user.id }}/{{ user.name }}"
+        class="user__btn"
+      >
+        Check User Todos
+      </button>
+    </div>
+  </div>
+</div>

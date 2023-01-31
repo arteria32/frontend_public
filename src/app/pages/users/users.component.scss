@@ -1,0 +1,20 @@
+@import "./src/app/styles/global/colors";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.main {
+  flex-grow: 1;
+  padding-top: 20px;
+  background-color: $main-bg;
+  height: 100vh;
+  &__container {
+    margin: 0 30px auto 30px;
+  }
+
+  &__wrap {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}
+
+.users {
+  padding-top: 20px;
+}

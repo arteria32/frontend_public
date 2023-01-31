@@ -1,0 +1,11 @@
+<div>
+  <main class="main">
+    <app-user
+      *ngFor="let user of users"
+      [loaded]="loaded"
+      [user]="user"
+      [infoToggle]="infoToggle"
+    >
+    </app-user>
+  </main>
+</div>

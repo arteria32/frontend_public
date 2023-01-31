@@ -1,0 +1,5 @@
+<p style="padding-top: 30px; display: flex; justify-content: center">
+  ToDo List for: {{ userName }}
+</p>
+<app-user-todo *ngFor="let todo of todos" class="todos" [todo]="todo">
+</app-user-todo>

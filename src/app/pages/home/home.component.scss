@@ -1,0 +1,17 @@
+@import "./src/app/styles/global/colors";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.main {
+  flex-grow: 1;
+  background-color: $main-bg;
+  height: 100vh;
+  &__container {
+    margin: 0 30px auto 30px;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+  }
+}

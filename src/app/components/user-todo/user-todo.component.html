@@ -1,0 +1,6 @@
+<div>
+  <div class="todo">
+    <p class="todo__title">{{ todo.title | uppercase }}</p>
+    <p [ngClass]="todo.completed ? 'todo__completed' : 'todo__uncompleted'"></p>
+  </div>
+</div>
