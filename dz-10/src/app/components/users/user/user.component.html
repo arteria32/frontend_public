@@ -1,11 +1,8 @@
 <div (click)="toggle()" class="user">
+    <h3>{{username}}</h3>
     <div class="d-flex justify-content-between">
         <div>Name:</div>
         <div>{{name}}</div>
-    </div>
-    <div class="d-flex justify-content-between">
-        <div>City: </div>
-        <div>{{city}}</div>
     </div>
     <div class="d-flex justify-content-between">
         <div>Company: </div>
@@ -14,8 +11,8 @@
 
     <div *ngIf="isActive" class="d-flex flex-column">
         <div class="d-flex justify-content-between">
-            <div>Username: </div>
-            <div>{{username}}</div>
+            <div>City: </div>
+            <div>{{city}}</div>
         </div>
         <div class="d-flex justify-content-between">
             <div>Email: </div>

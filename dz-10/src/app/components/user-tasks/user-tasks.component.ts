@@ -5,7 +5,7 @@ import { UsersService } from 'src/app/services/users.service';
 import { map, Observable, switchMap, filter } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { UserTasks } from './user-task-interface';
-import {environment} from "../../../environments/environment"
+import { environment } from "../../../environments/environment"
 import { User } from '../users/user/user-interface';
 
 @Component({
@@ -27,12 +27,12 @@ export class UserTasksComponent {
   ) as Observable<User>;
 
   public userTasks$ = this.userId$.pipe(
-    switchMap(id => this.http.get<UserTasks[]>(`${environment.userAPI}users/${id}/todos`))
+    switchMap(id => this.http.get<UserTasks[]>(`${environment.userTasksAPI}users/${id}/todos`))
   );
+
   constructor(private usersService: UsersService, 
               private route: ActivatedRoute,
               private http: HttpClient) { }
-
 }
 
 // switchMap(id => this.usersService.userById$(id))

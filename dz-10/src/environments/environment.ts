@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  userAPI: "https://jsonplaceholder.typicode.com/"
+  userTasksAPI: "https://jsonplaceholder.typicode.com/",
+  usersAPI: 'https://jsonplaceholder.typicode.com/users'
 };
 
 /*

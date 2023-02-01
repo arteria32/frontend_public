@@ -1,6 +1,6 @@
 <div class="d-flex flex-column justify-content-around">
-    <div class="p-3 m-2 bg-primary text-white d-flex justify-content-around">
-        <h2>{{(user$ | async)?.name}} tasks</h2>
+    <div class="p-3 m-2 bg-primary text-white d-flex justify-content-between">
+        <h2 class="m-2">{{(user$ | async)?.name}} tasks</h2>
         <button [routerLink]="['']" class="btn btn-light m-2">Go to all Users</button>
     </div>
     <div  class="p-3 m-2 bg-primary text-white  d-flex flex-column">
