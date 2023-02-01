@@ -1,0 +1,10 @@
+<div *ngIf="loading" class="loading">Loading...</div>
+<div *ngIf="error" class="error">{{ error }}</div>
+<div *ngIf="!loading && !error" class="users">
+  <user
+    *ngFor="let user of users"
+    [id]="user.id"
+    [name]="user.name"
+    [email]="user.email"
+  ></user>
+</div>

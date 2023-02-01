@@ -1,0 +1,10 @@
+<div *ngIf="loading" class="loading">Loading...</div>
+<div *ngIf="error" class="error">{{ error }}</div>
+<div *ngIf="!loading && !error" class="todos">
+  <todo
+    [title]="todo.title"
+    [completed]="todo.completed"
+    *ngFor="let todo of todos"
+  >
+  </todo>
+</div>

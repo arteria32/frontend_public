@@ -1,0 +1,76 @@
+<div *ngIf="loading" class="loading">Loading...</div>
+<div *ngIf="error" class="error">{{ error }}</div>
+<div *ngIf="!loading && !error" class="user">
+  <h2 class="title">{{ user?.name }}</h2>
+  <div class="container">
+    <div class="main-info">
+      <h3 class="subtitle">Main information</h3>
+      <p class="name">
+        Name: <span class="data-field">{{ user?.name }}</span>
+      </p>
+      <p class="username">
+        Username: <span class="data-field">{{ user?.username }}</span>
+      </p>
+    </div>
+    <div class="contacts">
+      <h3 class="subtitle">Contacts</h3>
+      <p>
+        E-mail:
+        <a href="mailto:{{ user?.email }}"
+          ><span class="data-field">{{ user?.email }}</span></a
+        >
+      </p>
+      <p>
+        Phone:
+        <a href="tel:{{ user?.phone }}"
+          ><span class="data-field">{{ user?.phone }}</span></a
+        >
+      </p>
+      <p>
+        Website:
+        <a href="https://{{ user?.website }}"
+          ><span class="data-field">{{ user?.website }}</span></a
+        >
+      </p>
+    </div>
+    <div class="address">
+      <h3 class="subtitle">Address</h3>
+      <p class="street">
+        Street: <span class="data-field">{{ user?.address?.street }}</span>
+      </p>
+      <p class="suite">
+        Suite: <span class="data-field">{{ user?.address?.suite }}</span>
+      </p>
+      <p class="city">
+        City: <span class="data-field">{{ user?.address?.city }}</span>
+      </p>
+      <p class="zipcode">
+        Zipcode: <span class="data-field">{{ user?.address?.zipcode }}</span>
+      </p>
+      <div class="geo">
+        <p class="lat">
+          Lat: <span class="data-field">{{ user?.address?.geo?.lat }}</span>
+        </p>
+        <p class="lng">
+          Lng: <span class="data-field">{{ user?.address?.geo?.lng }}</span>
+        </p>
+      </div>
+    </div>
+    <div class="company">
+      <h3 class="subtitle">Company</h3>
+      <p class="company-name">
+        Name: <span class="data-field">{{ user?.company?.name }}</span>
+      </p>
+      <p class="catch-phrase">
+        Catch phrase:
+        <span class="data-field">{{ user?.company?.catchPhrase }}</span>
+      </p>
+      <p class="bs">
+        Bs: <span class="data-field">{{ user?.company?.bs }}</span>
+      </p>
+    </div>
+  </div>
+  <button class="btn" (click)="onClick()">
+    Просмотреть задачи пользователя
+  </button>
+</div>
