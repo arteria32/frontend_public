@@ -1,0 +1,10 @@
+.todo {
+  background-color: var(--block-bg-color);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo__checkbox {
+  pointer-events: none;
+}

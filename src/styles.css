@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --main-bg-color: #6d6b75;
+  --block-bg-color: #7395ae;
+  --button-bg-color: #b1a296;
+
+  --main-text-color: #ffffff;
+  --main-font: "Roboto", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  font-family: var(--main-font);
+  font-style: normal;
+  font-size: 12px;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  padding: 30px 10%;
+}

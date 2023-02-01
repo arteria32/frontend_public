@@ -1,0 +1,4 @@
+<h1 class="title">Задачи для {{ user.name }}</h1>
+<div class="todo-list">
+  <app-todo *ngFor="let todo of todos" [todo]="todo"></app-todo>
+</div>

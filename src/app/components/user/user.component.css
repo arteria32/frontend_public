@@ -1,0 +1,30 @@
+.user {
+  background-color: var(--block-bg-color);
+  padding: 2rem;
+  width: 600px;
+}
+
+.user__details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 2rem;
+}
+
+.user__button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  border: none;
+  background-color: var(--button-bg-color);
+  padding: 0.5rem;
+}
+
+.user__details__todos {
+  font-size: 12px;
+  background-color: var(--button-bg-color);
+  color: black;
+  padding: 0.2rem;
+  margin-top: 5px;
+  width: 90px;
+}
