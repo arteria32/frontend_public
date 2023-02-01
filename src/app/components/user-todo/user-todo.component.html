@@ -1,0 +1,11 @@
+<div class="btn__container">
+  <button class="btn" (click)="goToUser()">Пользователи</button>
+</div>
+<div class="todos__container">
+  <div class="todos" *ngFor="let todo of todos">
+    <div>Задачи пользователя {{ todo.userId }}</div>
+    <div>Задача №{{ todo.id }}</div>
+    <div>Задание: {{ todo.title }}</div>
+    <div>Статус: {{ todo.completed ? "Выполнено" : "Не выполнено" }}</div>
+  </div>
+</div>

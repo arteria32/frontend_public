@@ -1,0 +1,27 @@
+.user {
+  background-color: mistyrose;
+  width: 350px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Google Sans", sans-serif;
+}
+.user__header {
+  align-self: center;
+}
+.user__info {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
+.user__address {
+  margin-left: 15px;
+}
+.user__btn {
+  border-radius: 5px;
+  border-color: rgba(126, 131, 114, 0.24);
+  margin-top: 5px;
+  background-color: rgb(255, 228, 196);
+}

@@ -1,0 +1,36 @@
+<div class="user">
+  <div class="user__header">Пользователь №{{ user.id }}</div>
+  <div class="user__info">
+    <div class="user__name">
+      Имя: {{ user.name }}<br />
+      Ник: {{ user.username }}<br />
+    </div>
+    <div class="user__address">
+      Email: {{ user.email }}<br />
+      Website: {{ user.website }}
+    </div>
+  </div>
+  <div class="user__all-info" *ngIf="visability">
+    <hr />
+    Телефон: {{ user.phone }} <br />
+    Адрес: Город {{ user.address.city }}, улица {{ user.address.street }},
+    квартира {{ user.address.suite }}, почтовый индекс
+    {{ user.address.zipcode }} <br />
+    <hr />
+    Компания: имя {{ user.company.name }}, cфера деятельности
+    {{ user.company.catchPhrase }}, bs{{ user.company.bs }}
+  </div>
+  <input
+    *ngIf="visability"
+    class="user__btn"
+    type="button"
+    value="Показать задачи пользователя"
+    (click)="goToTodo(user.id)"
+  />
+  <input
+    class="user__btn"
+    type="button"
+    [value]="visability ? 'Скрыть' : 'Подробнее'"
+    (click)="show()"
+  />
+</div>
