@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TodosInterface } from 'src/app/interfaces/todos.interface';
 
 @Component({
@@ -7,10 +7,5 @@ import { TodosInterface } from 'src/app/interfaces/todos.interface';
   styleUrls: ['./todo.component.css'],
 })
 export class TodoComponent {
-  todo: TodosInterface = {
-    userId: 1,
-    id: 1,
-    title: 'delectus aut autem',
-    completed: false,
-  };
+  @Input() todo: TodosInterface;
 }

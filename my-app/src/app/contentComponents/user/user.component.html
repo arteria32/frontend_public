@@ -26,6 +26,8 @@
       <li>Слоган: {{ user.company.catchPhrase }}</li>
       <li>Сервисы: {{ user.company.bs }}</li>
     </ul>
-    <a class="user__details__todos">Перейти к задачам</a>
+    <a class="user__details__todos" [routerLink]="['/todos', user.id]"
+      >Перейти к задачам</a
+    >
   </div>
 </div>

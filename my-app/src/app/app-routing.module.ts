@@ -5,7 +5,7 @@ import { UsersComponent } from './pages/users/users.component';
 
 const routes: Routes = [
   { path: '', component: UsersComponent },
-  { path: 'todos', component: TodosComponent },
+  { path: 'todos/:id', component: TodosComponent },
 ];
 
 @NgModule({

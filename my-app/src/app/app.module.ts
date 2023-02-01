@@ -9,6 +9,7 @@ import { UserComponent } from './contentComponents/user/user.component';
 import { TodoComponent } from './contentComponents/todo/todo.component';
 import { TodosComponent } from './pages/todos/todos.component';
 import { UsersComponent } from './pages/users/users.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { UsersComponent } from './pages/users/users.component';
     TodosComponent,
     UsersComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -22,11 +22,12 @@
 
 .user__details__todos {
   display: inline-block;
+  width: fit-content;
   font-size: 14px;
   background-color: blueviolet;
   border-radius: 10px;
   color: white;
-  padding: 0.3rem;
+  padding: 0.4rem;
   margin-top: 10px;
   text-decoration: none;
 }
