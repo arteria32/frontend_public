@@ -1,3 +1,13 @@
-<p>)))))))))))))))))))))))))))))))))))))))))))))))))</p>
-<div *ngFor="let task of (userTasks$ | async)"
-     > {{task.title}}</div>
+<div class="d-flex flex-column justify-content-around">
+    <div class="p-3 m-2 bg-primary text-white d-flex justify-content-around">
+        <h2>{{(user$ | async)?.name}} tasks</h2>
+        <button [routerLink]="['']" class="btn btn-light m-2">Go to all Users</button>
+    </div>
+    <div  class="p-3 m-2 bg-primary text-white  d-flex flex-column">
+        <div  class=" m-2 rounded p-3 bg-light  item d-flex justify-content-between task" 
+        [ngClass]="{'text-success': task.completed, 'text-danger': !task.completed}"
+        *ngFor="let task of (userTasks$ | async)">
+            {{task.title[0].toUpperCase()+ task.title.slice(1)}}
+        </div>
+    </div>
+</div>

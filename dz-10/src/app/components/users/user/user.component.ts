@@ -1,7 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { TasksService } from 'src/app/services/tasks.service';
-
-
 
 @Component({
   selector: 'app-user',
@@ -16,6 +13,7 @@ export class UserComponent implements OnInit {
   @Input() website: string = '';
   @Input() company: string = '';
   @Input() city: string = '';
+  @Input() phone: string = '';
   
   public isActive:boolean = false;
   
