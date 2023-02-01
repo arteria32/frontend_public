@@ -1,16 +1,17 @@
 <div class="d-flex flex-column justify-content-around">
     <div class="p-3 m-2 bg-primary text-white d-flex justify-content-around">
-        <h2>Пользователи</h2>
+        <h2>USERS</h2>
     </div>
     <div  class="p-3 m-2 mt-0 bg-light text-dark d-flex flex-wrap">
         <app-user  class="border  rounded p-3 bg-primary text-white item d-flex flex-column"
         *ngFor="let user of (users$ | async)"
+                    [id]="user.id"
                     [name]="user.name"
+                    [username]="user.username"
                     [email]="user.email" 
                     [website]="user.website"
                     [company]="user.company.name"
-                    [city]="user.address.city"
-                    ></app-user>
-        
+                    [city]="user.address.city">
+        </app-user>
     </div>
 </div>

@@ -1,19 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from "../../services/http.service"
+import { UsersService } from "../../services/users.service"
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css']
 })
-export class UsersComponent implements OnInit {
+export class UsersComponent  {
   public users$ = this.httpService.usersData$;
 
-  constructor(public httpService: HttpService) { }
-
-  ngOnInit(): void {
-    this.httpService.getData();
-  }
-
- 
+  constructor(public httpService: UsersService) { }
 
 }
