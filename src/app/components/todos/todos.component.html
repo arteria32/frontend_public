@@ -1,0 +1,8 @@
+<div class="content">
+  <div class="content__todo" *ngFor="let todo of todos; let i = index">
+    <p>#{{ [i + 1] }}</p>
+    <p>title:{{ todos[i].title }}</p>
+    <p>status:{{ todos[i].completed }}</p>
+    <p>id:{{ todos[i].id }}</p>
+  </div>
+</div>

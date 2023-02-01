@@ -1,0 +1,15 @@
+<div class="user">
+  <div>{{ user.name | uppercase }}</div>
+  <div class="user__publicDescription">
+    Public information
+    <div>website: {{ user.website }}</div>
+    <div>city: {{ user.address.city }}</div>
+  </div>
+  <div class="user__id">{{ user.id }}</div>
+  <button (click)="details = !details">Show private information</button>
+  <div class="user__privateDescription" *ngIf="details">
+    <div>company-name: {{ user.company.name }}</div>
+    <div>company-bs: {{ user.company.bs }}</div>
+    <a [routerLink]="['/todos', user.id]"> <button>Show user todo</button></a>
+  </div>
+</div>

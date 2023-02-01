@@ -1,0 +1,44 @@
+.user {
+  background-color: rgb(71, 193, 107);
+  border: 4px thin black;
+  border-radius: 10px;
+  padding: 10px;
+  width: 250px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  &__publicDescription {
+    margin-top: 10px;
+    border: 3px solid rgb(145, 72, 72);
+    border-radius: 5px;
+    width: fit-content;
+    padding: 5px;
+  }
+
+  &__privateDescription {
+    margin-top: 10px;
+    border: 3px solid black;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 5px;
+  }
+
+  &__id {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  button {
+    background-color: #374270;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 2px;
+    border: none;
+    font-family: tahoma, sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+    align-items: center;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+}
