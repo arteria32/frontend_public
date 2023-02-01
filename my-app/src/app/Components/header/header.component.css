@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 25px;
+  padding: 15px;
+}
+a {
+  font-style: oblique;
+  color: inherit;
+  text-decoration: none;
+}

@@ -1,0 +1,7 @@
+<div
+  class="todo"
+  [class.checked]="todo.completed"
+  (click)="todo.completed = !todo.completed"
+>
+  <h2>{{ todo.title }}</h2>
+</div>

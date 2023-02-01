@@ -1,0 +1,40 @@
+.user {
+  width: 400px;
+  padding: 0.7em;
+}
+
+.user__button {
+  background-color: blueviolet;
+  border: none;
+  font-size: 15px;
+  border-radius: 10px;
+  margin: 10px 0px;
+  color: white;
+  padding: 0.5em;
+}
+
+.user__details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 2rem;
+}
+
+.user__details__todos {
+  display: inline-block;
+  font-size: 14px;
+  background-color: blueviolet;
+  border-radius: 10px;
+  color: white;
+  padding: 0.3rem;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.list {
+  margin-left: 17px;
+}

@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+app-header {
+  flex: 0 0 auto;
+  background-color: red;
+  color: white;
+}
+
+app-main {
+  flex: 1 0 auto;
+}

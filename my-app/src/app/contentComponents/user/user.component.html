@@ -1,0 +1,31 @@
+<div class="user">
+  <h2>{{ user.name }}</h2>
+  <p>{{ user.username }}</p>
+  <p>{{ user.email }}</p>
+
+  <button (click)="details = !details" class="user__button">
+    {{ details ? "Скрыть" : "Подробнее" }}
+  </button>
+
+  <div *ngIf="details" class="user__details">
+    <h3>Адрес:</h3>
+    <ul class="list">
+      <li>Улица: {{ user.address.street }}</li>
+      <li>Номер: {{ user.address.suite }}</li>
+      <li>Город: {{ user.address.city }}</li>
+      <li>Почтовый индекс: {{ user.address.zipcode }}</li>
+      <li>
+        Координаты: {{ user.address.geo.lat }}, {{ user.address.geo.lng }}
+      </li>
+    </ul>
+    <p>Телефон: {{ user.phone }}</p>
+    <p>Сайт: {{ user.website }}</p>
+    <h3>Компания:</h3>
+    <ul class="list">
+      <li>Название: {{ user.company.name }}</li>
+      <li>Слоган: {{ user.company.catchPhrase }}</li>
+      <li>Сервисы: {{ user.company.bs }}</li>
+    </ul>
+    <a class="user__details__todos">Перейти к задачам</a>
+  </div>
+</div>
