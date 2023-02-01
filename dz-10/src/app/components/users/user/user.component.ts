@@ -14,6 +14,7 @@ export class UserComponent implements OnInit {
   @Input() company: string = '';
   @Input() city: string = '';
   @Input() phone: string = '';
+  @Input() i: number = 0;
   
   public isActive:boolean = false;
   

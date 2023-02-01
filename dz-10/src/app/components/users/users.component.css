@@ -3,3 +3,20 @@
     margin: 10px;
 }
 
+@media (max-width: 1300px) {
+    .item {
+        width: calc(33% - 20px);
+    }
+ }
+
+ @media (max-width: 1056px) {
+    .item {
+        width: calc(50% - 20px);
+    }
+ }
+
+ @media (max-width: 730px) {
+    .item {
+        width: calc(100% - 20px);
+    }
+ }

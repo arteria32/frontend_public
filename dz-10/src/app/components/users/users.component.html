@@ -4,7 +4,7 @@
     </div>
     <div  class="p-3 m-2 mt-0 bg-light text-dark d-flex flex-wrap">
         <app-user  class="border rounded p-3 bg-primary text-white item d-flex flex-column"
-                    *ngFor="let user of (users$ | async)"
+                    *ngFor="let user of (users$ | async); let i = index"
                                 [id]="user.id"
                                 [name]="user.name"
                                 [username]="user.username"
@@ -13,6 +13,7 @@
                                 [company]="user.company.name"
                                 [city]="user.address.city"
                                 [phone]="user.phone"
+                                [i] = "i+1"
         >
         </app-user>
     </div>

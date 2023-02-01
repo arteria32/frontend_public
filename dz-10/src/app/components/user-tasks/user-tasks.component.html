@@ -6,8 +6,8 @@
     <div  class="p-3 m-2 bg-primary text-white  d-flex flex-column">
         <div  class=" m-2 rounded p-3 bg-light  item d-flex justify-content-between task" 
         [ngClass]="{'text-success': task.completed, 'text-danger': !task.completed}"
-        *ngFor="let task of (userTasks$ | async)">
-            {{task.title[0].toUpperCase()+ task.title.slice(1)}}
+        *ngFor="let task of (userTasks$ | async); let i = index">
+            {{i+1 + ') ' + task.title[0].toUpperCase()+ task.title.slice(1)}}
         </div>
     </div>
 </div>
