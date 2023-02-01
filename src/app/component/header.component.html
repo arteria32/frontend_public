@@ -1,0 +1,24 @@
+<div class="header">
+  <div class="info">
+    <img src="../assets/logo.svg " class="info__logo" />
+    <div class="info__text">Информация по резервуарам</div>
+  </div>
+  <div class="header__btnContainer">
+    <div class="header__administration-panel administration-panel">
+      <input
+        type="button"
+        (click)="changeBorder()"
+        value="Обновить границы"
+        class="administration-panel__text"
+      />
+    </div>
+    <div class="header__administration-panel administration-panel">
+      <input
+        type="button"
+        value="Загрузить данные"
+        class="administration-panel__text"
+        (click)="uploadRezervoir()"
+      />
+    </div>
+  </div>
+</div>
