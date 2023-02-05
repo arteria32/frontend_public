@@ -8,13 +8,12 @@ import { TodosInterface } from '../interfaces/todos.interface';
   providedIn: 'root',
 })
 export class TodosService {
-  todos: Subject<TodosInterface[]> = new Subject<TodosInterface[]>();
   constructor(private request: HttpClient) {}
 
-  async getTodosByUsersId(id: number) {
-    const result = await lastValueFrom(
+  getTodosByUsersId(id: number) {
+    const result = lastValueFrom(
       this.request.get<TodosInterface[]>(`${URL}/${id}/todos`)
     );
-    this.todos.next(result);
+    return result;
   }
 }

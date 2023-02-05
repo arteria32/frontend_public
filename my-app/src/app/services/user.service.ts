@@ -8,11 +8,10 @@ import { UserInterface } from '../interfaces/user.interface';
   providedIn: 'root',
 })
 export class UserService {
-  users: Subject<UserInterface[]> = new Subject<UserInterface[]>();
   constructor(private request: HttpClient) {}
 
-  async getAllUsers() {
-    const result = await lastValueFrom(this.request.get<UserInterface[]>(URL));
-    this.users.next(result);
+  getAllUsers() {
+    const result = lastValueFrom(this.request.get<UserInterface[]>(URL));
+    return result;
   }
 }

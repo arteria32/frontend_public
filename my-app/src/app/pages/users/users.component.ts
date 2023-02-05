@@ -8,11 +8,8 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./users.component.css'],
 })
 export class UsersComponent {
-  users: UserInterface[];
+  users: Promise<UserInterface[]>;
   constructor(private userService: UserService) {
-    userService.getAllUsers();
-    this.userService.users.subscribe((result) => {
-      this.users = result;
-    });
+    this.users = userService.getAllUsers();
   }
 }
